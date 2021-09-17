@@ -1,7 +1,14 @@
 {
-  "extends": ["next", "prettier", "babel"],
+  "extends": ["next", "prettier","plugin:prettier/recommended","babel"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto",
+        "printWidth": 150
+      }
+    ]
   }
 }

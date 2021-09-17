@@ -1,7 +1,20 @@
-import React from "react"
-import Link from "next/link"
+import React from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
 
-const Nav = ({ categories }) => {
+const LinkGroup = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const LinkHeader = styled.ul`
+  margin-right: 20px;
+`;
+
+const Nav = ({ navigation }) => {
+  const { links } = navigation;
+  console.log(links);
   return (
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>
@@ -16,20 +29,26 @@ const Nav = ({ categories }) => {
         </div>
         <div className="uk-navbar-right">
           <ul className="uk-navbar-nav">
-            {categories.map((category) => {
+            {links.map(({ id, linkGroup, navLinks }) => {
               return (
-                <li key={category.id}>
-                  <Link as={`/category/${category.slug}`} href="/category/[id]">
-                    <a className="uk-link-reset">{category.name}</a>
-                  </Link>
+                <li key={id}>
+                  {console.log(navLinks)}
+                  <LinkGroup>
+                    <LinkHeader>{linkGroup}</LinkHeader>
+                    {navLinks.map(({ id, name, slug }) => (
+                      <Link key={id} href={`/${slug}`}>
+                        {name}
+                      </Link>
+                    ))}
+                  </LinkGroup>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
