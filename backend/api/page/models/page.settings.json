@@ -12,14 +12,23 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
     "content": {
       "type": "dynamiczone",
       "components": [
-        "sections.text"
+        "sections.hero",
+        "sections.hero-price",
+        "sections.instructors",
+        "sections.courses",
+        "sections.posibilities"
       ]
-    },
-    "slug": {
-      "type": "uid"
     }
   }
 }

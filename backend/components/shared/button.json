@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_buttons",
+  "info": {
+    "name": "button",
+    "icon": "hand-point-up"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "isFilled": {
+      "type": "boolean"
+    }
+  }
+}
