@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_utils_buttons",
+  "info": {
+    "name": "button",
+    "icon": "square-full"
+  },
+  "options": {},
+  "attributes": {
+    "isFilled": {
+      "type": "boolean"
+    },
+    "link": {
+      "model": "link"
+    }
+  }
+}

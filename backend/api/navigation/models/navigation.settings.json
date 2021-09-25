@@ -27,8 +27,7 @@
     "links": {
       "type": "component",
       "repeatable": true,
-      "component": "sections.link",
-      "required": true
+      "component": "utils.nav-link"
     }
   }
 }

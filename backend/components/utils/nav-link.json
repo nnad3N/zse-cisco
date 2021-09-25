@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_utils_nav_links",
+  "info": {
+    "name": "NavLink",
+    "icon": "share"
+  },
+  "options": {},
+  "attributes": {
+    "groupName": {
+      "type": "string"
+    },
+    "links": {
+      "collection": "link"
+    }
+  }
+}

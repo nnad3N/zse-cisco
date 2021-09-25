@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_instructors",
+  "info": {
+    "name": "Instructors",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "instructorComponent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section-components.instructor-component"
+    }
+  }
+}

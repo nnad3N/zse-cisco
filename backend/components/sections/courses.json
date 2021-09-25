@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_courses",
+  "info": {
+    "name": "Courses",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "courseComponent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section-components.course-component"
+    }
+  }
+}

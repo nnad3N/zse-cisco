@@ -1,7 +1,7 @@
 import { fetchAPI } from '../utils/api';
-import Layout from '../components/Layout';
-import Seo from '../components/seo';
-import Sections from '../components/sections';
+import Layout from '../components/templates/Layout';
+import Seo from '../components/strapi/seo';
+import Sections from '../components/strapi/sections';
 import { getPageData } from '../utils/getPageData';
 
 const DynamicPage = ({ sections, pageContext, navigation, slug }) => {
@@ -9,7 +9,6 @@ const DynamicPage = ({ sections, pageContext, navigation, slug }) => {
   //     metaTitle: category.name,
   //     metaDescription: `All ${category.name} articles`,
   //   }
-  console.log(slug);
   return (
     <Layout pageContext={pageContext} navigation={navigation}>
       {/* <Seo seo={seo} /> */}
@@ -42,13 +41,10 @@ export async function getStaticProps({ params }) {
     return { props: {} };
   }
 
-  const { content, slug } = pageData;
-
   return {
     props: {
-      sections: content,
+      sections: pageData.content,
       navigation,
-      slug,
     },
   };
 }
