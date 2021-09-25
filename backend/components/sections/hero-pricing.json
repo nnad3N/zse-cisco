@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_hero_pricings",
+  "info": {
+    "name": "HeroPricing",
+    "icon": "money-bill"
+  },
+  "options": {},
+  "attributes": {
+    "titile": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "link": {
+      "model": "link"
+    }
+  }
+}

@@ -1,9 +1,8 @@
 {
-  "collectionName": "components_sections_posibilities",
+  "collectionName": "components_sections_hero_academies",
   "info": {
-    "name": "Posibilities",
-    "icon": "align-right",
-    "description": ""
+    "name": "HeroAcademy",
+    "icon": "align-left"
   },
   "options": {},
   "attributes": {
@@ -11,7 +10,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "button": {
       "type": "component",
@@ -19,7 +18,7 @@
       "component": "utils.button"
     },
     "image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",

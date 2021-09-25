@@ -1,10 +1,10 @@
-import { fetchAPI } from '../utils/api';
-import Layout from '../components/templates/Layout';
-import Seo from '../components/strapi/seo';
-import Sections from '../components/strapi/sections';
-import { getPageData } from '../utils/getPageData';
+import { fetchAPI } from '/utils/api';
+import Layout from '/components/templates/Layout';
+import Seo from '/components/strapi/seo';
+import Sections from '/components/strapi/sections';
+import { getPageData } from '/utils/getPageData';
 
-const DynamicPage = ({ sections, pageContext, navigation, slug }) => {
+const DynamicPage = ({ sections, pageContext, navigation }) => {
   //   const seo = {
   //     metaTitle: category.name,
   //     metaDescription: `All ${category.name} articles`,

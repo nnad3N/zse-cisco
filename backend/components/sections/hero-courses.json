@@ -1,13 +1,12 @@
 {
-  "collectionName": "components_sections_courses",
+  "collectionName": "components_sections_hero_courses",
   "info": {
-    "name": "Courses",
-    "icon": "align-left",
-    "description": ""
+    "name": "HeroCourses",
+    "icon": "arrows-alt"
   },
   "options": {},
   "attributes": {
-    "courseComponent": {
+    "course": {
       "type": "component",
       "repeatable": true,
       "component": "section-components.course-component"

@@ -1,22 +1,24 @@
 {
-  "collectionName": "components_decoration_heroes",
+  "collectionName": "components_hero_page_heroes",
   "info": {
     "name": "Hero",
-    "icon": "address-card",
+    "icon": "align-center",
     "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "heroButtons": {
+    "description": {
+      "type": "text"
+    },
+    "button": {
       "type": "component",
       "repeatable": true,
       "component": "utils.button"
     },
-    "heroIMG": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -27,9 +29,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "subTitle": {
-      "type": "text"
     }
   }
 }

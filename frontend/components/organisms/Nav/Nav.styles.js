@@ -24,7 +24,6 @@ export const Links = styled.div`
 
 export const LinkGroup = styled.h5`
   padding: 0.5rem 2rem;
-  user-select: none;
   display: flex;
   cursor: default;
 `;

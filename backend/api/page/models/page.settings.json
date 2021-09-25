@@ -24,10 +24,10 @@
       "type": "dynamiczone",
       "components": [
         "sections.hero",
-        "sections.hero-price",
-        "sections.instructors",
-        "sections.courses",
-        "sections.posibilities"
+        "sections.hero-instructors",
+        "sections.hero-courses",
+        "sections.hero-pricing",
+        "sections.hero-academy"
       ]
     }
   }

@@ -1,9 +1,11 @@
 import App from 'next/app';
 import Head from 'next/head';
 import { createContext } from 'react';
-import { fetchAPI } from '../utils/api';
-import { getStrapiMedia } from '../utils/media';
-import { GlobalStyle } from '../assets/styles/GlobalStyle';
+import { fetchAPI } from '/utils/api';
+import { getStrapiMedia } from '/utils/media';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '/assets/styles/theme';
+import { GlobalStyle } from '/assets/styles/GlobalStyle';
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
 
@@ -11,10 +13,12 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>{/* <link rel="shortcut icon" href={getStrapiMedia(global.favicon)} /> */}</Head>
-      <GlobalContext.Provider value={global}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </GlobalContext.Provider>
+      <ThemeProvider theme={theme}>
+        <GlobalContext.Provider value={global}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </GlobalContext.Provider>
+      </ThemeProvider>
     </>
   );
 };

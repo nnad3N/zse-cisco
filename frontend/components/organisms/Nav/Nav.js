@@ -4,7 +4,6 @@ import { NavBar, Logo, Links, LinkGroup, StyledLink, LinkContainer, LinkSpan, Li
 
 const Nav = ({ navigation }) => {
   const { links } = navigation;
-  console.log(links);
 
   return (
     <NavBar>
