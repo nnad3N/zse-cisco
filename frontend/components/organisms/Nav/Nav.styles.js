@@ -22,7 +22,7 @@ export const Links = styled.div`
   margin-left: auto;
 `;
 
-export const LinkGroup = styled.h5`
+export const LinkGroup = styled.h3`
   padding: 0.5rem 2rem;
   display: flex;
   cursor: default;
