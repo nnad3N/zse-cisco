@@ -17,4 +17,10 @@ export const theme = {
     body: '1.6rem',
     bodySmall: '1.4rem',
   },
+  dimensions: {
+    padding: '8vw',
+  },
+  utils: {
+    borderRadius: '6px',
+  },
 };

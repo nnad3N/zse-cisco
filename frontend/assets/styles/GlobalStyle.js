@@ -41,7 +41,7 @@ h1 {
 
 h2 {
     font-size: ${({ theme }) => theme.fontSize.subHeader};
-    font-weight: 800;
+    font-weight: 400;
 }
 
 h3 {
@@ -65,6 +65,7 @@ h6 {
 p {
     font-size: ${({ theme, small }) => (small ? theme.fontSize.bodySmall : theme.fontSize.body)};
     font-weight: 400;
+    text-align: justify;
 }
 
 ul {
