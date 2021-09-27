@@ -1,0 +1,103 @@
+self["webpackHotUpdate_N_E"]("pages/[[...slug]]",{
+
+/***/ "./assets/styles/theme.js":
+/*!********************************!*\
+  !*** ./assets/styles/theme.js ***!
+  \********************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "theme": function() { return /* binding */ theme; }
+/* harmony export */ });
+/* module decorator */ module = __webpack_require__.hmd(module);
+var theme = {
+  colors: {
+    white: '#FFFFFF',
+    black: '#000000',
+    backgroundColor: '#E8EBF1',
+    mainColor: '#0E274D',
+    accentColor: '#00BCEA'
+  },
+  fontSize: {
+    header: '4.8rem',
+    navHeader: '3.6rem',
+    navList: '1.8rem',
+    subHeader: '2.4rem',
+    captionLarge: '2rem',
+    captionMedium: '1.4rem',
+    captionSmall: '1.2rem',
+    body: '1.6rem',
+    bodySmall: '1.4rem'
+  },
+  dimensions: {
+    padding: '10vw',
+    heroCoursePadding: '3rem 5rem'
+  },
+  utils: {
+    borderRadius: '6px',
+    boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)'
+  }
+};
+
+;
+    var _a, _b;
+    // Legacy CSS implementations will `eval` browser code in a Node.js context
+    // to extract CSS. For backwards compatibility, we need to check we're in a
+    // browser context before continuing.
+    if (typeof self !== 'undefined' &&
+        // AMP / No-JS mode does not inject these helpers:
+        '$RefreshHelpers$' in self) {
+        var currentExports = module.__proto__.exports;
+        var prevExports = (_b = (_a = module.hot.data) === null || _a === void 0 ? void 0 : _a.prevExports) !== null && _b !== void 0 ? _b : null;
+        // This cannot happen in MainTemplate because the exports mismatch between
+        // templating and execution.
+        self.$RefreshHelpers$.registerExportsForReactRefresh(currentExports, module.id);
+        // A module can be accepted automatically based on its exports, e.g. when
+        // it is a Refresh Boundary.
+        if (self.$RefreshHelpers$.isReactRefreshBoundary(currentExports)) {
+            // Save the previous exports on update so we can compare the boundary
+            // signatures.
+            module.hot.dispose(function (data) {
+                data.prevExports = currentExports;
+            });
+            // Unconditionally accept an update to this module, we'll check if it's
+            // still a Refresh Boundary later.
+            module.hot.accept();
+            // This field is set when the previous version of this module was a
+            // Refresh Boundary, letting us know we need to check for invalidation or
+            // enqueue an update.
+            if (prevExports !== null) {
+                // A boundary can become ineligible if its exports are incompatible
+                // with the previous exports.
+                //
+                // For example, if you add/remove/change exports, we'll want to
+                // re-execute the importing modules, and force those components to
+                // re-render. Similarly, if you convert a class component to a
+                // function, we want to invalidate the boundary.
+                if (self.$RefreshHelpers$.shouldInvalidateReactRefreshBoundary(prevExports, currentExports)) {
+                    module.hot.invalidate();
+                }
+                else {
+                    self.$RefreshHelpers$.scheduleUpdate();
+                }
+            }
+        }
+        else {
+            // Since we just executed the code for the module, it's possible that the
+            // new exports made it ineligible for being a boundary.
+            // We only care about the case when we were _previously_ a boundary,
+            // because we already accepted this update (accidental side effect).
+            var isNoLongerABoundary = prevExports !== null;
+            if (isNoLongerABoundary) {
+                module.hot.invalidate();
+            }
+        }
+    }
+
+
+/***/ })
+
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vYXNzZXRzL3N0eWxlcy90aGVtZS5qcyJdLCJuYW1lcyI6WyJ0aGVtZSIsImNvbG9ycyIsIndoaXRlIiwiYmxhY2siLCJiYWNrZ3JvdW5kQ29sb3IiLCJtYWluQ29sb3IiLCJhY2NlbnRDb2xvciIsImZvbnRTaXplIiwiaGVhZGVyIiwibmF2SGVhZGVyIiwibmF2TGlzdCIsInN1YkhlYWRlciIsImNhcHRpb25MYXJnZSIsImNhcHRpb25NZWRpdW0iLCJjYXB0aW9uU21hbGwiLCJib2R5IiwiYm9keVNtYWxsIiwiZGltZW5zaW9ucyIsInBhZGRpbmciLCJoZXJvQ291cnNlUGFkZGluZyIsInV0aWxzIiwiYm9yZGVyUmFkaXVzIiwiYm94U2hhZG93Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztBQUFPLElBQU1BLEtBQUssR0FBRztBQUNuQkMsUUFBTSxFQUFFO0FBQ05DLFNBQUssRUFBRSxTQUREO0FBRU5DLFNBQUssRUFBRSxTQUZEO0FBR05DLG1CQUFlLEVBQUUsU0FIWDtBQUlOQyxhQUFTLEVBQUUsU0FKTDtBQUtOQyxlQUFXLEVBQUU7QUFMUCxHQURXO0FBUW5CQyxVQUFRLEVBQUU7QUFDUkMsVUFBTSxFQUFFLFFBREE7QUFFUkMsYUFBUyxFQUFFLFFBRkg7QUFHUkMsV0FBTyxFQUFFLFFBSEQ7QUFJUkMsYUFBUyxFQUFFLFFBSkg7QUFLUkMsZ0JBQVksRUFBRSxNQUxOO0FBTVJDLGlCQUFhLEVBQUUsUUFOUDtBQU9SQyxnQkFBWSxFQUFFLFFBUE47QUFRUkMsUUFBSSxFQUFFLFFBUkU7QUFTUkMsYUFBUyxFQUFFO0FBVEgsR0FSUztBQW1CbkJDLFlBQVUsRUFBRTtBQUNWQyxXQUFPLEVBQUUsTUFEQztBQUVWQyxxQkFBaUIsRUFBRTtBQUZULEdBbkJPO0FBdUJuQkMsT0FBSyxFQUFFO0FBQ0xDLGdCQUFZLEVBQUUsS0FEVDtBQUVMQyxhQUFTLEVBQUU7QUFGTjtBQXZCWSxDQUFkIiwiZmlsZSI6InN0YXRpYy93ZWJwYWNrL3BhZ2VzL1tbLi4uc2x1Z11dLjNmNTBiNzU2ZDkxZjg2ZGFiMWE0LmhvdC11cGRhdGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgdGhlbWUgPSB7XHJcbiAgY29sb3JzOiB7XHJcbiAgICB3aGl0ZTogJyNGRkZGRkYnLFxyXG4gICAgYmxhY2s6ICcjMDAwMDAwJyxcclxuICAgIGJhY2tncm91bmRDb2xvcjogJyNFOEVCRjEnLFxyXG4gICAgbWFpbkNvbG9yOiAnIzBFMjc0RCcsXHJcbiAgICBhY2NlbnRDb2xvcjogJyMwMEJDRUEnLFxyXG4gIH0sXHJcbiAgZm9udFNpemU6IHtcclxuICAgIGhlYWRlcjogJzQuOHJlbScsXHJcbiAgICBuYXZIZWFkZXI6ICczLjZyZW0nLFxyXG4gICAgbmF2TGlzdDogJzEuOHJlbScsXHJcbiAgICBzdWJIZWFkZXI6ICcyLjRyZW0nLFxyXG4gICAgY2FwdGlvbkxhcmdlOiAnMnJlbScsXHJcbiAgICBjYXB0aW9uTWVkaXVtOiAnMS40cmVtJyxcclxuICAgIGNhcHRpb25TbWFsbDogJzEuMnJlbScsXHJcbiAgICBib2R5OiAnMS42cmVtJyxcclxuICAgIGJvZHlTbWFsbDogJzEuNHJlbScsXHJcbiAgfSxcclxuICBkaW1lbnNpb25zOiB7XHJcbiAgICBwYWRkaW5nOiAnMTB2dycsXHJcbiAgICBoZXJvQ291cnNlUGFkZGluZzogJzNyZW0gNXJlbScsXHJcbiAgfSxcclxuICB1dGlsczoge1xyXG4gICAgYm9yZGVyUmFkaXVzOiAnNnB4JyxcclxuICAgIGJveFNoYWRvdzogJzBweCA0cHggMTRweCAgcmdiYSgwLCAwLCAwLCAwLjEpJyxcclxuICB9LFxyXG59O1xyXG4iXSwic291cmNlUm9vdCI6IiJ9

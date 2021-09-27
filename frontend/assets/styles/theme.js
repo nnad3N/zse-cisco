@@ -11,7 +11,7 @@ export const theme = {
     navHeader: '3.6rem',
     navList: '1.8rem',
     subHeader: '2.4rem',
-    captionLarge: '1.8rem',
+    captionLarge: '2rem',
     captionMedium: '1.2rem',
     captionSmall: '1rem',
     body: '1.6rem',

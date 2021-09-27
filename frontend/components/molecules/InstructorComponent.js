@@ -13,7 +13,7 @@ const InstructorWrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
 
   h4 {
-    margin: 0.3rem 0;
+    margin-bottom: 1rem;
   }
 
   &:nth-child(1) {
@@ -23,8 +23,8 @@ const InstructorWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   background-color: darkGray;
-  width: 15rem;
-  height: 15rem;
+  min-width: 15rem;
+  min-height: 15rem;
   margin-right: 4rem;
   border-radius: 50%;
 `;
@@ -35,7 +35,7 @@ const InstructorComponent = ({ data }) => {
     <Wrapper>
       <ImageWrapper />
       <InstructorWrapper>
-        <h6>{header}</h6>
+        <h5>{header}</h5>
         <h4>{instructor}</h4>
         <p>{description}</p>
       </InstructorWrapper>
