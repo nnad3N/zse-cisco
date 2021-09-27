@@ -18,7 +18,7 @@ export const theme = {
     bodySmall: '1.4rem',
   },
   dimensions: {
-    padding: '8vw',
+    padding: '10vw',
     heroCoursePadding: '3rem 5rem',
   },
   utils: {

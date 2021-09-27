@@ -14,11 +14,11 @@ const ArrowLinkWrapper = styled.div`
   }
 `;
 
-const ArrowLink = ({ data, title }) => {
+const ArrowLink = ({ data, title, colored }) => {
   return (
     <ArrowLinkWrapper>
-      <Link href={data.slug} passHref>
-        <a>{title}</a>
+      <Link href={`/${data.slug}`} passHref>
+        <a colored={colored}>{title}</a>
       </Link>
     </ArrowLinkWrapper>
   );

@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 const InstructorWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 25vw;
+  max-width: 35rem;
   color: ${({ theme }) => theme.colors.white};
 
   h4 {

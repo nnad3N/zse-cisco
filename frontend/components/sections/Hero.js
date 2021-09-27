@@ -13,7 +13,7 @@ const HeroWrapper = styled.section`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: ${({ theme }) => `calc(50vw - ${theme.dimensions.padding})`};
+  max-width: ${({ theme }) => `calc(40vw - ${theme.dimensions.padding})`};
 `;
 
 const Header = styled.h1`

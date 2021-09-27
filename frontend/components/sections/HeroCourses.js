@@ -6,7 +6,7 @@ const HeroCourseWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-row-gap: 10vh;
+  row-gap: 10vh;
   justify-items: center;
   padding: 10vh ${({ theme }) => theme.dimensions.padding};
 
@@ -17,7 +17,6 @@ const HeroCourseWrapper = styled.section`
 `;
 
 const HeroCourses = ({ data }) => {
-  console.log(data);
   return (
     <HeroCourseWrapper>
       <h1>{data.title}</h1>

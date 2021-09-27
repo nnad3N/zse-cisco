@@ -12,6 +12,14 @@ const HeroCourseComponentWrapper = styled.div`
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
   position: relative;
 
+  &:nth-child(odd) {
+    justify-self: end;
+  }
+
+  &:nth-child(even) {
+    justify-self: start;
+  }
+
   h4 {
     text-align: center;
     margin-bottom: 1rem;
@@ -32,13 +40,12 @@ const ImageWrapper = styled.div`
 `;
 
 const HeroCourseComponent = ({ data }) => {
-  console.log(data);
   const { title, description, link, linkTitle } = data;
   return (
     <HeroCourseComponentWrapper>
       <ImageWrapper />
       <h4>{title}</h4>
-      <p small>{description}</p>
+      <p small="true">{description}</p>
       <ArrowLink data={link} title={linkTitle} />
     </HeroCourseComponentWrapper>
   );

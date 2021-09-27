@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "titile": {
+    "title": {
       "type": "string"
     },
     "description": {
@@ -16,7 +16,7 @@
     "link": {
       "model": "link"
     },
-    "caption": {
+    "linkTitle": {
       "type": "string"
     }
   }
