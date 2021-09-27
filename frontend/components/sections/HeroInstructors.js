@@ -12,7 +12,6 @@ const InstructorsWrapper = styled.section`
 `;
 
 const HeroInstructors = ({ data }) => {
-  console.log({ data });
   return (
     <InstructorsWrapper>
       {data.instructorComponent.map((instructorData) => (

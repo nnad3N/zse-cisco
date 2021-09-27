@@ -8,6 +8,7 @@ export const NavBar = styled.nav`
   color: ${({ theme }) => theme.colors.white};
   position: sticky;
   top: 0;
+  z-index: 10;
 `;
 
 export const Logo = styled.div`

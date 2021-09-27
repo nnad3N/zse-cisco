@@ -19,8 +19,10 @@ export const theme = {
   },
   dimensions: {
     padding: '8vw',
+    heroCoursePadding: '3rem 5rem',
   },
   utils: {
     borderRadius: '6px',
+    boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)',
   },
 };

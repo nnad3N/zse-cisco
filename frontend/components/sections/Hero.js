@@ -36,7 +36,6 @@ const ImageWrapper = styled.div`
 
 const Hero = ({ data }) => {
   const { title, description, button } = data;
-  console.log(button);
 
   return (
     <HeroWrapper>
