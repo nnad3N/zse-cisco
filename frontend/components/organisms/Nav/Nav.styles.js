@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 export const NavBar = styled.nav`
   display: flex;
   padding: 1rem 10rem;
-  background-color: lightgray;
+  background-color: ${({ theme }) => theme.colors.mainColor};
+  color: ${({ theme }) => theme.colors.white};
   position: sticky;
   top: 0;
+  z-index: 10;
 `;
 
 export const Logo = styled.div`

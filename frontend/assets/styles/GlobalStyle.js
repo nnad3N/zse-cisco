@@ -36,25 +36,29 @@ a {
 
 h1 {
     font-size: ${({ theme }) => theme.fontSize.header};
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h2 {
     font-size: ${({ theme }) => theme.fontSize.subHeader};
-    font-weight: 800;
+    font-weight: 400;
 }
 
 h3 {
     font-size: ${({ theme }) => theme.fontSize.navHeader};
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h4 {
     font-size: ${({ theme }) => theme.fontSize.captionLarge};
+    font-weight: 700;
+
 }
 
 h5 {
     font-size: ${({ theme }) => theme.fontSize.captionMedium};
+    font-weight: 600;
+
 }
 
 h6 {
@@ -65,6 +69,7 @@ h6 {
 p {
     font-size: ${({ theme, small }) => (small ? theme.fontSize.bodySmall : theme.fontSize.body)};
     font-weight: 400;
+    text-align: justify;
 }
 
 ul {
