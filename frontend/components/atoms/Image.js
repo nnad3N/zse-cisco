@@ -8,10 +8,10 @@ const NextImageWrapper = styled.div`
 `;
 
 const StyledNextImage = styled(NextImage)`
-  border-radius: ${({ theme }) => theme.utils.borderRadius};
+  border-radius: ${({ theme, radius }) => (radius ? theme.utils.borderRadius : 0)};
 `;
 
-const Image = ({ image }) => {
+const Image = ({ image, hasRadius }) => {
   const { url, alternativeText, width, height } = image;
 
   const loader = () => {
@@ -19,8 +19,8 @@ const Image = ({ image }) => {
   };
 
   return (
-    <NextImageWrapper>
-      <StyledNextImage loader={loader} layout="responsive" width={width} height={height} src={url} alt={alternativeText || ''} />
+    <NextImageWrapper hasRadius={hasRadius}>
+      <StyledNextImage radius={hasRadius} loader={loader} layout="responsive" width={width} height={height} src={url} alt={alternativeText || ''} />
     </NextImageWrapper>
   );
 };

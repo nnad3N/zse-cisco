@@ -22,6 +22,9 @@ export const theme = {
     paddingNarrow: '15vw',
     heroCoursePadding: '3rem 5rem',
     heroAcademyPadding: '4rem 4.5rem',
+    navigationPadding: '15vh 12vw',
+    navigationColumnGap: '15vw',
+    navigationRowGap: '6rem',
   },
   utils: {
     borderRadius: '6px',

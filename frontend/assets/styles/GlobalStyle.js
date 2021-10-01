@@ -41,6 +41,7 @@ h2 {
 
 h3 {
     font-size: ${({ theme }) => theme.fontSize.navHeader};
+    color: ${({ theme }) => theme.colors.white};
     font-weight: 700;
 }
 
@@ -72,7 +73,14 @@ ul {
 }
 
 li {
-    font-size: ${({ theme, nav }) => (nav ? theme.fontSize.navList : theme.fontSize.body)};
+    a {
+        color: white;
+        font-size: ${({ theme }) => theme.fontSize.body};
+
+        &:visited {
+            color: white;
+        }
+    }
 }
 
 `;
