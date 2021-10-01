@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import ArrowLink from '../atoms/ArrowLink';
+import LineVertical from '../atoms/LineVertical';
 
 const HeroCourseComponentWrapper = styled.div`
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => theme.dimensions.heroCoursePadding};
-  max-width: 46rem;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
@@ -22,11 +23,11 @@ const HeroCourseComponentWrapper = styled.div`
 
   h4 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
-  p {
-    margin-bottom: 3rem;
+  a {
+    margin-top: 4rem;
   }
 `;
 
@@ -45,7 +46,9 @@ const HeroCourseComponent = ({ data }) => {
     <HeroCourseComponentWrapper>
       <ImageWrapper />
       <h4>{title}</h4>
-      <p small="true">{description}</p>
+      <LineVertical>
+        <p>{description}</p>
+      </LineVertical>
       <ArrowLink data={link} title={linkTitle} />
     </HeroCourseComponentWrapper>
   );

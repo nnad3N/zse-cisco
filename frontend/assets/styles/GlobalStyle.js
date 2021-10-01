@@ -26,12 +26,7 @@ a, button {
 }
 
 a {
-	color: ${({ theme }) => theme.colors.black};
 	text-decoration: none;
-
-	&:visited {
-		color: ${({ theme }) => theme.colors.black};
-	}
 }
 
 h1 {
@@ -67,7 +62,7 @@ h6 {
 }
 
 p {
-    font-size: ${({ theme, small }) => (small ? theme.fontSize.bodySmall : theme.fontSize.body)};
+    font-size: ${({ theme }) => theme.fontSize.body};
     font-weight: 400;
     text-align: justify;
 }

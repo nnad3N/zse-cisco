@@ -9,16 +9,20 @@ const ArrowLinkWrapper = styled.div`
   align-self: flex-end;
 
   a {
-    color: ${({ theme }) => theme.colors.mainColor};
     border-bottom: 2px solid ${({ theme }) => theme.colors.mainColor};
+
+    &:visited {
+      border-bottom: 2px solid ${({ theme }) => theme.colors.mainColor};
+      color: ${({ theme }) => theme.colors.mainColor};
+    }
   }
 `;
 
-const ArrowLink = ({ data, title, colored }) => {
+const ArrowLink = ({ data, title }) => {
   return (
     <ArrowLinkWrapper>
       <Link href={`/${data.slug}`} passHref>
-        <a colored={colored}>{title}</a>
+        <a>{title}</a>
       </Link>
     </ArrowLinkWrapper>
   );
