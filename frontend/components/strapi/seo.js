@@ -1,6 +1,4 @@
 import { NextSeo } from 'next-seo';
-import { useContext } from 'react';
-import { GlobalContext } from '/pages/_app';
 import { getStrapiMedia } from '/utils/media';
 
 const Seo = ({ metadata }) => {

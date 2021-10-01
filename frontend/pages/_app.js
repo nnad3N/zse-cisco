@@ -1,6 +1,5 @@
 import App from 'next/app';
 import Head from 'next/head';
-import { createContext } from 'react';
 import { fetchAPI } from '/utils/api';
 import { getStrapiMedia } from '/utils/media';
 import { DefaultSeo } from 'next-seo';
@@ -8,8 +7,6 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from '/assets/styles/theme';
 import { GlobalStyle } from '/assets/styles/GlobalStyle';
 import ErrorPage from 'next/error';
-// Store Strapi Global object in context
-export const GlobalContext = createContext({});
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps;
@@ -37,10 +34,8 @@ const MyApp = ({ Component, pageProps }) => {
         }}
       />
       <ThemeProvider theme={theme}>
-        <GlobalContext.Provider value={global}>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </GlobalContext.Provider>
+        <GlobalStyle />
+        <Component {...pageProps} />
       </ThemeProvider>
     </>
   );
