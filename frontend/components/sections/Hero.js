@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '../atoms/Button';
+import LineVertical from '../atoms/LineVertical';
+import Image from '../atoms/Image';
 
 const HeroWrapper = styled.section`
   padding: 0 ${({ theme }) => theme.dimensions.padding};
@@ -14,41 +16,44 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: ${({ theme }) => `calc(40vw - ${theme.dimensions.padding})`};
-`;
 
-const Header = styled.h1`
-  max-width: 40rem;
-`;
-
-const SubHeader = styled.h2`
-  margin: 4rem 0;
+  h1 {
+    max-width: 40rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
+  margin-top: 4rem;
 `;
 
 const ImageWrapper = styled.div`
   width: 40vw;
-  height: 50vh;
-  background-color: darkGray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Hero = ({ data }) => {
-  const { title, description, button } = data;
+  const { title, description, button, image } = data;
 
   return (
     <HeroWrapper>
       <ContentWrapper>
-        <Header>{title}</Header>
-        <SubHeader>{description}</SubHeader>
+        <h1>{title}</h1>
+        <LineVertical>
+          <h2>{description}</h2>
+        </LineVertical>
         <ButtonWrapper>
           {button.map((buttonData) => (
             <Button key={buttonData.id} data={buttonData} hasMargin />
           ))}
         </ButtonWrapper>
       </ContentWrapper>
-      <ImageWrapper />
+      <ImageWrapper>
+        <Image image={image} />
+      </ImageWrapper>
     </HeroWrapper>
   );
 };

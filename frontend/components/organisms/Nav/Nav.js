@@ -1,14 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from '../../atoms/Image';
 import { NavBar, Logo, Links, LinkGroup, StyledLink, LinkContainer, LinkSpan, LinkContainerBackground } from './Nav.styles';
 
 const Nav = ({ navigation }) => {
-  const { links } = navigation;
+  const { links, logo } = navigation;
+  console.log(navigation);
 
   return (
     <NavBar>
       <Logo>
-        <Link href="/">Strapi Blog</Link>
+        <Image image={logo} />
       </Logo>
       <Links>
         {links.map(({ id, groupName }) => (

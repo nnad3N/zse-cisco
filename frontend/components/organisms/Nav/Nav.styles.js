@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const NavBar = styled.nav`
+export const NavBar = styled.header`
   display: flex;
-  padding: 1rem 10rem;
+  min-height: 10vh;
+  padding: 1rem ${({ theme }) => theme.dimensions.padding};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
   position: sticky;
@@ -15,6 +16,7 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 25rem;
 `;
 
 export const Links = styled.div`

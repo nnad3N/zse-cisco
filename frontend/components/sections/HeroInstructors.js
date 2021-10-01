@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import InstructorComponent from '../molecules/InstructorComponent';
+import HeroInstructorComponent from '../molecules/HeroInstructorComponent';
 
 const InstructorsWrapper = styled.section`
-  padding: 0 ${({ theme }) => theme.dimensions.padding};
-  display: flex;
+  padding: 5rem ${({ theme }) => theme.dimensions.padding};
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: ${({ theme }) => theme.dimensions.paddingNarrow};
   align-items: center;
   justify-content: space-between;
   min-height: 40vh;
@@ -15,7 +17,7 @@ const HeroInstructors = ({ data }) => {
   return (
     <InstructorsWrapper>
       {data.instructorComponent.map((instructorData) => (
-        <InstructorComponent key={instructorData.id} data={instructorData} />
+        <HeroInstructorComponent key={instructorData.id} data={instructorData} />
       ))}
     </InstructorsWrapper>
   );

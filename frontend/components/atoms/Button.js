@@ -6,7 +6,7 @@ const StyledButton = styled.a`
   padding: 1rem 2rem;
   border: ${({ theme, isFilled }) => (isFilled ? '0' : `3px solid ${theme.colors.mainColor}`)};
   background-color: ${({ theme, isFilled }) => (isFilled ? theme.colors.mainColor : 'transparent')};
-  color: ${({ theme, isFilled }) => (isFilled ? theme.colors.white : theme.colors.black)};
+  color: ${({ theme, isFilled }) => (isFilled ? theme.colors.white : theme.colors.mainColor)};
   display: flex;
   align-items: center;
 
