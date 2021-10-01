@@ -24,7 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
         title={defaultSeo.metaTitle}
         description={defaultSeo.metaDescription}
         openGraph={{
-          images: Object.values(defaultSeo.shareImage.formats).map((image) => {
+          images: Object.values(defaultSeo.sharedImage.formats).map((image) => {
             return {
               url: getStrapiMedia(image),
               width: image.width,

@@ -5,14 +5,14 @@ import Sections from '/components/strapi/sections';
 import { getPageData } from '/utils/getPageData';
 import ErrorPage from 'next/error';
 
-const DynamicPage = ({ sections, pageContext, navigation, metadata }) => {
+const DynamicPage = ({ sections, pageContext, navigation, seo }) => {
   if (!sections?.length) {
     return <ErrorPage statusCode={404} />;
   }
 
   return (
     <Layout pageContext={pageContext} navigation={navigation}>
-      <Seo metadata={metadata} />
+      <Seo seo={seo} />
       <Sections sections={sections} />
     </Layout>
   );
@@ -47,7 +47,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       sections: content,
-      metadata: seo,
+      seo,
       navigation,
     },
   };
