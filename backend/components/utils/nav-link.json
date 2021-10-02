@@ -2,7 +2,8 @@
   "collectionName": "components_utils_nav_links",
   "info": {
     "name": "NavLink",
-    "icon": "share"
+    "icon": "share",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,18 @@
     },
     "links": {
       "collection": "link"
+    },
+    "listIcon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

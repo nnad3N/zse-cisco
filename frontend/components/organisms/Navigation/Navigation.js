@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import NavListItem from '../../atoms/NavListItem';
 
 const StyledNavigation = styled.nav`
   position: absolute;
@@ -49,16 +50,12 @@ const Navigation = ({ links, setIsNavOpen }) => {
     <StyledNavigation>
       <ExitButton onClick={() => setIsNavOpen((state) => !state)} />
 
-      {links.map(({ groupName, id, links: navLinks }) => (
+      {links.map(({ groupName, id, links: navLinks, listIcon }) => (
         <ContentWrapper key={id}>
           <h3>{groupName}</h3>
           <ul>
-            {navLinks.map(({ id, name, slug, newTab }) => (
-              <li nav="true" key={id}>
-                <Link href={`/${slug}`} passHref>
-                  <a>{name}</a>
-                </Link>
-              </li>
+            {navLinks.map((navLink) => (
+              <NavListItem listIcon={listIcon} link={navLink} />
             ))}
           </ul>
         </ContentWrapper>
