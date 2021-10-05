@@ -11,6 +11,11 @@ export const HeroWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
   }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    padding: 2vh ${({ theme }) => theme.dimensions.paddingMobile};
+    min-height: unset;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -23,11 +28,19 @@ export const ContentWrapper = styled.div`
     max-width: 40rem;
     margin-bottom: 4rem;
   }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    width: 100%;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   margin-top: 4rem;
+
+  ${({ theme }) => theme.mq.desktop} {
+    justify-content: center;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -38,5 +51,9 @@ export const ImageWrapper = styled.div`
 
   ${({ theme }) => theme.mq.laptop} {
     width: 44rem;
+  }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    width: 100%;
   }
 `;

@@ -16,6 +16,22 @@ export const HeroInstructorWrapper = styled.div`
       justify-content: flex-end;
     }
   }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    margin: 0 0 10rem 0;
+
+    &:not(:last-child) {
+      margin: 10rem 0 10rem 0;
+    }
+  }
+
+  ${({ theme }) => theme.mq.mobileSSmall} {
+    margin: 0 0 8rem 0;
+
+    &:not(:last-child) {
+      margin: 8rem 0 8rem 0;
+    }
+  }
 `;
 
 export const InstructorWrapper = styled.div`
@@ -26,6 +42,14 @@ export const InstructorWrapper = styled.div`
 
   h4 {
     margin-bottom: 1rem;
+  }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    flex-basis: 40rem;
+  }
+
+  ${({ theme }) => theme.mq.mobileSmall} {
+    flex-basis: unset;
   }
 `;
 

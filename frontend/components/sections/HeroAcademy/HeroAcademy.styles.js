@@ -3,24 +3,34 @@ import styled from 'styled-components';
 export const HeroAcademyWrapper = styled.section`
   padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.paddingNarrow};
   display: grid;
-  /* column-gap: ${({ theme }) => theme.dimensions.paddingNarrow}; */
   row-gap: 4rem;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 
   ${({ theme }) => theme.mq.desktop} {
-    padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.padding};
+    padding: 10vh ${({ theme }) => theme.dimensions.padding};
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+  }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
   }
 `;
 
 export const HeaderWrapper = styled.div`
   grid-column: 1/3;
   grid-row: 1/2;
+
+  ${({ theme }) => theme.mq.desktop} {
+    grid-column: 1/1;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
-  width: 48rem;
-  margin-right: ${({ theme }) => theme.dimensions.padding};
+  width: clamp(38rem, 100%, 60rem);
+  margin-right: 8rem;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -34,11 +44,33 @@ export const DescriptionWrapper = styled.div`
   p {
     margin-bottom: 4rem;
   }
+
+  ${({ theme }) => theme.mq.desktop} {
+    grid-row: 3/4;
+    margin-right: 0;
+  }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: ${({ theme }) => theme.dimensions.cardPaddingMobile};
+  }
 `;
 
 export const ImageWrapper = styled.div`
-  width: 66rem;
+  width: 100%;
+  max-width: 70%;
   height: 50vh;
   background-color: darkGray;
   justify-self: end;
+  align-self: center;
+
+  ${({ theme }) => theme.mq.desktop} {
+    width: clamp(38rem, 100%, 60rem);
+    max-width: 100%;
+    height: 50vmin;
+    justify-self: center;
+  }
+
+  ${({ theme }) => theme.mq.laptopTall} {
+    height: 34vmin;
+  }
 `;

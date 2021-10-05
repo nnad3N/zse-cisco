@@ -11,4 +11,8 @@ export const HeroInstructorsWrapper = styled.section`
   ${({ theme }) => theme.mq.laptop} {
     column-gap: ${({ theme }) => theme.dimensions.padding};
   }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: 0 ${({ theme }) => theme.dimensions.paddingMobile};
+  }
 `;

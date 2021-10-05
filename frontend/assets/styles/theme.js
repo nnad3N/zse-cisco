@@ -19,8 +19,10 @@ export const theme = {
   },
   dimensions: {
     padding: '10vw',
+    paddingMobile: '5vw',
     paddingNarrow: '15vw',
     heroCoursePadding: '3rem 5rem',
+    cardPaddingMobile: '5vw',
     heroAcademyPadding: '4rem 4.5rem',
     navigationPadding: '15vh 12vw',
     navigationColumnGap: '15vw',
@@ -31,8 +33,16 @@ export const theme = {
     boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)',
   },
   mq: {
-    laptop: `@media (max-width: 1224px)`,
     heroInstructors: `@media (min-width: 1438px)`,
+    desktopTall: `@media (min-height: 1100px)`,
+    desktopWide: `@media (min-width: 2000px)`,
+    desktopSuperWide: `@media (min-width: 3000px)`,
     desktop: `@media (max-width: 1550px)`,
+    laptopTall: `@media (min-height: 1000px)`,
+    laptop: `@media (max-width: 1224px)`,
+    mobileLarge: `@media (max-width: 568px)`,
+    mobileMedium: `@media (max-width: 450px)`,
+    mobileSmall: `@media (max-width: 350px)`,
+    mobileSSmall: `@media (max-width: 330px)`,
   },
 };

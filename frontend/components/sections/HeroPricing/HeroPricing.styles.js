@@ -15,6 +15,10 @@ export const HeroPricingWrapper = styled.section`
   ${({ theme }) => theme.mq.desktop} {
     padding: 6vh ${({ theme }) => theme.dimensions.padding};
   }
+
+  ${({ theme }) => theme.mq.laptop} {
+    flex-direction: column;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`

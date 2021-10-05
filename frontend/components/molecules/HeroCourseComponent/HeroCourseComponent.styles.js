@@ -27,6 +27,10 @@ export const HeroCourseComponentWrapper = styled.div`
   a {
     margin-top: 4rem;
   }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: ${({ theme }) => theme.dimensions.cardPaddingMobile};
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -36,4 +40,20 @@ export const ImageWrapper = styled.div`
   position: absolute;
   background-color: darkGray;
   transform: translate(-90%, -65%);
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    transform: translate(-45%, -65%);
+  }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    height: 9.5rem;
+    width: 9.5rem;
+    transform: translate(-40%, -65%);
+  }
+
+  ${({ theme }) => theme.mq.mobileSmall} {
+    height: 8rem;
+    width: 8rem;
+    transform: translate(-45%, -65%);
+  }
 `;
