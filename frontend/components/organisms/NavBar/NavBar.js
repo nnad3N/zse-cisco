@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '@atoms/Image';
+import Image from '@components/atoms/Image/Image';
 import { Header, Logo, MenuImage } from './NavBar.styles';
 
 const NavBar = ({ logo, menuImage, setIsNavOpen }) => {

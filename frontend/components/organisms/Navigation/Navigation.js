@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '@atoms/Image';
+import Image from '@components/atoms/Image/Image';
 import NavListItem from '@components/molecules/ListItem/ListItem';
 import { StyledNavigation, ExitButton, ContentWrapper } from './Navigation.styles';
 

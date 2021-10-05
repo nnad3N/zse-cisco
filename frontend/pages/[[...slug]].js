@@ -1,8 +1,8 @@
-import { fetchAPI } from '/utils/api';
-import Layout from '/components/templates/Layout';
-import Seo from '/components/strapi/seo';
-import Sections from '/components/strapi/sections';
-import { getPageData } from '/utils/getPageData';
+import { fetchAPI } from 'utils/api';
+import Layout from 'components/templates/Layout';
+import Seo from 'components/strapi/seo';
+import Sections from 'components/strapi/sections';
+import { getPageData } from 'utils/getPageData';
 import ErrorPage from 'next/error';
 
 const DynamicPage = ({ sections, pageContext, navigation, seo }) => {
