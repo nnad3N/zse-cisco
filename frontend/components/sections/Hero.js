@@ -52,7 +52,7 @@ const Hero = ({ data }) => {
         </ButtonWrapper>
       </ContentWrapper>
       <ImageWrapper>
-        <Image image={image} />
+        <Image image={image} hasRadius="true" />
       </ImageWrapper>
     </HeroWrapper>
   );

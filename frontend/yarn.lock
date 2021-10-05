@@ -1258,7 +1258,7 @@
     "debug" "^2.6.9"
     "resolve" "^1.13.1"
 
-"eslint-import-resolver-typescript@^2.4.0", "eslint-import-resolver-typescript@^2.5.0":
+"eslint-import-resolver-typescript@^2.4.0":
   "integrity" "sha512-qZ6e5CFr+I7K4VVhQu3M/9xGv9/YmwsEXrsm3nimw8vWaVHRDrQRp26BgCypTxBp3vUp4o5aVEJRiy0F2DFddQ=="
   "resolved" "https://registry.npmjs.org/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.5.0.tgz"
   "version" "2.5.0"

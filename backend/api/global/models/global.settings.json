@@ -30,8 +30,7 @@
     "defaultSeo": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.seo",
-      "required": true
+      "component": "shared.default-seo"
     }
   }
 }
