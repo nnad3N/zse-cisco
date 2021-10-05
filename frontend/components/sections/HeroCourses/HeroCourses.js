@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroCourseComponent from '@molecules/HeroCourseComponent/HeroCourseComponent';
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
-import { HeroCourseWrapper, HeaderWrapper } from './HeroCourses.styles';
+import { HeroCourseWrapper, ContentWrapper, HeaderWrapper } from './HeroCourses.styles';
 
 const HeroCourses = ({ data }) => {
   return (
@@ -11,9 +11,11 @@ const HeroCourses = ({ data }) => {
           <h1>{data.title}</h1>
         </LineHorizontal>
       </HeaderWrapper>
-      {data.course.map((courseData) => (
-        <HeroCourseComponent key={courseData.id} data={courseData} />
-      ))}
+      <ContentWrapper>
+        {data.course.map((courseData) => (
+          <HeroCourseComponent key={courseData.id} data={courseData} />
+        ))}
+      </ContentWrapper>
     </HeroCourseWrapper>
   );
 };

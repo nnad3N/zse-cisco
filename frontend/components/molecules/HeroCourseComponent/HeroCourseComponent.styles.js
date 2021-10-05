@@ -9,6 +9,7 @@ export const HeroCourseComponentWrapper = styled.div`
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
   position: relative;
+  max-width: 50rem;
 
   &:nth-child(odd) {
     justify-self: end;
