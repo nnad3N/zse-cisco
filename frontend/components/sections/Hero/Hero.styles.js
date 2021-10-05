@@ -13,7 +13,7 @@ export const HeroWrapper = styled.section`
   }
 
   ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 2vh ${({ theme }) => theme.dimensions.paddingMobile};
+    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
     min-height: unset;
   }
 `;

@@ -1,7 +1,7 @@
 import { getStrapiMedia } from 'utils/media';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
-const Image = ({ image, hasRadius, priority }) => {
+const Image = ({ image, priority }) => {
   const { url, alternativeText, width, height } = image;
 
   const loader = () => {
@@ -9,16 +9,15 @@ const Image = ({ image, hasRadius, priority }) => {
   };
 
   return (
-    <NextImageWrapper hasRadius={hasRadius}>
+    <NextImageWrapper>
       <StyledNextImage
         priority={priority}
-        radius={hasRadius}
         loader={loader}
         layout="responsive"
         width={width}
         height={height}
         src={url}
-        alt={alternativeText || ''}
+        alt={alternativeText || 'image'}
       />
     </NextImageWrapper>
   );

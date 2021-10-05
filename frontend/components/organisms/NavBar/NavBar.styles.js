@@ -12,6 +12,10 @@ export const Header = styled.header`
   top: 0;
   z-index: 10;
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+
+  img {
+    border-radius: 0;
+  }
 `;
 
 export const Logo = styled.div`
