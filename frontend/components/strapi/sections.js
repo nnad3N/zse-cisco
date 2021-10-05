@@ -1,8 +1,8 @@
-import Hero from '../sections/hero';
-import HeroInstructors from '../sections/heroInstructors';
-import HeroCourses from '../sections/heroCourses';
-import HeroPricing from '../sections/heroPricing';
-import HeroAcademy from '../sections/heroAcademy';
+import Hero from '@sections/Hero/Hero';
+import HeroInstructors from '@sections/HeroInstructors/HeroInstructors';
+import HeroCourses from '@sections/HeroCourses/HeroCourses';
+import HeroPricing from '@sections/HeroPricing/HeroPricing';
+import HeroAcademy from '@sections/HeroAcademy/HeroAcademy';
 
 // Map Strapi sections to section components
 const sectionComponents = {

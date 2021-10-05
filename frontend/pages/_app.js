@@ -4,8 +4,8 @@ import { fetchAPI } from '/utils/api';
 import { getStrapiMedia } from '/utils/media';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '/assets/styles/theme';
-import { GlobalStyle } from '/assets/styles/GlobalStyle';
+import { theme } from 'assets/styles/theme';
+import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import ErrorPage from 'next/error';
 
 const MyApp = ({ Component, pageProps }) => {
