@@ -31,6 +31,7 @@ export const theme = {
     boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)',
   },
   mq: {
-    tablet: `media (min-width: 768px)`,
+    hero: `@media (max-width: 1224px)`,
+    tablet: `@media (max-width: 768px)`,
   },
 };
