@@ -1,7 +1,6 @@
 import React from 'react';
-
 import FunctionalLink from '@atoms/FunctionalLink';
-import Image from '@components/atoms/Image/Image';
+import Image from '@atoms/Image/Image';
 import { ListItemWrapper, ImageWrapper } from './ListItem.styles';
 
 const ListItem = ({ link, listIcon, setIsNavOpen }) => {

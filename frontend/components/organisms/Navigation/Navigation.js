@@ -1,6 +1,6 @@
 import React from 'react';
-import Image from '@components/atoms/Image/Image';
-import NavListItem from '@components/molecules/ListItem/ListItem';
+import Image from '@atoms/Image/Image';
+import NavListItem from '@molecules/ListItem/ListItem';
 import { StyledNavigation, ExitButton, ContentWrapper } from './Navigation.styles';
 
 const Navigation = ({ navLinks, setIsNavOpen, exitButton, navListIcon }) => {

@@ -30,4 +30,7 @@ export const theme = {
     borderRadius: '6px',
     boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)',
   },
+  mq: {
+    tablet: `media (min-width: 768px)`,
+  },
 };
