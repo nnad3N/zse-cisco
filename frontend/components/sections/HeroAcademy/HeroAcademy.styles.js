@@ -3,10 +3,14 @@ import styled from 'styled-components';
 export const HeroAcademyWrapper = styled.section`
   padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.paddingNarrow};
   display: grid;
-  column-gap: 20rem;
+  /* column-gap: ${({ theme }) => theme.dimensions.paddingNarrow}; */
   row-gap: 4rem;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.padding};
+  }
 `;
 
 export const HeaderWrapper = styled.div`
@@ -15,6 +19,8 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const DescriptionWrapper = styled.div`
+  width: 48rem;
+  margin-right: ${({ theme }) => theme.dimensions.padding};
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -31,7 +37,7 @@ export const DescriptionWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 40vw;
+  width: 66rem;
   height: 50vh;
   background-color: darkGray;
   justify-self: end;

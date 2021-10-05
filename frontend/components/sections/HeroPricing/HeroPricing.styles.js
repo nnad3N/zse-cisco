@@ -4,12 +4,16 @@ export const HeroPricingWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${({ theme }) => `6rem ${theme.dimensions.paddingNarrow}`};
+  padding: 6rem ${({ theme }) => theme.dimensions.paddingNarrow};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
 
   h1 {
     margin-right: 10rem;
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 6vh ${({ theme }) => theme.dimensions.padding};
   }
 `;
 

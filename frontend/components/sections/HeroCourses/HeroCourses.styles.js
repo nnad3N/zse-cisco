@@ -8,6 +8,10 @@ export const HeroCourseWrapper = styled.section`
   row-gap: 15vh;
   justify-items: center;
   padding: 10vh ${({ theme }) => theme.dimensions.paddingNarrow};
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 10vh ${({ theme }) => theme.dimensions.padding};
+  }
 `;
 
 export const HeaderWrapper = styled.div`

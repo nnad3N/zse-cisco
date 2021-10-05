@@ -3,6 +3,11 @@ import styled from 'styled-components';
 export const HeroInstructorWrapper = styled.div`
   display: flex;
   align-items: center;
+
+  ${({ theme }) => theme.mq.desktop} {
+    flex-direction: column;
+    max-width: 38rem;
+  }
 `;
 
 export const InstructorWrapper = styled.div`
@@ -16,6 +21,10 @@ export const InstructorWrapper = styled.div`
 
   &:nth-child(1) {
     margin-right: 2rem;
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    margin-top: 2rem;
   }
 `;
 
