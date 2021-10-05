@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-const FunctionalLink = ({ link }) => {
+const FunctionalLink = ({ link, setIsNavOpen }) => {
   const { name, slug, newTab } = link;
 
   if (newTab) {
     return (
-      <a href={slug} target="_blank" rel="noopener noreferrer">
+      <a href={slug} target="_blank" rel="noopener noreferrer" onClick={() => setIsNavOpen((state) => !state)}>
         {name}
       </a>
     );
@@ -14,7 +14,7 @@ const FunctionalLink = ({ link }) => {
 
   return (
     <Link href={`/${slug}`} passHref>
-      <a>{name}</a>
+      <a onClick={() => setIsNavOpen((state) => !state)}>{name}</a>
     </Link>
   );
 };

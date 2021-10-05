@@ -22,7 +22,7 @@
       "required": false,
       "pluginOptions": {}
     },
-    "links": {
+    "navLinks": {
       "type": "component",
       "repeatable": true,
       "component": "utils.nav-link"
@@ -32,6 +32,30 @@
       "via": "related",
       "allowedTypes": [
         "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "exitButton": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "navListIcon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
       ],
       "plugin": "upload",
       "required": false,

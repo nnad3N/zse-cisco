@@ -11,7 +11,7 @@ const StyledNextImage = styled(NextImage)`
   border-radius: ${({ theme, radius }) => (radius ? theme.utils.borderRadius : 0)};
 `;
 
-const Image = ({ image, hasRadius }) => {
+const Image = ({ image, hasRadius, priority }) => {
   const { url, alternativeText, width, height } = image;
 
   const loader = () => {
@@ -20,7 +20,16 @@ const Image = ({ image, hasRadius }) => {
 
   return (
     <NextImageWrapper hasRadius={hasRadius}>
-      <StyledNextImage radius={hasRadius} loader={loader} layout="responsive" width={width} height={height} src={url} alt={alternativeText || ''} />
+      <StyledNextImage
+        priority={priority}
+        radius={hasRadius}
+        loader={loader}
+        layout="responsive"
+        width={width}
+        height={height}
+        src={url}
+        alt={alternativeText || ''}
+      />
     </NextImageWrapper>
   );
 };
