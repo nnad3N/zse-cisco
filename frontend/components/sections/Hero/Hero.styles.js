@@ -7,7 +7,7 @@ export const HeroWrapper = styled.section`
   justify-content: space-between;
   min-height: 90vh;
 
-  ${({ theme }) => theme.mq.hero} {
+  ${({ theme }) => theme.mq.laptop} {
     flex-direction: column;
     justify-content: center;
   }
@@ -36,7 +36,7 @@ export const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${({ theme }) => theme.mq.hero} {
+  ${({ theme }) => theme.mq.laptop} {
     width: 44rem;
   }
 `;

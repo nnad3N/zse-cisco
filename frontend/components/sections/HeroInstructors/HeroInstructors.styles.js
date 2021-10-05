@@ -3,10 +3,12 @@ import styled from 'styled-components';
 export const HeroInstructorsWrapper = styled.section`
   padding: 5rem ${({ theme }) => theme.dimensions.padding};
   display: grid;
-  grid-template-columns: auto auto;
-  column-gap: ${({ theme }) => theme.dimensions.paddingNarrow};
-  align-items: center;
-  justify-content: space-between;
-  min-height: 40vh;
+  grid-template-columns: repeat(auto-fit, minmax(34rem, auto));
+  column-gap: 5vw;
+  justify-content: center;
   background-color: ${({ theme }) => theme.colors.mainColor};
+
+  ${({ theme }) => theme.mq.laptop} {
+    column-gap: ${({ theme }) => theme.dimensions.padding};
+  }
 `;
