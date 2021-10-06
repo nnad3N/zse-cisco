@@ -25,7 +25,7 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 6rem;
 
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: column;

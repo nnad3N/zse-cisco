@@ -9,7 +9,7 @@ const HeroPricing = ({ data }) => {
 
   return (
     <HeroPricingWrapper>
-      <LineHorizontal large>
+      <LineHorizontal>
         <h1>{title}</h1>
       </LineHorizontal>
       <DescriptionWrapper>
