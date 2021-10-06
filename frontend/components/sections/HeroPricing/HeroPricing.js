@@ -1,18 +1,19 @@
 import React from 'react';
-import ArrowLink from '@atoms/ArrowLink/ArrowLink';
-import LineVertical from '@atoms/LineVertical/LineVertical';
+import Button from '@atoms/Button/Button';
+import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import { HeroPricingWrapper, DescriptionWrapper } from './HeroPricing.styles';
 
 const HeroPricing = ({ data }) => {
-  const { title, description, linkTitle, link } = data;
+  const { title, description, button } = data;
+
   return (
     <HeroPricingWrapper>
-      <LineVertical large>
+      <LineHorizontal large>
         <h1>{title}</h1>
-      </LineVertical>
+      </LineHorizontal>
       <DescriptionWrapper>
         <p>{description}</p>
-        {/* <ArrowLink data={link} title={linkTitle} /> */}
+        <Button data={button} accent />
       </DescriptionWrapper>
     </HeroPricingWrapper>
   );

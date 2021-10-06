@@ -13,11 +13,10 @@
     "description": {
       "type": "text"
     },
-    "link": {
-      "model": "link"
-    },
-    "linkTitle": {
-      "type": "string"
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utils.button"
     }
   }
 }

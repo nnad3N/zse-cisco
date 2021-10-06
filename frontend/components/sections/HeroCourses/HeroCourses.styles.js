@@ -12,11 +12,6 @@ export const HeroCourseWrapper = styled.section`
   }
 `;
 
-export const HeaderWrapper = styled.div`
-  text-align: center;
-  width: 100%;
-`;
-
 export const ContentWrapper = styled.div`
   display: grid;
   justify-content: center;

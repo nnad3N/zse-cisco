@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const LineHorizontalWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  text-align: center;
 `;
 
 export const Line = styled.span`
