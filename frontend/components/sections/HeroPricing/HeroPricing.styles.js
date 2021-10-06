@@ -51,11 +51,12 @@ export const DescriptionWrapper = styled.div`
     width: 39rem;
 
     ${({ theme }) => theme.mq.tablet} {
-      margin: 0 0 3rem 0;
+      margin: 0 0 4rem 0;
     }
 
-    ${({ theme }) => theme.mq.tablet} {
+    ${({ theme }) => theme.mq.mobileMedium} {
       margin: 0 0 3rem 0;
+      width: 100%;
     }
   }
 `;
