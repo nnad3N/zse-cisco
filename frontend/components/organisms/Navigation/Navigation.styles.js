@@ -4,17 +4,21 @@ export const StyledNavigation = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   z-index: 20;
   background-color: ${({ theme }) => theme.colors.mainColor};
   position: relative;
   padding: ${({ theme }) => theme.dimensions.navigationPadding};
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
   column-gap: ${({ theme }) => theme.dimensions.navigationColumnGap};
   row-gap: ${({ theme }) => theme.dimensions.navigationRowGap};
+  align-content: start;
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    padding: 20rem ${({ theme }) => theme.dimensions.paddingMobile};
+  }
 
   img {
     border-radius: 0;
@@ -35,10 +39,16 @@ export const ExitButton = styled.button`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 40rem;
+  justify-self: center;
 
-  h3 {
-    border-bottom: 0.4rem solid ${({ theme }) => theme.colors.accentColor};
+  ${({ theme }) => theme.mq.mobileLarge} {
+    width: 100%;
+  }
+
+  & > div {
     margin-bottom: 2rem;
+    text-align: left;
   }
 
   a {
