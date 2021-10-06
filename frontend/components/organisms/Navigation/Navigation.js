@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from '@atoms/Image/Image';
 import ListItem from '@molecules/ListItem/ListItem';
+import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import { StyledNavigation, ExitButton, ContentWrapper } from './Navigation.styles';
 
 const Navigation = ({ navLinks, setIsNavOpen, exitButton, navListIcon }) => {
@@ -13,7 +14,9 @@ const Navigation = ({ navLinks, setIsNavOpen, exitButton, navListIcon }) => {
 
       {navLinks.map(({ groupName, id, links }) => (
         <ContentWrapper key={id}>
-          <h3>{groupName}</h3>
+          <LineHorizontal>
+            <h3>{groupName}</h3>
+          </LineHorizontal>
           <ul>
             {links.map((link) => (
               <ListItem key={link.id} listIcon={navListIcon} link={link} setIsNavOpen={setIsNavOpen} />
