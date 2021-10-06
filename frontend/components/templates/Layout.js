@@ -1,10 +1,9 @@
+import { componentShape } from 'utils/shapes';
 import NavBar from '@organisms/NavBar/NavBar';
 import Navigation from '@organisms/Navigation/Navigation';
 import { useState } from 'react';
 
-const Layout = ({ children, navigation }) => {
-  const { navLinks, logo, menuImage, exitButton, navListIcon } = navigation;
-
+const Layout = ({ children, navigation: { navLinks, logo, menuImage, exitButton, navListIcon } }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
@@ -19,6 +18,11 @@ const Layout = ({ children, navigation }) => {
       )}
     </>
   );
+};
+
+Layout.propTypes = {
+  children: componentShape,
+  navigation: componentShape,
 };
 
 export default Layout;

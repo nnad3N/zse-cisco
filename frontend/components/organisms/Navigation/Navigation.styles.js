@@ -15,9 +15,15 @@ export const StyledNavigation = styled.nav`
   grid-template-rows: auto auto auto;
   column-gap: ${({ theme }) => theme.dimensions.navigationColumnGap};
   row-gap: ${({ theme }) => theme.dimensions.navigationRowGap};
+
+  img {
+    border-radius: 0;
+  }
 `;
 
-export const ExitButton = styled.div`
+export const ExitButton = styled.button`
+  border: none;
+  background-color: transparent;
   height: 5rem;
   width: 5rem;
   position: absolute;

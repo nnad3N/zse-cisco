@@ -10,6 +10,23 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
     font-size: 10px;
+
+    ${({ theme }) => theme.mq.mobileLarge} {
+        font-size: 9px;
+    }
+
+    ${({ theme }) => theme.mq.mobileMedium} {
+        font-size: 8px;
+    }
+
+    ${({ theme }) => theme.mq.mobileSmall} {
+        font-size: 6px;
+    }
+
+    ${({ theme }) => theme.mq.desktopTall} {
+        font-size: 18px;
+    }
+
 }
 
 body {
@@ -23,6 +40,8 @@ a, button {
     font-size: ${({ theme }) => theme.fontSize.body};
     font-weight: 600;
     cursor: pointer;
+
+   
 }
 
 a {

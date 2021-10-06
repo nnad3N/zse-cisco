@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Hero from '@sections/Hero/Hero';
 import HeroInstructors from '@sections/HeroInstructors/HeroInstructors';
 import HeroCourses from '@sections/HeroCourses/HeroCourses';
@@ -35,6 +36,18 @@ const Sections = ({ sections }) => {
       ))}
     </>
   );
+};
+
+Section.propTypes = {
+  sectionData: PropTypes.object,
+};
+
+Sections.propTypes = {
+  sections: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+Sections.defaultProps = {
+  sections: [],
 };
 
 export default Sections;

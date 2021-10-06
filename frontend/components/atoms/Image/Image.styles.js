@@ -7,5 +7,5 @@ export const NextImageWrapper = styled.div`
 `;
 
 export const StyledNextImage = styled(NextImage)`
-  border-radius: ${({ theme, radius }) => (radius ? theme.utils.borderRadius : 0)};
+  border-radius: ${({ theme }) => theme.utils.borderRadius};
 `;

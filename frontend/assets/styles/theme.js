@@ -11,6 +11,7 @@ export const theme = {
     navHeader: '3.6rem',
     navList: '1.8rem',
     subHeader: '2rem',
+    subText: '1.8rem',
     captionLarge: '2.4rem',
     captionMedium: '1.3rem',
     captionSmall: '1.2rem',
@@ -19,8 +20,10 @@ export const theme = {
   },
   dimensions: {
     padding: '10vw',
+    paddingMobile: '5vw',
     paddingNarrow: '15vw',
     heroCoursePadding: '3rem 5rem',
+    cardPaddingMobile: '5vw',
     heroAcademyPadding: '4rem 4.5rem',
     navigationPadding: '15vh 12vw',
     navigationColumnGap: '15vw',
@@ -29,5 +32,16 @@ export const theme = {
   utils: {
     borderRadius: '6px',
     boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)',
+  },
+  mq: {
+    heroInstructors: `@media (min-width: 1438px)`,
+    desktop: `@media (max-width: 1550px)`,
+    desktopTall: `@media (min-height: 1100px) and (min-width: 850px) and (max-width: 1400px)`,
+    desktopWide: `@media (min-width: 1400px)`,
+    laptop: `@media (max-width: 1224px)`,
+    tablet: `@media (max-width: 850px)`,
+    mobileLarge: `@media (max-width: 568px)`,
+    mobileMedium: `@media (max-width: 450px)`,
+    mobileSmall: `@media (max-width: 350px)`,
   },
 };

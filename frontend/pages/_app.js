@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import App from 'next/app';
 import Head from 'next/head';
 import { fetchAPI } from '/utils/api';
@@ -10,21 +11,25 @@ import ErrorPage from 'next/error';
 
 const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps;
+
   if (global == null) {
     return <ErrorPage statusCode={404} />;
   }
 
-  const { defaultSeo } = global;
+  const {
+    favicon,
+    defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
+  } = global;
 
   return (
     <>
-      <Head>{<link rel="shortcut icon" href={getStrapiMedia(global.favicon)} />}</Head>
+      <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon)} />}</Head>
       <DefaultSeo
-        titleTemplate={`%s | ${defaultSeo.metaTitleSuffix}`}
-        title={defaultSeo.metaTitle}
-        description={defaultSeo.metaDescription}
+        titleTemplate={`%s | ${metaTitleSuffix}`}
+        title={metaTitle}
+        description={metaDescription}
         openGraph={{
-          images: Object.values(defaultSeo.sharedImage.formats).map((image) => {
+          images: Object.values(sharedImage.formats).map((image) => {
             return {
               url: getStrapiMedia(image),
               width: image.width,
@@ -39,6 +44,38 @@ const MyApp = ({ Component, pageProps }) => {
       </ThemeProvider>
     </>
   );
+};
+
+MyApp.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.shape({
+    global: PropTypes.shape({
+      defaultSeo: PropTypes.shape({
+        id: PropTypes.number,
+        metaDescription: PropTypes.string.isRequired,
+        metaTitle: PropTypes.string.isRequired,
+        metaTitleSuffix: PropTypes.string,
+        sharedImage: PropTypes.object,
+      }),
+      favicon: PropTypes.object,
+      id: PropTypes.number,
+    }),
+    navigation: PropTypes.object,
+    sections: PropTypes.arrayOf(PropTypes.object),
+    seo: PropTypes.object,
+  }),
+};
+
+MyApp.defaultProps = {
+  pageProps: {
+    global: {
+      defaultSeo: {
+        metaDescription: 'Akademia Cisco w Zespole Szkół Elektronicznych w Radomiu',
+        metaTitle: 'Akademia Cisco',
+        metaTitleSuffix: 'Zespół Szkół Elektronicznych',
+      },
+    },
+  },
 };
 
 // getInitialProps disables automatic static optimization for pages that don't

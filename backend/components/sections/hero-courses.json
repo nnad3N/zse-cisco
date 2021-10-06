@@ -7,13 +7,25 @@
   },
   "options": {},
   "attributes": {
-    "course": {
+    "courses": {
       "type": "component",
       "repeatable": true,
       "component": "section-components.course-component"
     },
     "title": {
       "type": "string"
+    },
+    "arrowImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

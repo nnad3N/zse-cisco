@@ -13,9 +13,6 @@
     "description": {
       "type": "text"
     },
-    "link": {
-      "model": "link"
-    },
     "icon": {
       "model": "file",
       "via": "related",
@@ -28,7 +25,10 @@
       "required": false,
       "pluginOptions": {}
     },
-    "linkTitle": {
+    "link": {
+      "model": "link"
+    },
+    "linkName": {
       "type": "string"
     }
   }

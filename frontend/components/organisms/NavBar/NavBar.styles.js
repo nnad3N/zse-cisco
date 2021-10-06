@@ -12,13 +12,19 @@ export const Header = styled.header`
   top: 0;
   z-index: 10;
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+
+  img {
+    border-radius: 0;
+  }
 `;
 
 export const Logo = styled.div`
   width: 25rem;
 `;
 
-export const MenuImage = styled.div`
+export const MenuImage = styled.button`
+  background-color: transparent;
+  border: none;
   width: 5rem;
   cursor: pointer;
 `;

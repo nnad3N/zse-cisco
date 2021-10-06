@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { fetchAPI } from 'utils/api';
 import Layout from 'components/templates/Layout';
 import Seo from 'components/strapi/seo';
@@ -5,17 +6,23 @@ import Sections from 'components/strapi/sections';
 import { getPageData } from 'utils/getPageData';
 import ErrorPage from 'next/error';
 
-const DynamicPage = ({ sections, pageContext, navigation, seo }) => {
+const DynamicPage = ({ sections, navigation, seo }) => {
   if (!sections?.length) {
     return <ErrorPage statusCode={404} />;
   }
 
   return (
-    <Layout pageContext={pageContext} navigation={navigation}>
+    <Layout navigation={navigation}>
       <Seo seo={seo} />
       <Sections sections={sections} />
     </Layout>
   );
+};
+
+DynamicPage.propTypes = {
+  sections: PropTypes.arrayOf(PropTypes.object),
+  navigation: PropTypes.object,
+  seo: PropTypes.object,
 };
 
 export async function getStaticPaths() {

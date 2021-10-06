@@ -1,12 +1,11 @@
 import React from 'react';
+import { dataShape } from 'utils/shapes';
 import Button from '@atoms/Button/Button';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import Image from '@atoms/Image/Image';
 import { HeroWrapper, ContentWrapper, ButtonWrapper, ImageWrapper } from './Hero.styles';
 
-const Hero = ({ data }) => {
-  const { title, description, button, image } = data;
-
+const Hero = ({ data: { title, description, button, image } }) => {
   return (
     <HeroWrapper>
       <ContentWrapper>
@@ -25,6 +24,10 @@ const Hero = ({ data }) => {
       </ImageWrapper>
     </HeroWrapper>
   );
+};
+
+Hero.propTypes = {
+  data: dataShape,
 };
 
 export default Hero;

@@ -2,25 +2,37 @@ import styled from 'styled-components';
 
 export const HeroPricingWrapper = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: ${({ theme }) => `6rem ${theme.dimensions.paddingNarrow}`};
+  padding: 10vh ${({ theme }) => theme.dimensions.paddingNarrow};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
 
-  h1 {
-    margin-right: 10rem;
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 10vh ${({ theme }) => theme.dimensions.padding};
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
+    padding: 7vh ${({ theme }) => theme.dimensions.padding};
+  }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
   }
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  max-width: 20rem;
+  justify-content: center;
+  margin-top: 6rem;
 
-  p {
-    margin-bottom: 1rem;
+  ${({ theme }) => theme.mq.tablet} {
+    flex-direction: column;
+  }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    margin-top: 4rem;
   }
 
   a {
@@ -34,6 +46,17 @@ export const DescriptionWrapper = styled.div`
   }
 
   & > div {
-    margin: 0 auto;
+    font-size: ${({ theme }) => theme.fontSize.subText};
+    margin: 0 10rem 0 0;
+    width: 39rem;
+
+    ${({ theme }) => theme.mq.tablet} {
+      margin: 0 0 4rem 0;
+    }
+
+    ${({ theme }) => theme.mq.mobileMedium} {
+      margin: 0 0 3rem 0;
+      width: 100%;
+    }
   }
 `;

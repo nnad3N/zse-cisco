@@ -1,6 +1,7 @@
 import React from 'react';
-import Image from '@components/atoms/Image/Image';
-import NavListItem from '@components/molecules/ListItem/ListItem';
+import PropTypes from 'prop-types';
+import Image from '@atoms/Image/Image';
+import ListItem from '@molecules/ListItem/ListItem';
 import { StyledNavigation, ExitButton, ContentWrapper } from './Navigation.styles';
 
 const Navigation = ({ navLinks, setIsNavOpen, exitButton, navListIcon }) => {
@@ -15,13 +16,34 @@ const Navigation = ({ navLinks, setIsNavOpen, exitButton, navListIcon }) => {
           <h3>{groupName}</h3>
           <ul>
             {links.map((link) => (
-              <NavListItem key={link.id} listIcon={navListIcon} link={link} setIsNavOpen={setIsNavOpen} />
+              <ListItem key={link.id} listIcon={navListIcon} link={link} setIsNavOpen={setIsNavOpen} />
             ))}
           </ul>
         </ContentWrapper>
       ))}
     </StyledNavigation>
   );
+};
+
+Navigation.propTypes = {
+  navLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      groupName: PropTypes.string.isRequired,
+      id: PropTypes.number,
+      links: PropTypes.arrayOf(PropTypes.object),
+    })
+  ),
+  setIsNavOpen: PropTypes.func,
+  exitButton: PropTypes.object,
+  navListIcon: PropTypes.object,
+};
+
+Navigation.defaultProps = {
+  navLinks: [
+    {
+      groupName: 'Nazwa',
+    },
+  ],
 };
 
 export default Navigation;

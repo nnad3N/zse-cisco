@@ -15,7 +15,7 @@
       "type": "text",
       "required": true
     },
-    "shareImage": {
+    "sharedImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
