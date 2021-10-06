@@ -1,12 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@atoms/Button/Button';
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { HeroPricingWrapper, DescriptionWrapper } from './HeroPricing.styles';
 
-const HeroPricing = ({ data }) => {
-  const { title, description, button } = data;
-
+const HeroPricing = ({ data: { title, description, button } }) => {
   return (
     <HeroPricingWrapper>
       <LineHorizontal>
@@ -20,6 +19,14 @@ const HeroPricing = ({ data }) => {
       </DescriptionWrapper>
     </HeroPricingWrapper>
   );
+};
+
+HeroPricing.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    button: PropTypes.object,
+  }),
 };
 
 export default HeroPricing;

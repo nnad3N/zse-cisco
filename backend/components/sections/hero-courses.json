@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "course": {
+    "courses": {
       "type": "component",
       "repeatable": true,
       "component": "section-components.course-component"

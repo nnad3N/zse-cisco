@@ -1,11 +1,11 @@
 import React from 'react';
+import { dataShape } from 'utils/shapes';
 import Button from '@atoms/Button/Button';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import Image from '@atoms/Image/Image';
 import { HeroAcademyWrapper, HeaderWrapper, DescriptionWrapper, ImageWrapper } from './HeroAcademy.styles';
 
-const HeroAcademy = ({ data }) => {
-  const { title, description, button, image } = data;
+const HeroAcademy = ({ data: { title, description, button, image } }) => {
   return (
     <HeroAcademyWrapper>
       <HeaderWrapper>
@@ -22,6 +22,10 @@ const HeroAcademy = ({ data }) => {
       </ImageWrapper>
     </HeroAcademyWrapper>
   );
+};
+
+HeroAcademy.propTypes = {
+  data: dataShape,
 };
 
 export default HeroAcademy;

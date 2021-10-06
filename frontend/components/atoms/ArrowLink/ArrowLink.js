@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Image from '@atoms/Image/Image';
 import { ArrowLinkWrapper, ImageWrapper } from './ArrowLink.styles';
 
-const ArrowLink = ({ link, title, image }) => {
+const ArrowLink = ({ slug, title, image }) => {
   return (
-    <Link href={`/${link.slug}`} passHref>
+    <Link href={`/${slug}`} passHref>
       <ArrowLinkWrapper>
         <h5>{title}</h5>
         <ImageWrapper>
@@ -14,6 +15,17 @@ const ArrowLink = ({ link, title, image }) => {
       </ArrowLinkWrapper>
     </Link>
   );
+};
+
+ArrowLink.propTypes = {
+  slug: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.object,
+};
+
+ArrowLink.defaultProps = {
+  slug: '',
+  title: 'Link',
 };
 
 export default ArrowLink;

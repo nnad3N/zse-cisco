@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Image from '@atoms/Image/Image';
 import { Header, Logo, MenuImage } from './NavBar.styles';
 
@@ -13,6 +14,12 @@ const NavBar = ({ logo, menuImage, setIsNavOpen }) => {
       </MenuImage>
     </Header>
   );
+};
+
+NavBar.propTypes = {
+  logo: PropTypes.object,
+  menuImage: PropTypes.object,
+  setIsNavOpen: PropTypes.func,
 };
 
 export default NavBar;
