@@ -13,7 +13,7 @@ const HeroCourses = ({ data }) => {
       </HeaderWrapper>
       <ContentWrapper>
         {data.course.map((courseData) => (
-          <HeroCourseComponent key={courseData.id} data={courseData} />
+          <HeroCourseComponent key={courseData.id} data={courseData} image={data.arrowImage} />
         ))}
       </ContentWrapper>
     </HeroCourseWrapper>

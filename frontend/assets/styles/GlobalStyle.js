@@ -19,7 +19,7 @@ html {
         font-size: 8px;
     }
 
-    ${({ theme }) => theme.mq.mobileSSmall} {
+    ${({ theme }) => theme.mq.mobileSmall} {
         font-size: 6px;
     }
 
@@ -27,13 +27,6 @@ html {
         font-size: 18px;
     }
 
-    ${({ theme }) => theme.mq.desktopWide} {
-        font-size: 17px;
-    }
-
-    ${({ theme }) => theme.mq.desktopSuperWide} {
-        font-size: 26px;
-    }
 }
 
 body {

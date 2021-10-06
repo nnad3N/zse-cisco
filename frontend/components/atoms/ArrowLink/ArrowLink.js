@@ -1,14 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLinkWrapper } from './ArrowLink.styles';
+import Image from '@atoms/Image/Image';
+import { ArrowLinkWrapper, ImageWrapper } from './ArrowLink.styles';
 
-const ArrowLink = ({ data, title }) => {
+const ArrowLink = ({ link, title, image }) => {
   return (
-    <ArrowLinkWrapper>
-      <Link href={`/${data.slug}`} passHref>
-        <a>{title}</a>
-      </Link>
-    </ArrowLinkWrapper>
+    <Link href={`/${link.slug}`} passHref>
+      <ArrowLinkWrapper>
+        <h5>{title}</h5>
+        <ImageWrapper>
+          <Image image={image} />
+        </ImageWrapper>
+      </ArrowLinkWrapper>
+    </Link>
   );
 };
 

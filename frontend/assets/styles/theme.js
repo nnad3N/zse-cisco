@@ -34,15 +34,12 @@ export const theme = {
   },
   mq: {
     heroInstructors: `@media (min-width: 1438px)`,
-    desktopTall: `@media (min-height: 1100px)`,
-    desktopWide: `@media (min-width: 2000px)`,
-    desktopSuperWide: `@media (min-width: 3000px)`,
     desktop: `@media (max-width: 1550px)`,
-    laptopTall: `@media (min-height: 1000px)`,
+    desktopTall: `@media (min-height: 1100px) and (min-width: 850px) and (max-width: 1400px)`,
+    desktopWide: `@media (min-width: 1400px)`,
     laptop: `@media (max-width: 1224px)`,
     mobileLarge: `@media (max-width: 568px)`,
     mobileMedium: `@media (max-width: 450px)`,
     mobileSmall: `@media (max-width: 350px)`,
-    mobileSSmall: `@media (max-width: 330px)`,
   },
 };

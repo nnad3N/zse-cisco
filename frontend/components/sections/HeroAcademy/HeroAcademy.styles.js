@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const HeroAcademyWrapper = styled.section`
-  padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.paddingNarrow};
+  padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.padding};
   display: grid;
   row-gap: 4rem;
+  column-gap: 8rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 
@@ -30,7 +31,6 @@ export const HeaderWrapper = styled.div`
 
 export const DescriptionWrapper = styled.div`
   width: clamp(38rem, 100%, 60rem);
-  margin-right: 8rem;
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -57,8 +57,6 @@ export const DescriptionWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   width: 100%;
-  max-width: 70%;
-  height: 50vh;
   background-color: darkGray;
   justify-self: end;
   align-self: center;
@@ -66,11 +64,6 @@ export const ImageWrapper = styled.div`
   ${({ theme }) => theme.mq.desktop} {
     width: clamp(38rem, 100%, 60rem);
     max-width: 100%;
-    height: 50vmin;
     justify-self: center;
-  }
-
-  ${({ theme }) => theme.mq.laptopTall} {
-    height: 34vmin;
   }
 `;

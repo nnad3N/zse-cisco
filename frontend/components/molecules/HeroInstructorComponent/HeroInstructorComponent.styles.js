@@ -25,7 +25,7 @@ export const HeroInstructorWrapper = styled.div`
     }
   }
 
-  ${({ theme }) => theme.mq.mobileSSmall} {
+  ${({ theme }) => theme.mq.mobileSmall} {
     margin: 0 0 8rem 0;
 
     &:not(:last-child) {

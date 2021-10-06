@@ -32,13 +32,17 @@ export const ContentWrapper = styled.div`
   ${({ theme }) => theme.mq.mobileMedium} {
     width: 100%;
   }
+
+  ${({ theme }) => theme.mq.desktopWide} {
+    margin-right: 10vmin;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   margin-top: 4rem;
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.laptop} {
     justify-content: center;
   }
 `;

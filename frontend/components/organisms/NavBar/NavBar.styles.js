@@ -22,7 +22,9 @@ export const Logo = styled.div`
   width: 25rem;
 `;
 
-export const MenuImage = styled.div`
+export const MenuImage = styled.button`
+  background-color: transparent;
+  border: none;
   width: 5rem;
   cursor: pointer;
 `;

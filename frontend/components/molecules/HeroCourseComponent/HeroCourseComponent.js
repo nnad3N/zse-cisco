@@ -3,8 +3,9 @@ import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { HeroCourseComponentWrapper, ImageWrapper } from './HeroCourseComponent.styles';
 
-const HeroCourseComponent = ({ data }) => {
+const HeroCourseComponent = ({ data, image }) => {
   const { title, description, link, linkTitle } = data;
+
   return (
     <HeroCourseComponentWrapper>
       <ImageWrapper />
@@ -12,7 +13,7 @@ const HeroCourseComponent = ({ data }) => {
       <LineVertical>
         <p>{description}</p>
       </LineVertical>
-      <ArrowLink data={link} title={linkTitle} />
+      <ArrowLink link={link} title={linkTitle} image={image} />
     </HeroCourseComponentWrapper>
   );
 };

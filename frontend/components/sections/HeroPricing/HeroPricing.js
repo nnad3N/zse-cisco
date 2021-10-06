@@ -12,7 +12,7 @@ const HeroPricing = ({ data }) => {
       </LineVertical>
       <DescriptionWrapper>
         <p>{description}</p>
-        <ArrowLink data={link} title={linkTitle} />
+        {/* <ArrowLink data={link} title={linkTitle} /> */}
       </DescriptionWrapper>
     </HeroPricingWrapper>
   );

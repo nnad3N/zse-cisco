@@ -21,7 +21,9 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const ExitButton = styled.div`
+export const ExitButton = styled.button`
+  border: none;
+  background-color: transparent;
   height: 5rem;
   width: 5rem;
   position: absolute;
