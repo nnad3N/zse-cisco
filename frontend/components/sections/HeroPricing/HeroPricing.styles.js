@@ -35,20 +35,6 @@ export const DescriptionWrapper = styled.div`
     margin-top: 4rem;
   }
 
-  p {
-    font-size: ${({ theme }) => theme.fontSize.subText};
-    margin: 0 10rem 0 0;
-    width: 41rem;
-
-    ${({ theme }) => theme.mq.tablet} {
-      margin: 0 0 3rem 0;
-    }
-
-    ${({ theme }) => theme.mq.tablet} {
-      margin: 0 0 3rem 0;
-    }
-  }
-
   a {
     color: ${({ theme }) => theme.colors.accentColor};
     border-color: ${({ theme }) => theme.colors.accentColor};
@@ -60,6 +46,16 @@ export const DescriptionWrapper = styled.div`
   }
 
   & > div {
-    margin: 0 auto;
+    font-size: ${({ theme }) => theme.fontSize.subText};
+    margin: 0 10rem 0 0;
+    width: 41rem;
+
+    ${({ theme }) => theme.mq.tablet} {
+      margin: 0 0 3rem 0;
+    }
+
+    ${({ theme }) => theme.mq.tablet} {
+      margin: 0 0 3rem 0;
+    }
   }
 `;

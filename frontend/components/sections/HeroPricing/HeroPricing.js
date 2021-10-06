@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@atoms/Button/Button';
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
+import LineVertical from '@atoms/LineVertical/LineVertical';
 import { HeroPricingWrapper, DescriptionWrapper } from './HeroPricing.styles';
 
 const HeroPricing = ({ data }) => {
@@ -12,7 +13,9 @@ const HeroPricing = ({ data }) => {
         <h1>{title}</h1>
       </LineHorizontal>
       <DescriptionWrapper>
-        <p>{description}</p>
+        <LineVertical>
+          <p>{description}</p>
+        </LineVertical>
         <Button data={button} accent />
       </DescriptionWrapper>
     </HeroPricingWrapper>
