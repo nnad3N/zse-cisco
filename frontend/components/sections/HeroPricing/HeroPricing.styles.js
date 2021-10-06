@@ -48,7 +48,7 @@ export const DescriptionWrapper = styled.div`
   & > div {
     font-size: ${({ theme }) => theme.fontSize.subText};
     margin: 0 10rem 0 0;
-    width: 41rem;
+    width: 39rem;
 
     ${({ theme }) => theme.mq.tablet} {
       margin: 0 0 3rem 0;
