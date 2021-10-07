@@ -5,7 +5,7 @@ import { Header, Logo, MenuImage } from './NavBar.styles';
 
 const NavBar = ({ logo, menuImage, setIsNavOpen }) => {
   return (
-    <Header>
+    <Header id="navbar">
       <Logo>
         <Image image={logo} priority />
       </Logo>
