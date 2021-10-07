@@ -30,7 +30,7 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
         <Line />
         <ImagesWrapper>
           {footerImages.map((footerImage) => (
-            <ImageWrapper>
+            <ImageWrapper key={footerImage.id}>
               <Image image={footerImage} />
             </ImageWrapper>
           ))}
