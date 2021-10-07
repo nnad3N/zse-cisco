@@ -40,6 +40,20 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
   );
 };
 
-Footer.propTypes = {};
+Footer.propTypes = {
+  footer: PropTypes.shape({
+    header: PropTypes.string,
+    schoolName: PropTypes.string,
+    footerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+    footerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
+};
+
+Footer.defaultProps = {
+  footer: {
+    footerInfo: [],
+    footerImages: [],
+  },
+};
 
 export default Footer;
