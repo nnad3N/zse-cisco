@@ -5,7 +5,7 @@ import ListItem from '@molecules/ListItem/ListItem';
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import { StyledNavigation, ExitButton, ContentWrapper } from './Navigation.styles';
 
-const Navigation = ({ navLinks, setIsNavOpen, exitButton, navListIcon }) => {
+const Navigation = ({ navigation: { navLinks, exitButton, navListIcon }, setIsNavOpen }) => {
   return (
     <StyledNavigation>
       <ExitButton onClick={() => setIsNavOpen((state) => !state)}>
@@ -36,7 +36,7 @@ Navigation.propTypes = {
       links: PropTypes.arrayOf(PropTypes.object),
     })
   ),
-  setIsNavOpen: PropTypes.func,
+  setIsNavOpen: PropTypes.func.isRequired,
   exitButton: PropTypes.object,
   navListIcon: PropTypes.object,
 };
@@ -47,6 +47,9 @@ Navigation.defaultProps = {
       groupName: 'Nazwa',
     },
   ],
+  setIsNavOpen: () => {
+    console.log(`setIsNavOpen function prop error`);
+  },
 };
 
 export default Navigation;

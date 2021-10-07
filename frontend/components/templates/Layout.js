@@ -4,18 +4,19 @@ import Navigation from '@organisms/Navigation/Navigation';
 import Footer from '@organisms/Footer/Footer';
 import { useState } from 'react';
 
-const Layout = ({ children, navigation: { navLinks, logo, menuImage, exitButton, navListIcon } }) => {
+const Layout = ({ children, navigation, footer }) => {
+  const { logo, menuImage } = navigation;
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <>
       {isNavOpen ? (
-        <Navigation navLinks={navLinks} exitButton={exitButton} setIsNavOpen={setIsNavOpen} navListIcon={navListIcon} />
+        <Navigation navigation={navigation} setIsNavOpen={setIsNavOpen} />
       ) : (
         <>
           <NavBar logo={logo} menuImage={menuImage} setIsNavOpen={setIsNavOpen} />
           {children}
-          <Footer />
+          <Footer footer={footer} />
         </>
       )}
     </>

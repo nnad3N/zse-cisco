@@ -1,33 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledFooter, FooterWrapper, ContentWrapper, InformationWrapper, Line, ImagesWrapper, ImageWrapper } from './Footer.styles';
+import {
+  StyledFooter,
+  FooterWrapper,
+  ContentWrapper,
+  InformationWrapper,
+  StyledSchoolInfo,
+  Line,
+  ImagesWrapper,
+  ImageWrapper,
+} from './Footer.styles';
+import Image from '@atoms/Image/Image';
 
-const Footer = (props) => {
+const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) => {
   return (
     <StyledFooter>
       <FooterWrapper>
-        <h1>Kontakt:</h1>
+        <h1>{header}</h1>
         <ContentWrapper>
-          <p>
-            Zespół Szkół <br />
-            Elektronicznych <br />w Radomiu
-          </p>
+          <StyledSchoolInfo>{schoolName}</StyledSchoolInfo>
           <InformationWrapper>
-            <p>
-              <span>tel:</span> 111-11-11
-            </p>
-            <p>
-              <span>fax:</span> 111-11-11
-            </p>
-            <p>
-              <span>mail:</span> 111-11-11
-            </p>
+            {footerInfo.map(({ id, caption, info }) => (
+              <p key={id}>
+                <span>{caption}</span> {info}
+              </p>
+            ))}
           </InformationWrapper>
         </ContentWrapper>
         <Line />
         <ImagesWrapper>
-          <ImageWrapper></ImageWrapper>
-          <ImageWrapper></ImageWrapper>
+          {footerImages.map((footerImage) => (
+            <ImageWrapper>
+              <Image image={footerImage} />
+            </ImageWrapper>
+          ))}
         </ImagesWrapper>
       </FooterWrapper>
     </StyledFooter>

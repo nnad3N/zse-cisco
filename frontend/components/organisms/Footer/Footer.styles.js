@@ -10,31 +10,6 @@ export const StyledFooter = styled.footer`
   ${({ theme }) => theme.mq.mobileMedium} {
     padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
   }
-`;
-
-export const FooterWrapper = styled.div`
-  display: grid;
-  column-gap: ${({ theme }) => theme.dimensions.padding};
-  row-gap: 4rem;
-
-  grid-template:
-    'header line images'
-    'content line images';
-
-  ${({ theme }) => theme.mq.desktop} {
-    min-width: 40rem;
-    max-width: 50rem;
-    grid-template:
-      'header '
-      'content'
-      'line'
-      'images';
-  }
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    max-width: 100%;
-    text-align: center;
-  }
 
   h1 {
     grid-area: header;
@@ -42,8 +17,46 @@ export const FooterWrapper = styled.div`
   }
 
   p {
+    text-align: left;
     font-size: ${({ theme }) => theme.fontSize.subHeader};
   }
+`;
+
+export const FooterWrapper = styled.div`
+  display: grid;
+  column-gap: 5vw;
+  row-gap: 4rem;
+  width: 100%;
+  grid-template:
+    'header line images'
+    'content line images';
+
+  ${({ theme }) => theme.mq.desktop} {
+    max-width: 60rem;
+    grid-template:
+      'header '
+      'content'
+      'line'
+      'images';
+  }
+
+  ${({ theme }) => theme.mq.laptop} {
+    max-width: 50rem;
+
+    p {
+      font-size: ${({ theme }) => theme.fontSize.subText};
+    }
+  }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    max-width: 100%;
+    text-align: center;
+  }
+`;
+
+export const StyledSchoolInfo = styled.p`
+  max-width: 14rem;
+  margin-right: 3rem;
 `;
 
 export const ContentWrapper = styled.div`
@@ -59,26 +72,27 @@ export const ContentWrapper = styled.div`
 export const InformationWrapper = styled.div`
   margin-left: 10rem;
 
-  ${({ theme }) => theme.mq.desktop} {
-    margin-left: 0;
-  }
-
   span {
     color: ${({ theme }) => theme.colors.accentColor};
     margin-right: 0.4rem;
     font-weight: 600;
   }
+
+  ${({ theme }) => theme.mq.desktop} {
+    margin-left: 0;
+  }
 `;
 
 export const Line = styled.span`
   grid-area: line;
-  min-width: 0.5rem;
+  justify-self: center;
+  width: 0.6rem;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.accentColor};
 
   ${({ theme }) => theme.mq.desktop} {
     width: 100%;
-    min-height: 0.5rem;
+    height: 0.5rem;
   }
 `;
 
@@ -94,19 +108,22 @@ export const ImagesWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  height: 10rem;
-  width: 20rem;
-  background-color: darkGray;
+  width: 15vw;
+  max-width: 30rem;
 
   &:first-child {
-    margin-right: 10rem;
+    margin-right: 5rem;
+  }
+
+  ${({ theme }) => theme.mq.desktop} {
+    width: 25rem;
   }
 
   ${({ theme }) => theme.mq.tablet} {
-    width: 100%;
+    min-width: 30rem;
+
     &:first-child {
-      margin-right: 0;
-      margin-bottom: 10rem;
+      margin: 5rem 0;
     }
   }
 `;

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_utils_footer_infos",
+  "info": {
+    "name": "footerInfo",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    }
+  }
+}
