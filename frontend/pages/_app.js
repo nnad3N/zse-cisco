@@ -1,4 +1,8 @@
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+import NProgress from 'nprogress';
+import '../public/nprogress.css';
 import App from 'next/app';
 import Head from 'next/head';
 import { fetchAPI } from '/utils/api';
@@ -20,6 +24,32 @@ const MyApp = ({ Component, pageProps }) => {
     favicon,
     defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
   } = global;
+
+  const router = useRouter();
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = (url) => {
+      console.log(`Loading: ${url}`);
+      setIsLoading(true);
+      NProgress.start();
+    };
+    const handleStop = () => {
+      setIsLoading(false);
+      NProgress.done();
+    };
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleStop);
+    router.events.on('routeChangeError', handleStop);
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleStop);
+      router.events.off('routeChangeError', handleStop);
+    };
+  }, [router]);
 
   return (
     <>
