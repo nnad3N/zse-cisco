@@ -38,22 +38,9 @@ export const ImageWrapper = styled.div`
   width: 10rem;
   border-radius: 50%;
   position: absolute;
-  background-color: darkGray;
   transform: translate(-90%, -65%);
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    transform: translate(-45%, -65%);
-  }
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    height: 9.5rem;
-    width: 9.5rem;
-    transform: translate(-40%, -65%);
-  }
-
-  ${({ theme }) => theme.mq.mobileSmall} {
-    height: 8rem;
-    width: 8rem;
-    transform: translate(-45%, -65%);
+    display: none;
   }
 `;

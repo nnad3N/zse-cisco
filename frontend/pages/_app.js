@@ -34,13 +34,16 @@ const MyApp = ({ Component, pageProps }) => {
         title={metaTitle}
         description={metaDescription}
         openGraph={{
-          images: Object.values(sharedImage.formats).map((image) => {
-            return {
-              url: getStrapiMedia(image),
-              width: image.width,
-              height: image.height,
-            };
-          }),
+          ...(sharedImage &&
+            sharedImage.formats && {
+              images: Object.values(sharedImage.formats).map((image) => {
+                return {
+                  url: getStrapiMedia(image),
+                  width: image.width,
+                  height: image.height,
+                };
+              }),
+            }),
         }}
       />
       <ThemeProvider theme={theme}>
