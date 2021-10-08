@@ -54,12 +54,11 @@ export const InstructorWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  min-width: 17rem;
-  min-height: 17rem;
+  width: 20rem;
   border-radius: 50%;
   margin: 2rem 4rem;
 
   ${({ theme }) => theme.mq.heroInstructors} {
-    margin: 0 4rem 0 0;
+    margin: 0 6rem 0 0;
   }
 `;

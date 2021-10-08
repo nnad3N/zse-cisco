@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const HeroInstructorsWrapper = styled.section`
   padding: 5rem ${({ theme }) => theme.dimensions.padding};
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(34rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
   column-gap: 5vw;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.mainColor};
