@@ -9,7 +9,7 @@ const Navigation = ({ navigation: { navLinks, exitButton, navListIcon }, setIsNa
   return (
     <StyledNavigation>
       <ExitButton onClick={() => setIsNavOpen((state) => !state)}>
-        <Image image={exitButton} />
+        <Image image={exitButton} priority />
       </ExitButton>
 
       {navLinks.map(({ groupName, id, links }) => (
