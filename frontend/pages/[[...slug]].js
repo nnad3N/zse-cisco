@@ -8,7 +8,7 @@ import ErrorPage from 'next/error';
 
 const DynamicPage = ({ sections, navigation, footer, seo }) => {
   if (!sections?.length) {
-    return <ErrorPage statusCode={404} />;
+    return <ErrorPage statusCode={500} />;
   }
 
   return (

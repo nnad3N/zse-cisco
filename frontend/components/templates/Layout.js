@@ -1,4 +1,5 @@
-import { componentShape } from 'utils/shapes';
+import PropTypes from 'prop-types';
+import { childrenShape } from 'types/componentTypes';
 import NavBar from '@organisms/NavBar/NavBar';
 import Navigation from '@organisms/Navigation/Navigation';
 import Footer from '@organisms/Footer/Footer';
@@ -24,8 +25,8 @@ const Layout = ({ children, navigation, footer }) => {
 };
 
 Layout.propTypes = {
-  children: componentShape,
-  navigation: componentShape,
+  children: childrenShape,
+  navigation: PropTypes.object,
 };
 
 export default Layout;
