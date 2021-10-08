@@ -5,12 +5,12 @@
 
 #nprogress .bar {
   background: #00bcea;
-  position: fixed;
+  position: relative;
   z-index: 1031;
-  top: 10vh;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 0.5rem;
 }
 
 /* Fancy blur effect */
@@ -18,14 +18,14 @@
   display: block;
   position: absolute;
   right: 0px;
-  width: 100px;
+  width: 10rem;
   height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  box-shadow: 0 0 1rem #29d, 0 0 0.5rem #29d;
   opacity: 1;
 
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  -ms-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px);
+  -webkit-transform: rotate(3deg) translate(0px, -0.4rem);
+  -ms-transform: rotate(3deg) translate(0px, -0.4rem);
+  transform: rotate(3deg) translate(0px, -0.4rem);
 }
 
 .nprogress-custom-parent {
@@ -33,7 +33,6 @@
   position: relative;
 }
 
-.nprogress-custom-parent #nprogress .spinner,
 .nprogress-custom-parent #nprogress .bar {
   position: absolute;
 }

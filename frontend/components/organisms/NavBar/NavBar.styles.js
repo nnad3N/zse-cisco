@@ -12,6 +12,7 @@ export const Header = styled.header`
   top: 0;
   z-index: 10;
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
+  /* border-bottom: ${({ theme, isLoading }) => (isLoading ? 'unset' : `2px solid ${theme.colors.accentColor}`)}; */
 
   img {
     border-radius: 0;

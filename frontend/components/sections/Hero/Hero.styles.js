@@ -6,6 +6,7 @@ export const HeroWrapper = styled.section`
   align-items: center;
   justify-content: space-between;
   min-height: 90vh;
+  background-color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mq.laptop} {
     flex-direction: column;
