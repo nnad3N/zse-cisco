@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { componentShape } from 'utils/shapes';
-
+import { childrenShape } from 'types/componentTypes';
 import { LineHorizontalWrapper, Line } from './LineHorizontal.styles';
 
 const LineHorizontal = ({ children, large }) => {
@@ -14,7 +13,7 @@ const LineHorizontal = ({ children, large }) => {
 };
 
 LineHorizontal.propTypes = {
-  children: componentShape,
+  children: childrenShape,
   large: PropTypes.bool,
 };
 

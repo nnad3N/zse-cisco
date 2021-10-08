@@ -13,20 +13,19 @@ const Seo = ({ seo }) => {
       title={metaTitle}
       description={metaDescription}
       openGraph={{
-        // Title and description are mandatory
         title: metaTitle,
         description: metaDescription,
-        // Only include OG image if we have it
         // Careful: if you disable image optimization in Strapi, this will break
-        ...(sharedImage && {
-          images: Object.values(sharedImage.formats).map((image) => {
-            return {
-              url: getStrapiMedia(image),
-              width: image.width,
-              height: image.height,
-            };
+        ...(sharedImage &&
+          sharedImage.formats && {
+            images: Object.values(sharedImage.formats).map((image) => {
+              return {
+                url: getStrapiMedia(image),
+                width: image.width,
+                height: image.height,
+              };
+            }),
           }),
-        }),
       }}
     />
   );

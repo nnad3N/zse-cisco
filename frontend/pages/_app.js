@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { pagePropsShape } from 'types/appTypes';
 import LoadingProvider from 'providers/LoadingProvider';
 import { useRouter } from 'next/router';
 import 'public/nprogress.css';
@@ -33,13 +34,16 @@ const MyApp = ({ Component, pageProps }) => {
         title={metaTitle}
         description={metaDescription}
         openGraph={{
-          images: Object.values(sharedImage.formats).map((image) => {
-            return {
-              url: getStrapiMedia(image),
-              width: image.width,
-              height: image.height,
-            };
-          }),
+          ...(sharedImage &&
+            sharedImage.formats && {
+              images: Object.values(sharedImage.formats).map((image) => {
+                return {
+                  url: getStrapiMedia(image),
+                  width: image.width,
+                  height: image.height,
+                };
+              }),
+            }),
         }}
       />
       <ThemeProvider theme={theme}>
@@ -54,22 +58,7 @@ const MyApp = ({ Component, pageProps }) => {
 
 MyApp.propTypes = {
   Component: PropTypes.func,
-  pageProps: PropTypes.shape({
-    global: PropTypes.shape({
-      defaultSeo: PropTypes.shape({
-        id: PropTypes.number,
-        metaDescription: PropTypes.string.isRequired,
-        metaTitle: PropTypes.string.isRequired,
-        metaTitleSuffix: PropTypes.string,
-        sharedImage: PropTypes.object,
-      }),
-      favicon: PropTypes.object,
-      id: PropTypes.number,
-    }),
-    navigation: PropTypes.object,
-    sections: PropTypes.arrayOf(PropTypes.object),
-    seo: PropTypes.object,
-  }),
+  pageProps: pagePropsShape,
 };
 
 MyApp.defaultProps = {
@@ -89,11 +78,9 @@ MyApp.defaultProps = {
 // Hopefully we can replace this with getStaticProps once this issue is fixed:
 // https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
-  // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(ctx);
-  // Fetch global site settings from Strapi
   const global = await fetchAPI('/global');
-  // Pass the data to our page via props
+
   return { ...appProps, pageProps: { global } };
 };
 

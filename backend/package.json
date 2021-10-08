@@ -27,12 +27,11 @@
     "strapi-plugin-graphql": "3.6.8"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Damian Struk",
+    "mail": "damianstruk@outlook.com"
   },
   "strapi": {
-    "uuid": "f4141a84-74b3-4885-ab51-2a0c226d4db2",
-    "template": "https://github.com/strapi/strapi-template-blog",
-    "starter": "https://github.com/strapi/strapi-starter-next-blog"
+    "uuid": "f4141a84-74b3-4885-ab51-2a0c226d4db2"
   },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",

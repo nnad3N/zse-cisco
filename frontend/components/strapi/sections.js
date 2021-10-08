@@ -16,14 +16,12 @@ const sectionComponents = {
 
 // Display a section individually
 const Section = ({ sectionData }) => {
-  // Prepare the component
   const SectionComponent = sectionComponents[sectionData.__component];
 
   if (!SectionComponent) {
     return null;
   }
 
-  // Display the section
   return <SectionComponent data={sectionData} />;
 };
 

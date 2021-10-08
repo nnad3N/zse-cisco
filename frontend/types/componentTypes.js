@@ -7,4 +7,4 @@ export const dataShape = PropTypes.shape({
   image: PropTypes.object,
 });
 
-export const componentShape = PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.object]);
+export const childrenShape = PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.element]);

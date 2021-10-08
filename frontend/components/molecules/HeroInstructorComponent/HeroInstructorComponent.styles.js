@@ -54,7 +54,6 @@ export const InstructorWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  background-color: darkGray;
   min-width: 17rem;
   min-height: 17rem;
   border-radius: 50%;
