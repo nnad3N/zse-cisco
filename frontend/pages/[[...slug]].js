@@ -26,7 +26,7 @@ DynamicPage.propTypes = {
 };
 
 export async function getStaticPaths() {
-  const pages = await fetchAPI(`${process.env.API_URL}/pages`);
+  const pages = await fetchAPI('/pages');
 
   const paths = pages.map((page) => {
     // Decompose the slug that was saved in Strapi
@@ -42,8 +42,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const pageData = await getPageData({ slug: !params.slug ? [''] : params.slug });
-  const navigation = await fetchAPI(`${process.env.API_URL}/navigation`);
-  const footer = await fetchAPI(`${process.env.API_URL}/footer`);
+  const navigation = await fetchAPI('/navigation');
+  const footer = await fetchAPI('/footer');
 
   if (pageData == null) {
     // Giving the page no props will trigger a 404 page
