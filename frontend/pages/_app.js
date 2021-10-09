@@ -79,7 +79,7 @@ MyApp.defaultProps = {
 // https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
   const appProps = await App.getInitialProps(ctx);
-  const global = await fetchAPI('/global');
+  const global = await fetchAPI(`${process.env.API_URL}/global`);
 
   return { ...appProps, pageProps: { global } };
 };
