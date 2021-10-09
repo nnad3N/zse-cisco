@@ -34,7 +34,7 @@ export const theme = {
     boxShadow: '0px 4px 14px  rgba(0, 0, 0, 0.1)',
   },
   mq: {
-    heroInstructors: `@media (min-width: 1438px)`,
+    heroInstructors: `@media (min-width: 1570px)`,
     desktop: `@media (max-width: 1550px)`,
     desktopTall: `@media (min-height: 1100px) and (min-width: 850px) and (max-width: 1400px)`,
     desktopWide: `@media (min-width: 1400px)`,
