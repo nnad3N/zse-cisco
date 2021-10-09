@@ -14,6 +14,7 @@ export const ArrowLinkWrapper = styled.a`
 
   h5 {
     border-bottom: 2px solid ${({ theme }) => theme.colors.mainColor};
+    color: ${({ theme }) => theme.colors.mainColor};
     margin-right: 2rem;
     font-size: ${({ theme }) => theme.fontSize.body};
   }
