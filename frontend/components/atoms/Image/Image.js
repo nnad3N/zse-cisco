@@ -9,17 +9,11 @@ const Image = ({ image, priority }) => {
     return getStrapiMedia(image);
   };
 
+  const imageUrl = getStrapiMedia(image);
+
   return (
     <NextImageWrapper>
-      <StyledNextImage
-        priority={priority}
-        loader={loader}
-        layout="responsive"
-        width={width}
-        height={height}
-        src={url}
-        alt={alternativeText || 'image'}
-      />
+      <StyledNextImage priority={priority} layout="responsive" width={width} height={height} src={imageUrl} alt={alternativeText || 'image'} />
     </NextImageWrapper>
   );
 };
