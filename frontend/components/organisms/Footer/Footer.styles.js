@@ -32,7 +32,7 @@ export const FooterWrapper = styled.div`
     'content line images';
 
   ${({ theme }) => theme.mq.desktop} {
-    max-width: 60rem;
+    max-width: 65rem;
     grid-template:
       'header '
       'content'
@@ -41,8 +41,6 @@ export const FooterWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.laptop} {
-    max-width: 50rem;
-
     p {
       font-size: ${({ theme }) => theme.fontSize.subText};
     }
@@ -51,6 +49,11 @@ export const FooterWrapper = styled.div`
   ${({ theme }) => theme.mq.mobileMedium} {
     max-width: 100%;
     text-align: center;
+  }
+
+  ${({ theme }) => theme.mq.desktopTall} {
+    width: unset;
+    max-width: unset;
   }
 `;
 

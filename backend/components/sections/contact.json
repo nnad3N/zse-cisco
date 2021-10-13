@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_contacts",
+  "info": {
+    "name": "Contact",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "schoolName": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contactInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.footer-info"
+    }
+  }
+}

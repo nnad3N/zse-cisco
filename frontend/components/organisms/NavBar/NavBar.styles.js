@@ -8,14 +8,16 @@ export const Header = styled.header`
   padding: 1rem ${({ theme }) => theme.dimensions.padding};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
-  position: sticky;
-  top: 0;
   z-index: 10;
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
-  /* border-bottom: ${({ theme, isLoading }) => (isLoading ? 'unset' : `2px solid ${theme.colors.accentColor}`)}; */
+  position: relative;
 
   img {
     border-radius: 0;
+  }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    padding: 2rem ${({ theme }) => theme.dimensions.paddingMobile};
   }
 `;
 
@@ -28,4 +30,13 @@ export const MenuImage = styled.button`
   border: none;
   width: 5rem;
   cursor: pointer;
+`;
+
+export const Loader = styled.div`
+  height: 0.2rem;
+  width: 100%;
+  bottom: -0.2rem;
+  left: 0;
+  background-color: ${({ theme, isLoading }) => (isLoading ? 'transparent' : theme.colors.accentColor)};
+  position: absolute;
 `;

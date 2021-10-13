@@ -22,6 +22,8 @@ export const theme = {
     padding: '10vw',
     paddingMobile: '5vw',
     paddingNarrow: '15vw',
+    tilePadding: '4rem 3.5rem',
+    tilePaddingMobile: '3rem 5vw',
     heroCoursePadding: '3rem 5rem',
     cardPaddingMobile: '5vw',
     heroAcademyPadding: '4rem 4.5rem',
@@ -36,7 +38,7 @@ export const theme = {
   mq: {
     heroInstructors: `@media (min-width: 1570px)`,
     desktop: `@media (max-width: 1550px)`,
-    desktopTall: `@media (min-height: 1100px) and (min-width: 850px) and (max-width: 1400px)`,
+    desktopTall: `@media (min-height: 1100px) and (min-width: 1000px) and (max-width: 1400px)`,
     desktopWide: `@media (min-width: 1400px)`,
     laptop: `@media (max-width: 1224px)`,
     tablet: `@media (max-width: 850px)`,

@@ -4,6 +4,7 @@ import HeroInstructors from '@sections/HeroInstructors/HeroInstructors';
 import HeroCourses from '@sections/HeroCourses/HeroCourses';
 import HeroPricing from '@sections/HeroPricing/HeroPricing';
 import HeroAcademy from '@sections/HeroAcademy/HeroAcademy';
+import Contact from '@sections/Contact/Contact';
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -12,6 +13,7 @@ const sectionComponents = {
   'sections.hero-courses': HeroCourses,
   'sections.hero-pricing': HeroPricing,
   'sections.hero-academy': HeroAcademy,
+  'sections.contact': Contact,
 };
 
 // Display a section individually
