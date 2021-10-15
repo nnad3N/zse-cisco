@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const ContactWrapper = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh ${({ theme }) => theme.dimensions.padding};
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    padding: 8vh ${({ theme }) => theme.dimensions.paddingMobile};
+  }
+`;
+
 export const ContentWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
@@ -9,17 +20,6 @@ export const ContentWrapper = styled.div`
 
   ${({ theme }) => theme.mq.mobileMedium} {
     padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
-  }
-`;
-
-export const ContactWrapper = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10vh ${({ theme }) => theme.dimensions.padding};
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 8vh ${({ theme }) => theme.dimensions.paddingMobile};
   }
 `;
 
