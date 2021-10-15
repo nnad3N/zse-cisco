@@ -1,8 +1,9 @@
 {
   "collectionName": "components_utils_footer_infos",
   "info": {
-    "name": "footerInfo",
-    "icon": "address-card"
+    "name": "contactInfo",
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {

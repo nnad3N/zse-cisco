@@ -16,7 +16,7 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
   return (
     <StyledFooter>
       <FooterWrapper>
-        <h1>{header}</h1>
+        <h3>{header}</h3>
         <ContentWrapper>
           <StyledSchoolInfo>{schoolName}</StyledSchoolInfo>
           <InformationWrapper>

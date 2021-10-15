@@ -1,6 +1,6 @@
 {
-  "extends": ["next", "prettier", "plugin:prettier/recommended", "babel"],
-  "plugins": ["prettier, import"],
+  "extends": ["next", "babel", "prettier", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "rules": {
     "import/no-unresolved": "error",
     "prettier/prettier": [

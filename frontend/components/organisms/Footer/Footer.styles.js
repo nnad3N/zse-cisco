@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  padding: 8vh ${({ theme }) => theme.dimensions.padding};
+  padding: 5vh ${({ theme }) => theme.dimensions.padding};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
@@ -11,14 +11,14 @@ export const StyledFooter = styled.footer`
     padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
   }
 
-  h1 {
+  h3 {
     grid-area: header;
     color: ${({ theme }) => theme.colors.accentColor};
   }
 
   p {
     text-align: left;
-    font-size: ${({ theme }) => theme.fontSize.subHeader};
+    font-size: ${({ theme }) => theme.fontSize.subText};
   }
 `;
 
@@ -32,7 +32,7 @@ export const FooterWrapper = styled.div`
     'content line images';
 
   ${({ theme }) => theme.mq.desktop} {
-    max-width: 60rem;
+    max-width: 65rem;
     grid-template:
       'header '
       'content'
@@ -41,8 +41,6 @@ export const FooterWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.laptop} {
-    max-width: 50rem;
-
     p {
       font-size: ${({ theme }) => theme.fontSize.subText};
     }
@@ -51,6 +49,11 @@ export const FooterWrapper = styled.div`
   ${({ theme }) => theme.mq.mobileMedium} {
     max-width: 100%;
     text-align: center;
+  }
+
+  ${({ theme }) => theme.mq.desktopTall} {
+    width: unset;
+    max-width: unset;
   }
 `;
 
@@ -108,7 +111,7 @@ export const ImagesWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 15vw;
+  width: 12vw;
   max-width: 30rem;
 
   &:first-child {
