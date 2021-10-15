@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps;
 
   if (global == null) {
-    return <ErrorPage statusCode={500} />;
+    return <ErrorPage statusCode={404} />;
   }
 
   const {

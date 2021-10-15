@@ -3,22 +3,25 @@ import { getStrapiMedia } from 'utils/media';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
 const Image = ({ image, priority }) => {
-  const { url, alternativeText, width, height } = image;
+  const { alternativeText, width, height } = image;
 
   const loader = () => {
     return getStrapiMedia(image);
   };
 
+  const imageUrl = getStrapiMedia(image);
+
   return (
     <NextImageWrapper>
       <StyledNextImage
-        priority={priority}
         loader={loader}
+        unoptimized
         layout="responsive"
         width={width}
         height={height}
-        src={url}
+        src={imageUrl}
         alt={alternativeText || 'image'}
+        priority={priority}
       />
     </NextImageWrapper>
   );
