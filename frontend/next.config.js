@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['zse-cisco-experimental.herokuapp.com', 'localhost'],
+    domains: ['zse-cisco-5v79m.ondigitalocean.app', 'localhost'],
   },
 };
