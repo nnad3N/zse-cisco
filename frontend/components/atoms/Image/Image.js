@@ -3,7 +3,7 @@ import { getStrapiMedia } from 'utils/media';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
 const Image = ({ image, priority }) => {
-  const { url, alternativeText, width, height } = image;
+  const { alternativeText, width, height } = image;
 
   const loader = () => {
     return getStrapiMedia(image);
@@ -13,7 +13,16 @@ const Image = ({ image, priority }) => {
 
   return (
     <NextImageWrapper>
-      <StyledNextImage priority={priority} layout="responsive" width={width} height={height} src={imageUrl} alt={alternativeText || 'image'} />
+      <StyledNextImage
+        loader={loader}
+        unoptimized
+        layout="responsive"
+        width={width}
+        height={height}
+        src={imageUrl}
+        alt={alternativeText || 'image'}
+        priority={priority}
+      />
     </NextImageWrapper>
   );
 };
