@@ -22,7 +22,7 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.div`
-  width: 25rem;
+  width: 22rem;
 `;
 
 export const MenuImage = styled.button`
