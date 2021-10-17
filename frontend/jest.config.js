@@ -3,6 +3,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/components/(.*)$': '<rootDir>/components/$1',
     '^utils/(.*)$': '<rootDir>/utils/$1',
+    '^types/(.*)$': '<rootDir>/types/$1',
     '^assets/(.*)$': '<rootDir>/assets/$1',
     '^@atoms/(.*)$': '<rootDir>/components/atoms/$1',
     '^@molecules/(.*)$': '<rootDir>/components/molecules/$1',

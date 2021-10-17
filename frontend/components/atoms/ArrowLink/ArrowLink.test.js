@@ -27,6 +27,6 @@ describe('ArrowLink', () => {
 
   it('Renders correctly with image', () => {
     renderWithProviders(<ArrowLink image={image} />);
-    expect(screen.getAllByAltText('arrow alternative text')[0]).toBeInTheDocument();
+    expect(screen.getByAltText('arrow alternative text')).toBeInTheDocument();
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FunctionalLink from '@atoms/FunctionalLink';
+import FunctionalLink from '@atoms/FunctionalLink/FunctionalLink';
 import Image from '@atoms/Image/Image';
 import { ListItemWrapper, ImageWrapper } from './ListItem.styles';
 

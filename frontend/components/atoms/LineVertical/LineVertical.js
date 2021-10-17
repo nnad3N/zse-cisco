@@ -6,7 +6,7 @@ import { LineVerticalWrapper, Line } from './LineVertical.styles';
 const LineVertical = ({ children, large }) => {
   return (
     <LineVerticalWrapper>
-      <Line large={large} />
+      <Line large={large} data-testid="line-vertical" />
       {children}
     </LineVerticalWrapper>
   );

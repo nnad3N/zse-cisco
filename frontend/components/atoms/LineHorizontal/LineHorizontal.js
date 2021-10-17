@@ -7,7 +7,7 @@ const LineHorizontal = ({ children, large }) => {
   return (
     <LineHorizontalWrapper>
       {children}
-      <Line large={large} />
+      <Line large={large} data-testid="line-horizontal" />
     </LineHorizontalWrapper>
   );
 };
