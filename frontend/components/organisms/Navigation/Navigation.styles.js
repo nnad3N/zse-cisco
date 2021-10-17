@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledNavigation = styled.nav`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
   width: 100%;
   z-index: 20;
   background-color: ${({ theme }) => theme.colors.mainColor};
-  position: relative;
   padding: ${({ theme }) => theme.dimensions.navigationPadding};
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));

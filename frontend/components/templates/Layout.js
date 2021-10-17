@@ -11,15 +11,10 @@ const Layout = ({ children, navigation, footer }) => {
 
   return (
     <>
-      {isNavOpen ? (
-        <Navigation navigation={navigation} setIsNavOpen={setIsNavOpen} />
-      ) : (
-        <>
-          <NavBar logo={logo} menuImage={menuImage} setIsNavOpen={setIsNavOpen} />
-          {children}
-          <Footer footer={footer} />
-        </>
-      )}
+      {isNavOpen && <Navigation navigation={navigation} setIsNavOpen={setIsNavOpen} />}
+      <NavBar logo={logo} menuImage={menuImage} setIsNavOpen={setIsNavOpen} />
+      {children}
+      <Footer footer={footer} />
     </>
   );
 };
