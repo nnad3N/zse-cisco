@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import HeroInstructorComponent from '@molecules/HeroInstructorComponent/HeroInstructorComponent';
 import { renderWithProviders } from 'utils/renderWithProviders';

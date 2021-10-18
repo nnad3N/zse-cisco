@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import Button from '@atoms/Button/Button';
 import { theme } from 'assets/styles/theme';

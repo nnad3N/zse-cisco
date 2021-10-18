@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import { renderWithProviders } from 'utils/renderWithProviders';

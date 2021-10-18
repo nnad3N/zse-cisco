@@ -27,8 +27,8 @@ export const theme = {
     heroCoursePadding: '3rem 5rem',
     cardPaddingMobile: '5vw',
     heroAcademyPadding: '4rem 4.5rem',
-    navigationPadding: '8vh 12vw',
-    navigationColumnGap: '15vw',
+    navigationPadding: '10vh',
+    navigationColumnGap: '20vw',
     navigationRowGap: '6rem',
   },
   utils: {

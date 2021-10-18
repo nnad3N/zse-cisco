@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import FunctionalLink from '@atoms/FunctionalLink/FunctionalLink';
 import { renderWithProviders } from 'utils/renderWithProviders';

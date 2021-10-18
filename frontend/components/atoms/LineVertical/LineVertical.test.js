@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { renderWithProviders } from 'utils/renderWithProviders';

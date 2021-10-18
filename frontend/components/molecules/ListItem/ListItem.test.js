@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import ListItem from '@molecules/ListItem/ListItem';
 import { renderWithProviders } from 'utils/renderWithProviders';

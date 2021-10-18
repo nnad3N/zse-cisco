@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import Image from '@atoms/Image/Image';
 import { renderWithProviders } from 'utils/renderWithProviders';

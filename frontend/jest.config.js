@@ -1,10 +1,11 @@
 module.exports = {
   collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/*.d.ts', '!**/node_modules/**'],
+  testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
-    '^@/components/(.*)$': '<rootDir>/components/$1',
     '^utils/(.*)$': '<rootDir>/utils/$1',
     '^types/(.*)$': '<rootDir>/types/$1',
     '^assets/(.*)$': '<rootDir>/assets/$1',
+    '^providers/(.*)$': '<rootDir>/providers/$1',
     '^@atoms/(.*)$': '<rootDir>/components/atoms/$1',
     '^@molecules/(.*)$': '<rootDir>/components/molecules/$1',
     '^@organisms/(.*)$': '<rootDir>/components/organisms/$1',

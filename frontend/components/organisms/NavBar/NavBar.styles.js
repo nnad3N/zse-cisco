@@ -25,11 +25,32 @@ export const Logo = styled.div`
   width: 22rem;
 `;
 
-export const MenuImage = styled.button`
+export const MenuButton = styled.button`
+  position: relative;
   background-color: transparent;
   border: none;
-  width: 5rem;
+  width: 6rem;
+  height: ${({ isNavOpen }) => (isNavOpen ? '6rem' : 'unset')};
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+
+export const StyledSpan = styled.span`
+  width: ${({ short, isNavOpen }) => (isNavOpen ? '100%' : short ? '50%' : '100%')};
+  height: 1rem;
+  background-color: ${({ theme }) => theme.colors.accentColor};
+
+  &:first-child {
+    margin-bottom: 1rem;
+    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(2.5rem) rotate(45deg)' : 'unset')};
+  }
+
+  &:nth-child(2) {
+    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(-2.5rem) rotate(-45deg)' : 'unset')};
+  }
 `;
 
 export const Loader = styled.div`

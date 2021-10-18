@@ -2,10 +2,10 @@ import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { AppContext } from 'providers/AppProvider';
 import Image from '@atoms/Image/Image';
-import { Header, Logo, MenuImage, Loader } from './NavBar.styles';
+import { Header, Logo, MenuButton, StyledSpan, Loader } from './NavBar.styles';
 
-const NavBar = ({ logo, menuImage }) => {
-  const { isLoading, setIsNavOpen } = useContext(AppContext);
+const NavBar = ({ logo }) => {
+  const { isLoading, isNavOpen, setIsNavOpen } = useContext(AppContext);
 
   return (
     <Header isLoading={isLoading}>
@@ -13,16 +13,16 @@ const NavBar = ({ logo, menuImage }) => {
       <Logo>
         <Image image={logo} priority />
       </Logo>
-      <MenuImage onClick={() => setIsNavOpen((state) => !state)}>
-        <Image image={menuImage} priority />
-      </MenuImage>
+      <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen}>
+        <StyledSpan short isNavOpen={isNavOpen} />
+        <StyledSpan isNavOpen={isNavOpen} />
+      </MenuButton>
     </Header>
   );
 };
 
 NavBar.propTypes = {
   logo: PropTypes.object,
-  menuImage: PropTypes.object,
 };
 
 export default NavBar;

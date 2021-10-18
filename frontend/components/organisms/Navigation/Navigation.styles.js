@@ -6,15 +6,21 @@ export const StyledNavigation = styled.nav`
   width: 100%;
   z-index: 20;
   background-color: ${({ theme }) => theme.colors.mainColor};
-  padding: ${({ theme }) => theme.dimensions.navigationPadding};
+  padding: ${({ theme }) => theme.dimensions.navigationPadding} ${({ theme }) => theme.dimensions.padding};
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
-  column-gap: ${({ theme }) => theme.dimensions.navigationColumnGap};
+  grid-template-columns: 40rem 40rem;
   row-gap: ${({ theme }) => theme.dimensions.navigationRowGap};
+  justify-content: space-between;
   align-content: start;
 
+  ${({ theme }) => theme.mq.laptop} {
+    grid-template-columns: 40rem;
+    justify-content: center;
+  }
+
   ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 20rem ${({ theme }) => theme.dimensions.paddingMobile};
+    grid-template-columns: 1fr;
+    padding: 6rem ${({ theme }) => theme.dimensions.paddingMobile};
   }
 
   img {
@@ -36,12 +42,8 @@ export const ExitButton = styled.button`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40rem;
+  width: 100%;
   justify-self: center;
-
-  ${({ theme }) => theme.mq.mobileLarge} {
-    width: 100%;
-  }
 
   & > div {
     margin-bottom: 2rem;

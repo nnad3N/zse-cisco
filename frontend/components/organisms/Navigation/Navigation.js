@@ -5,7 +5,7 @@ import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import { AppContext } from 'providers/AppProvider';
 import { StyledNavigation, ContentWrapper } from './Navigation.styles';
 
-const Navigation = ({ navigation: { navLinks, exitButton, navListIcon } }) => {
+const Navigation = ({ navLinks }) => {
   const { setIsNavOpen } = useContext(AppContext);
 
   return (
@@ -17,7 +17,7 @@ const Navigation = ({ navigation: { navLinks, exitButton, navListIcon } }) => {
           </LineHorizontal>
           <ul>
             {links.map((link) => (
-              <ListItem key={link.id} listIcon={navListIcon} link={link} setIsNavOpen={setIsNavOpen} />
+              <ListItem key={link.id} link={link} setIsNavOpen={setIsNavOpen} />
             ))}
           </ul>
         </ContentWrapper>
@@ -31,17 +31,16 @@ Navigation.propTypes = {
     PropTypes.shape({
       groupName: PropTypes.string.isRequired,
       id: PropTypes.number,
-      links: PropTypes.arrayOf(PropTypes.object),
+      links: PropTypes.arrayOf(PropTypes.object).isRequired,
     })
   ),
-  exitButton: PropTypes.object,
-  navListIcon: PropTypes.object,
 };
 
 Navigation.defaultProps = {
   navLinks: [
     {
       groupName: 'Group Name',
+      links: [],
     },
   ],
 };
