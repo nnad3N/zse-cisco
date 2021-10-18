@@ -8,7 +8,7 @@ export const Header = styled.header`
   padding: 1rem ${({ theme }) => theme.dimensions.padding};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
-  z-index: 10;
+  z-index: 30;
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
   position: relative;
 

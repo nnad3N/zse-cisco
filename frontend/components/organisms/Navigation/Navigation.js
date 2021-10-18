@@ -1,17 +1,15 @@
-import React from 'react';
+import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Image from '@atoms/Image/Image';
 import ListItem from '@molecules/ListItem/ListItem';
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
-import { StyledNavigation, ExitButton, ContentWrapper } from './Navigation.styles';
+import { AppContext } from 'providers/AppProvider';
+import { StyledNavigation, ContentWrapper } from './Navigation.styles';
 
-const Navigation = ({ navigation: { navLinks, exitButton, navListIcon }, setIsNavOpen }) => {
+const Navigation = ({ navigation: { navLinks, exitButton, navListIcon } }) => {
+  const { setIsNavOpen } = useContext(AppContext);
+
   return (
     <StyledNavigation>
-      <ExitButton onClick={() => setIsNavOpen((state) => !state)}>
-        <Image image={exitButton} priority />
-      </ExitButton>
-
       {navLinks.map(({ groupName, id, links }) => (
         <ContentWrapper key={id}>
           <LineHorizontal>
@@ -36,7 +34,6 @@ Navigation.propTypes = {
       links: PropTypes.arrayOf(PropTypes.object),
     })
   ),
-  setIsNavOpen: PropTypes.func.isRequired,
   exitButton: PropTypes.object,
   navListIcon: PropTypes.object,
 };
@@ -44,12 +41,9 @@ Navigation.propTypes = {
 Navigation.defaultProps = {
   navLinks: [
     {
-      groupName: 'Nazwa',
+      groupName: 'Group Name',
     },
   ],
-  setIsNavOpen: () => {
-    console.log(`setIsNavOpen function prop error`);
-  },
 };
 
 export default Navigation;

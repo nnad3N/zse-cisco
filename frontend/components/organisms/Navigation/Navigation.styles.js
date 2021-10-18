@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledNavigation = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
+  position: absolute;
+  min-height: 90vh;
   width: 100%;
   z-index: 20;
   background-color: ${({ theme }) => theme.colors.mainColor};
