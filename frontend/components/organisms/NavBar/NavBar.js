@@ -13,7 +13,7 @@ const NavBar = ({ logo }) => {
       <Logo>
         <Image image={logo} priority />
       </Logo>
-      <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen}>
+      <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen} data-testid="menu-button">
         <StyledSpan short isNavOpen={isNavOpen} />
         <StyledSpan isNavOpen={isNavOpen} />
       </MenuButton>

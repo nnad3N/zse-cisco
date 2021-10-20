@@ -9,18 +9,10 @@ const link = {
   newTab: false,
 };
 
-const listIcon = {
-  url: '/',
-  alternativeText: 'list icon alternative text',
-  width: 10,
-  height: 10,
-};
-
 describe('ListItem', () => {
   it('Renders correctly with data', () => {
-    renderWithProviders(<ListItem link={link} listIcon={listIcon} />);
+    renderWithProviders(<ListItem link={link} />);
     expect(screen.getByText('test link')).toBeInTheDocument();
     expect(screen.getByRole('link')).toHaveAttribute('href', '/link');
-    expect(screen.getByAltText('list icon alternative text')).toBeInTheDocument();
   });
 });

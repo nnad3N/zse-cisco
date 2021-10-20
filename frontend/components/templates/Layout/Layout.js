@@ -7,12 +7,12 @@ import Footer from '@organisms/Footer/Footer';
 import { AppContext } from 'providers/AppProvider';
 import { StyledLayout } from './Layout.styles';
 
-const Layout = ({ children, navigation: { logo, menuImage, navLinks }, footer }) => {
+const Layout = ({ children, navigation: { logo, navLinks }, footer }) => {
   const { isNavOpen } = useContext(AppContext);
 
   return (
     <StyledLayout isNavOpen={isNavOpen}>
-      <NavBar logo={logo} menuImage={menuImage} />
+      <NavBar logo={logo} />
       {isNavOpen && <Navigation navLinks={navLinks} />}
       {children}
       <Footer footer={footer} />

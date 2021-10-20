@@ -39,17 +39,19 @@ export const MenuButton = styled.button`
 `;
 
 export const StyledSpan = styled.span`
-  width: ${({ short, isNavOpen }) => (isNavOpen ? '100%' : short ? '50%' : '100%')};
+  width: 100%;
   height: 1rem;
   background-color: ${({ theme }) => theme.colors.accentColor};
+  transform-origin: ${({ isNavOpen, short }) => (short && !isNavOpen ? 'right' : 'center')};
+  transform: ${({ short, isNavOpen }) => (isNavOpen ? 'scaleX(1)' : short ? 'scaleX(0.5)' : 'scaleX(1)')};
 
   &:first-child {
     margin-bottom: 1rem;
-    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(2.5rem) rotate(45deg)' : 'unset')};
+    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(2.5rem) rotate(45deg)' : '')};
   }
 
   &:nth-child(2) {
-    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(-2.5rem) rotate(-45deg)' : 'unset')};
+    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(-2.5rem) rotate(-45deg)' : '')};
   }
 `;
 
