@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { fetchAPI } from 'utils/api';
-import Layout from 'components/templates/Layout';
+import Layout from 'components/templates/Layout/Layout';
 import Seo from 'components/strapi/seo';
 import Sections from 'components/strapi/sections';
 import { getPageData } from 'utils/getPageData';

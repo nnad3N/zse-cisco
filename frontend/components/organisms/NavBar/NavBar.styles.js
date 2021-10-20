@@ -8,7 +8,7 @@ export const Header = styled.header`
   padding: 1rem ${({ theme }) => theme.dimensions.padding};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
-  z-index: 10;
+  z-index: 30;
   border-bottom: 2px solid ${({ theme }) => theme.colors.accentColor};
   position: relative;
 
@@ -25,11 +25,34 @@ export const Logo = styled.div`
   width: 22rem;
 `;
 
-export const MenuImage = styled.button`
+export const MenuButton = styled.button`
+  position: relative;
   background-color: transparent;
   border: none;
-  width: 5rem;
+  width: 6rem;
+  height: ${({ isNavOpen }) => (isNavOpen ? '6rem' : 'unset')};
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+
+export const StyledSpan = styled.span`
+  width: 100%;
+  height: 1rem;
+  background-color: ${({ theme }) => theme.colors.accentColor};
+  transform-origin: ${({ isNavOpen, short }) => (short && !isNavOpen ? 'right' : 'center')};
+  transform: ${({ short, isNavOpen }) => (isNavOpen ? 'scaleX(1)' : short ? 'scaleX(0.5)' : 'scaleX(1)')};
+
+  &:first-child {
+    margin-bottom: 1rem;
+    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(2.5rem) rotate(45deg)' : '')};
+  }
+
+  &:nth-child(2) {
+    transform: ${({ isNavOpen }) => (isNavOpen ? 'translateY(-2.5rem) rotate(-45deg)' : '')};
+  }
 `;
 
 export const Loader = styled.div`

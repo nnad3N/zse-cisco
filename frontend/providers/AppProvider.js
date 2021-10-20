@@ -1,11 +1,15 @@
-// import { LoadingContext } from 'pages/_app'
 import { useState, useEffect, createContext } from 'react';
 import NProgress from 'nprogress';
 
-export const LoadingContext = createContext(false);
+export const AppContext = createContext({
+  isLoading: false,
+  isNavOpen: false,
+  setIsNavOpen: () => {},
+});
 
-const LoadingProvider = ({ children, router }) => {
+const AppProvider = ({ children, router }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   if (router) {
     useEffect(() => {
@@ -31,7 +35,17 @@ const LoadingProvider = ({ children, router }) => {
     }, [router]);
   }
 
-  return <LoadingContext.Provider value={isLoading}>{children}</LoadingContext.Provider>;
+  return (
+    <AppContext.Provider
+      value={{
+        isLoading,
+        isNavOpen,
+        setIsNavOpen,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
 };
 
-export default LoadingProvider;
+export default AppProvider;

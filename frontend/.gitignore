@@ -7,14 +7,12 @@
 
 # testing
 /coverage
+/__mocks__
 
 # production
 /build
 /.next
-<<<<<<< HEAD
 .next
-=======
->>>>>>> 03b9d54b379814899f9ac9496a77c78cff73a0fd
 
 # misc
 .DS_Store

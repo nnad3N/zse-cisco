@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { pagePropsShape } from 'types/appTypes';
-import LoadingProvider from 'providers/LoadingProvider';
+import AppProvider from 'providers/AppProvider';
 import { useRouter } from 'next/router';
 import 'public/nprogress.css';
 import App from 'next/app';
@@ -48,9 +48,9 @@ const MyApp = ({ Component, pageProps }) => {
       />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <LoadingProvider router={router}>
+        <AppProvider router={router}>
           <Component {...pageProps} />
-        </LoadingProvider>
+        </AppProvider>
       </ThemeProvider>
     </>
   );

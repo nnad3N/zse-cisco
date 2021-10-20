@@ -5,9 +5,9 @@ import { LineHorizontalWrapper, Line } from './LineHorizontal.styles';
 
 const LineHorizontal = ({ children, large }) => {
   return (
-    <LineHorizontalWrapper>
+    <LineHorizontalWrapper data-testid="line-horizontal-wrapper">
       {children}
-      <Line large={large} />
+      <Line large={large} data-testid="line-horizontal" />
     </LineHorizontalWrapper>
   );
 };
