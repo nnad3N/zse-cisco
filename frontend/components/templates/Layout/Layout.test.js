@@ -2,32 +2,18 @@ import React from 'react';
 import Layout from 'components/templates/Layout/Layout';
 import { renderWithProviders } from 'utils/renderWithProviders';
 import { screen, fireEvent } from '@testing-library/react';
+import logo from '__mocks__/icon';
+import links from '__mocks__/links';
+import footerInfo from '__mocks__/contactInfo';
+import footerImages from '__mocks__/images';
 
 const navigation = {
-  logo: {
-    url: '/',
-    alternativeText: 'logo alternative text',
-    width: 10,
-    height: 10,
-  },
+  logo,
   navLinks: [
     {
       id: 1,
       groupName: 'test',
-      links: [
-        {
-          id: 2,
-          name: 'test link',
-          slug: 'link',
-          newTab: false,
-        },
-        {
-          id: 3,
-          name: 'test link 2',
-          slug: 'link',
-          newTab: false,
-        },
-      ],
+      links,
     },
     {
       id: 4,
@@ -40,29 +26,8 @@ const navigation = {
 const footer = {
   header: 'test header',
   schoolName: 'test school name',
-  footerInfo: [
-    {
-      id: 1,
-      caption: 'test caption',
-      info: 'test info',
-    },
-  ],
-  footerImages: [
-    {
-      id: 2,
-      url: '/',
-      alternativeText: 'image alternative text',
-      width: 10,
-      height: 10,
-    },
-    {
-      id: 3,
-      url: '/test',
-      alternativeText: 'image 2 alternative text',
-      width: 10,
-      height: 10,
-    },
-  ],
+  footerInfo,
+  footerImages,
 };
 
 describe('Layout', () => {
@@ -75,7 +40,7 @@ describe('Layout', () => {
     expect(screen.getByText('test title')).toBeInTheDocument();
   });
 
-  it('Renders correctly with data', () => {
+  it('Renders with provided data', () => {
     renderWithProviders(<Layout navigation={navigation} footer={footer} />);
     expect(screen.getByText('test header')).toBeInTheDocument();
     expect(screen.getByText('test school name')).toBeInTheDocument();
@@ -83,7 +48,7 @@ describe('Layout', () => {
     expect(screen.getByText('test info')).toBeInTheDocument();
     expect(screen.getByAltText('image alternative text')).toBeInTheDocument();
     expect(screen.getByAltText('image 2 alternative text')).toBeInTheDocument();
-    expect(screen.getByAltText('logo alternative text')).toBeInTheDocument();
+    expect(screen.getByAltText('icon alternative text')).toBeInTheDocument();
   });
 
   it('Renders navigation', () => {

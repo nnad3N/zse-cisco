@@ -2,27 +2,21 @@ import React from 'react';
 import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import { renderWithProviders } from 'utils/renderWithProviders';
 import { screen } from '@testing-library/react';
-
-const image = {
-  url: '/',
-  alternativeText: 'arrow alternative text',
-  width: 10,
-  height: 10,
-};
+import image from '__mocks__/image';
 
 describe('ArrowLink', () => {
-  it('Renders correctly with title', () => {
+  it('Renders the title', () => {
     renderWithProviders(<ArrowLink title="arrow" />);
     expect(screen.getByText('arrow')).toBeInTheDocument();
   });
 
-  it('Renders correctly with link', () => {
+  it('Renders the link', () => {
     renderWithProviders(<ArrowLink slug="link" />);
     expect(screen.getByRole('link')).toHaveAttribute('href', '/link');
   });
 
-  it('Renders correctly with image', () => {
+  it('Renders the image', () => {
     renderWithProviders(<ArrowLink image={image} />);
-    expect(screen.getByAltText('arrow alternative text')).toBeInTheDocument();
+    expect(screen.getByAltText('image alternative text')).toBeInTheDocument();
   });
 });

@@ -7,10 +7,12 @@ describe('LineHorizontal', () => {
   it('Renders children', () => {
     renderWithProviders(
       <LineHorizontal>
-        <h1>Test Title</h1>
+        <h1 data-testid="line-child">Test Title</h1>
       </LineHorizontal>
     );
-    expect(screen.getByText('Test Title')).toBeInTheDocument();
+    const line = screen.getByTestId('line-horizontal-wrapper');
+    const lineChild = screen.getByTestId('line-child');
+    expect(line).toContainElement(lineChild);
   });
 
   it('Renders large variant', () => {

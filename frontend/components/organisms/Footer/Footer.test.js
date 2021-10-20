@@ -2,37 +2,18 @@ import React from 'react';
 import Footer from '@organisms/Footer/Footer';
 import { renderWithProviders } from 'utils/renderWithProviders';
 import { screen } from '@testing-library/react';
+import footerInfo from '__mocks__/contactInfo';
+import footerImages from '__mocks__/images';
 
 const footer = {
   header: 'test header',
   schoolName: 'test school name',
-  footerInfo: [
-    {
-      id: 1,
-      caption: 'test caption',
-      info: 'test info',
-    },
-  ],
-  footerImages: [
-    {
-      id: 2,
-      url: '/',
-      alternativeText: 'image alternative text',
-      width: 10,
-      height: 10,
-    },
-    {
-      id: 3,
-      url: '/test',
-      alternativeText: 'image 2 alternative text',
-      width: 10,
-      height: 10,
-    },
-  ],
+  footerInfo,
+  footerImages,
 };
 
 describe('Footer', () => {
-  it('Renders correctly with data', () => {
+  it('Renders with provided data', () => {
     renderWithProviders(<Footer footer={footer} />);
     expect(screen.getByText('test header')).toBeInTheDocument();
     expect(screen.getByText('test school name')).toBeInTheDocument();

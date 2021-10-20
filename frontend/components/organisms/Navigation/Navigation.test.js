@@ -2,25 +2,13 @@ import React from 'react';
 import Navigation from '@organisms/Navigation/Navigation';
 import { renderWithProviders } from 'utils/renderWithProviders';
 import { screen } from '@testing-library/react';
+import links from '__mocks__/links';
 
 const navLinks = [
   {
     id: 1,
     groupName: 'test',
-    links: [
-      {
-        id: 2,
-        name: 'test link',
-        slug: 'link',
-        newTab: false,
-      },
-      {
-        id: 3,
-        name: 'test link 2',
-        slug: 'link',
-        newTab: false,
-      },
-    ],
+    links,
   },
   {
     id: 4,
@@ -30,7 +18,7 @@ const navLinks = [
 ];
 
 describe('Navigation', () => {
-  it('Renders correctly with data', () => {
+  it('Renders with provided data', () => {
     renderWithProviders(<Navigation navLinks={navLinks} />);
     expect(screen.getByText('test')).toBeInTheDocument();
     expect(screen.getByText('test 2')).toBeInTheDocument();
