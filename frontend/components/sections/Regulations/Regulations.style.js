@@ -7,10 +7,6 @@ export const RegulationsWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  section div:first-child {
-    margin-bottom: 4rem;
-  }
-
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
     min-height: unset;

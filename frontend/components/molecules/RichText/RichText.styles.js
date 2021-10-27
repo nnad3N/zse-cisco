@@ -2,6 +2,8 @@ import Markdown from 'react-markdown';
 import styled from 'styled-components';
 
 export const StyledMarkdown = styled(Markdown)`
+  margin: 4rem 0 0 0;
+
   h1,
   h2,
   h3,
@@ -69,6 +71,12 @@ export const StyledMarkdown = styled(Markdown)`
       &:visited {
         color: ${({ theme }) => theme.colors.black};
       }
+    }
+  }
+
+  p {
+    &:not(:last-child) {
+      margin: 0 0 1rem 0;
     }
   }
 `;
