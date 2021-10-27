@@ -9,7 +9,7 @@ export const Line = styled.span`
   background-color: ${({ theme }) => theme.colors.accentColor};
   margin-right: ${({ large }) => (large ? '2.2rem' : '1.5rem')};
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     margin-right: ${({ large }) => (large ? '1.8rem' : '1.5rem')};
   }
 `;

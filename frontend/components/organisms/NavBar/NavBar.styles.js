@@ -16,7 +16,7 @@ export const Header = styled.header`
     border-radius: 0;
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     padding: 2rem ${({ theme }) => theme.padding.s};
   }
 `;

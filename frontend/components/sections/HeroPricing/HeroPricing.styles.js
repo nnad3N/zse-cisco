@@ -24,14 +24,16 @@ export const HeroPricingWrapper = styled.section`
 export const DescriptionWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 6rem;
+  width: ${({ theme }) => theme.dimensions.tileWidth};
 
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: column;
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
+    width: unset;
     margin-top: 4rem;
   }
 
@@ -47,14 +49,14 @@ export const DescriptionWrapper = styled.div`
 
   & > div {
     font-size: ${({ theme }) => theme.fontSize.subText};
-    margin: 0 10rem 0 0;
+    margin: 0 5rem 0 0;
     width: 39rem;
 
     ${({ theme }) => theme.mq.tablet} {
       margin: 0 0 4rem 0;
     }
 
-    ${({ theme }) => theme.mq.mobileMedium} {
+    ${({ theme }) => theme.mq.mobileLarge} {
       margin: 0 0 3rem 0;
       width: 100%;
     }

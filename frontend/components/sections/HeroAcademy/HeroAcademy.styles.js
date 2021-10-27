@@ -47,7 +47,7 @@ export const DescriptionWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.desktop} {
-    width: clamp(38rem, 100%, 65rem);
+    width: clamp(38rem, 100%, ${({ theme }) => theme.dimensions.tileWidth});
     grid-row: 3/4;
     margin-right: 0;
   }
@@ -64,7 +64,7 @@ export const ImageWrapper = styled.div`
   align-self: center;
 
   ${({ theme }) => theme.mq.desktop} {
-    width: clamp(38rem, 100%, 65rem);
+    width: clamp(38rem, 100%, ${({ theme }) => theme.dimensions.tileWidth});
     max-width: 100%;
     justify-self: center;
   }

@@ -14,7 +14,7 @@ export const StyledNavigation = styled.nav`
   justify-content: center;
   align-content: start;
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
   }
 

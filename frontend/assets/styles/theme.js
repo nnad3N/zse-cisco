@@ -35,6 +35,7 @@ export const theme = {
     tilePadding: '4rem 3.5rem',
     tilePaddingMobile: '3rem 5vw',
     heroCoursePadding: '3rem 5rem',
+    tileWidth: '65rem',
   },
   utils: {
     borderRadius: '6px',

@@ -27,7 +27,7 @@ export const HeroInstructorWrapper = styled.div`
 `;
 
 export const InstructorWrapper = styled.div`
-  flex-basis: 32rem;
+  flex-basis: 42rem;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.colors.white};
@@ -38,11 +38,8 @@ export const InstructorWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.heroInstructors} {
+    flex-basis: 32rem;
     padding: 0;
-  }
-
-  ${({ theme }) => theme.mq.tablet} {
-    flex-basis: 40rem;
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {

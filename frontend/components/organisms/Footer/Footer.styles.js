@@ -32,7 +32,7 @@ export const FooterWrapper = styled.div`
     'content line images';
 
   ${({ theme }) => theme.mq.desktop} {
-    max-width: 65rem;
+    max-width: ${({ theme }) => theme.dimensions.tileWidth};
     grid-template:
       'header '
       'content'
@@ -46,7 +46,7 @@ export const FooterWrapper = styled.div`
     }
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     max-width: 100%;
     text-align: center;
   }
