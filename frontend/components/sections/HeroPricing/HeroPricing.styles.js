@@ -4,20 +4,20 @@ export const HeroPricingWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10vh ${({ theme }) => theme.dimensions.paddingNarrow};
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.x};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
 
   ${({ theme }) => theme.mq.desktop} {
-    padding: 10vh ${({ theme }) => theme.dimensions.padding};
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   }
 
   ${({ theme }) => theme.mq.tablet} {
-    padding: 7vh ${({ theme }) => theme.dimensions.padding};
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.m};
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 `;
 

@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.section`
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10vh ${({ theme }) => theme.dimensions.padding};
 
-  ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 8vh ${({ theme }) => theme.dimensions.paddingMobile};
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 `;
 

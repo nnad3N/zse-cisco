@@ -5,7 +5,6 @@ export const ArrowLinkWrapper = styled.a`
   align-items: center;
   justify-content: center;
   align-self: flex-end;
-  margin-top: 2rem;
 
   &:visited {
     border-bottom: 2px solid ${({ theme }) => theme.colors.mainColor};

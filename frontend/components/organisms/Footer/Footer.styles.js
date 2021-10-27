@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  padding: 5vh ${({ theme }) => theme.dimensions.padding};
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: center;
 
-  ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 
   h3 {
@@ -24,8 +24,8 @@ export const StyledFooter = styled.footer`
 
 export const FooterWrapper = styled.div`
   display: grid;
-  column-gap: 5vw;
-  row-gap: 4rem;
+  column-gap: ${({ theme }) => theme.padding.s};
+  row-gap: ${({ theme }) => theme.padding.xsV};
   width: 100%;
   grid-template:
     'header line images'
@@ -73,7 +73,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const InformationWrapper = styled.div`
-  margin-left: 10rem;
+  margin-left: 8rem;
 
   span {
     color: ${({ theme }) => theme.colors.accentColor};

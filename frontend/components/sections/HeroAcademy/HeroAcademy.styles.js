@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 
 export const HeroAcademyWrapper = styled.section`
-  padding: 10vh 0 10vh ${({ theme }) => theme.dimensions.padding};
+  padding: ${({ theme }) => theme.padding.xV} 0 ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   display: grid;
-  row-gap: 4rem;
-  column-gap: 8rem;
+  row-gap: ${({ theme }) => theme.padding.xV};
+  column-gap: ${({ theme }) => theme.padding.xV};
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 
   ${({ theme }) => theme.mq.desktop} {
-    padding: 10vh ${({ theme }) => theme.dimensions.padding};
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     justify-items: center;
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
+    row-gap: ${({ theme }) => theme.padding.mV};
   }
 `;
 
@@ -36,13 +37,13 @@ export const DescriptionWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: ${({ theme }) => theme.dimensions.heroAcademyPadding};
+  padding: ${({ theme }) => theme.dimensions.tilePadding};
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
 
   p {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 
   ${({ theme }) => theme.mq.desktop} {
@@ -52,7 +53,7 @@ export const DescriptionWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: ${({ theme }) => theme.dimensions.cardPaddingMobile};
+    padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
   }
 `;
 

@@ -5,7 +5,7 @@ export const HeroInstructorWrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 5rem 0;
+  padding: ${({ theme }) => theme.padding.xV} 0;
 
   ${({ theme }) => theme.mq.heroInstructors} {
     &:first-child {
@@ -18,18 +18,10 @@ export const HeroInstructorWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    margin: 0 0 10rem 0;
+    padding: 0 0 ${({ theme }) => theme.padding.mV} 0;
 
     &:not(:last-child) {
-      margin: 10rem 0 10rem 0;
-    }
-  }
-
-  ${({ theme }) => theme.mq.mobileSmall} {
-    margin: 0 0 8rem 0;
-
-    &:not(:last-child) {
-      margin: 8rem 0 8rem 0;
+      padding: ${({ theme }) => theme.padding.mV} 0;
     }
   }
 `;
@@ -39,16 +31,22 @@ export const InstructorWrapper = styled.div`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.colors.white};
+  padding: 0 3rem;
 
   h4 {
     margin-bottom: 1rem;
   }
 
-  ${({ theme }) => theme.mq.mobileLarge} {
+  ${({ theme }) => theme.mq.heroInstructors} {
+    padding: 0;
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
     flex-basis: 40rem;
   }
 
-  ${({ theme }) => theme.mq.mobileSmall} {
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: 0 ${({ theme }) => theme.padding.s};
     flex-basis: unset;
   }
 `;
@@ -56,7 +54,7 @@ export const InstructorWrapper = styled.div`
 export const ImageWrapper = styled.div`
   width: 20rem;
   border-radius: 50%;
-  margin: 2rem 4rem;
+  margin: 2rem 3rem;
 
   ${({ theme }) => theme.mq.heroInstructors} {
     margin: 0 6rem 0 0;
