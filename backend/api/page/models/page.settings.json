@@ -28,7 +28,8 @@
         "sections.hero-courses",
         "sections.hero-pricing",
         "sections.hero-academy",
-        "sections.contact"
+        "sections.contact",
+        "sections.regulations"
       ]
     }
   }

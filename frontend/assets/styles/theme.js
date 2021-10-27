@@ -8,6 +8,7 @@ export const theme = {
   },
   fontSize: {
     header: '4.8rem',
+    headerMobile: '4rem',
     navHeader: '3.6rem',
     navList: '1.8rem',
     subHeader: '2rem',
@@ -36,6 +37,8 @@ export const theme = {
     tilePaddingMobile: '3rem 5vw',
     heroCoursePadding: '3rem 5rem',
     tileWidth: '65rem',
+    pageSectionPadding: '4rem 5rem',
+    pageSectionWidth: '100rem',
   },
   utils: {
     borderRadius: '6px',

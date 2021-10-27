@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
+  padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.m};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
   display: flex;

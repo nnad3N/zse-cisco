@@ -16,6 +16,11 @@ export const HeroWrapper = styled.section`
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
     min-height: unset;
+
+    h1 {
+      font-size: ${({ theme }) => theme.fontSize.header};
+      text-align: center;
+    }
   }
 `;
 
