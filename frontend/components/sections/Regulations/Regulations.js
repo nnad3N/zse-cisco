@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import RichText from '@molecules/RichText/RichText';
 import PageSection from '@organisms/PageSection/PageSection';
-import { RegulationsWrapper } from './Regulations.style';
+import { RegulationsWrapper } from './Regulations.styles';
 
 const Regulations = ({ data: { title, content } }) => {
   return (
@@ -18,6 +18,9 @@ const Regulations = ({ data: { title, content } }) => {
   );
 };
 
-Regulations.propTypes = {};
+Regulations.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+};
 
 export default Regulations;

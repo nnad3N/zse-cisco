@@ -5,6 +5,7 @@ export const theme = {
     backgroundColor: '#E8EBF1',
     mainColor: '#0E274D',
     accentColor: '#00BCEA',
+    darkBlue: '#173C74',
   },
   fontSize: {
     header: '4.8rem',
@@ -39,6 +40,7 @@ export const theme = {
     tileWidth: '65rem',
     pageSectionPadding: '4rem 5rem',
     pageSectionWidth: '100rem',
+    richTextMarginTop: '4rem',
   },
   utils: {
     borderRadius: '6px',

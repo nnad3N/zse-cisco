@@ -10,12 +10,13 @@ export const StyledNavigation = styled.nav`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, auto));
   row-gap: ${({ theme }) => theme.padding.xV};
-  column-gap: ${({ theme }) => theme.padding.xl};
+  column-gap: ${({ theme }) => theme.padding.x};
   justify-content: center;
   align-content: start;
 
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+    grid-template-columns: 100%;
   }
 
   img {

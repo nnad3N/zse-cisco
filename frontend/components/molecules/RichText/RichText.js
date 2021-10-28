@@ -6,6 +6,8 @@ const RichText = ({ children }) => {
   return <StyledMarkdown>{children}</StyledMarkdown>;
 };
 
-RichText.propTypes = {};
+RichText.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.elementType), PropTypes.elementType]),
+};
 
 export default RichText;

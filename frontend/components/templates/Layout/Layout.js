@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { childrenShape } from 'types/componentTypes';
+import { childrenShape } from 'propTypes/componentTypes';
 import NavBar from '@organisms/NavBar/NavBar';
 import Navigation from '@organisms/Navigation/Navigation';
 import Footer from '@organisms/Footer/Footer';

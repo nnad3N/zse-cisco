@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { childrenShape } from 'types/componentTypes';
+import { childrenShape } from 'propTypes/componentTypes';
 import { LineHorizontalWrapper, Line } from './LineHorizontal.styles';
 
 const LineHorizontal = ({ children, large }) => {

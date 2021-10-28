@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_utils_table_rows",
+  "info": {
+    "name": "TableRow",
+    "icon": "arrow-alt-circle-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "rowName": {
+      "type": "string"
+    },
+    "rowContent": {
+      "type": "string"
+    }
+  }
+}

@@ -2,7 +2,7 @@ import Markdown from 'react-markdown';
 import styled from 'styled-components';
 
 export const StyledMarkdown = styled(Markdown)`
-  margin: 4rem 0 0 0;
+  margin-top: ${({ theme }) => theme.dimensions.richTextMarginTop};
 
   h1,
   h2,

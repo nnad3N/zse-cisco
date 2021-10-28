@@ -28,6 +28,10 @@ export const DescriptionWrapper = styled.div`
   margin-top: 6rem;
   width: ${({ theme }) => theme.dimensions.tileWidth};
 
+  ${({ theme }) => theme.mq.desktopTall} {
+    flex-direction: column;
+  }
+
   ${({ theme }) => theme.mq.tablet} {
     flex-direction: column;
   }
@@ -51,6 +55,10 @@ export const DescriptionWrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.subText};
     margin: 0 5rem 0 0;
     width: 39rem;
+
+    ${({ theme }) => theme.mq.desktopTall} {
+      margin: 0 0 4rem 0;
+    }
 
     ${({ theme }) => theme.mq.tablet} {
       margin: 0 0 4rem 0;
