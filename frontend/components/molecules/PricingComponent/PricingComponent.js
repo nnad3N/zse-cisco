@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LineVertical from '@atoms/LineVertical/LineVertical';
-import { PricingComponentWrapper, Head, Row, Annotation } from './PricingComponent.styles';
+import PageTile from '@templates/PageTile/PageTile';
+import { Semester, Head, Row, Annotation } from './PricingComponent.styles';
 
-const PricingComponent = ({ data: { title, tableHead, tableRows, annotations } }) => {
+const PricingComponent = ({ data: { title, semester, tableHead, tableRows, annotations } }) => {
   return (
-    <PricingComponentWrapper>
+    <PageTile>
       <LineVertical>
         <h4>{title}</h4>
       </LineVertical>
+      {semester && <Semester>{semester}</Semester>}
       <Head>
         <span>{tableHead.rowName}</span>
         <span>{tableHead.rowContent}</span>
@@ -24,7 +26,7 @@ const PricingComponent = ({ data: { title, tableHead, tableRows, annotations } }
           <Annotation key={id}>{annotation}</Annotation>
         ))}
       </div>
-    </PricingComponentWrapper>
+    </PageTile>
   );
 };
 

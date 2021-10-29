@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-export const ContactWrapper = styled.section`
-  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  ${({ theme }) => theme.mq.mobileLarge} {
-    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
-  }
-`;
-
 export const ContentWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.utils.borderRadius};

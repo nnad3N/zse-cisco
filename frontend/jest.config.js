@@ -12,6 +12,7 @@ module.exports = {
     '^@molecules/(.*)$': '<rootDir>/components/molecules/$1',
     '^@organisms/(.*)$': '<rootDir>/components/organisms/$1',
     '^@sections/(.*)$': '<rootDir>/components/sections/$1',
+    '^@templates/(.*)$': '<rootDir>/components/templates/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],

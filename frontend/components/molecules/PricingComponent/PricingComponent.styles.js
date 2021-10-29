@@ -1,23 +1,10 @@
 import styled from 'styled-components';
 
-export const PricingComponentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: ${({ theme }) => theme.dimensions.richTextMarginTop};
-  padding: ${({ theme }) => theme.dimensions.tilePadding};
-  background-color: ${({ theme }) => theme.colors.mainColor};
-  border-radius: ${({ theme }) => theme.utils.borderRadius};
-  width: 40rem;
-  color: ${({ theme }) => theme.colors.white};
-
-  span {
-    font-size: ${({ theme }) => theme.fontSize.body};
-  }
-
-  ${({ theme }) => theme.mq.mobileLarge} {
-    width: 100%;
-    padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
-  }
+export const Semester = styled.span`
+  margin-top: 1rem;
+  font-size: ${({ theme }) => theme.fontSize.subText};
+  color: ${({ theme }) => theme.colors.accentColor};
+  font-weight: 600;
 `;
 
 export const Row = styled.div`
@@ -28,6 +15,10 @@ export const Row = styled.div`
   margin-top: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 0.3rem solid ${({ theme }) => theme.colors.darkBlue};
+
+  span {
+    font-size: ${({ theme }) => theme.fontSize.body};
+  }
 `;
 
 export const Head = styled(Row)`

@@ -11,11 +11,13 @@ export const StyledMarkdown = styled(Markdown)`
   h5,
   h6 {
     color: ${({ theme }) => theme.colors.black};
+    margin-top: 1rem;
   }
 
   h1,
   h2 {
     font-weight: 300;
+    margin-top: 2rem;
   }
 
   h3,
@@ -64,6 +66,13 @@ export const StyledMarkdown = styled(Markdown)`
   }
 
   li {
+    font-size: ${({ theme }) => theme.fontSize.body};
+    margin-left: 3rem;
+
+    &:first-child {
+      margin-top: 0.5rem;
+    }
+
     a {
       color: ${({ theme }) => theme.colors.black};
       font-size: ${({ theme }) => theme.fontSize.body};
