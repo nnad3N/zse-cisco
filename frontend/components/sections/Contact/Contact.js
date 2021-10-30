@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PageWrapper from '@templates/PageWrapper/PageWrapper';
 import LineVertical from '@atoms/LineVertical/LineVertical';
-import { ContactWrapper, ContentWrapper, AddressWrapper, InformationWrapper } from './Contact.styles';
+import { ContentWrapper, AddressWrapper, InformationWrapper } from './Contact.styles';
 
 const Contact = ({ data: { title, address, schoolName, contactInfo } }) => {
   return (
-    <ContactWrapper>
+    <PageWrapper>
       <ContentWrapper>
         <LineVertical large>
           <h1>{title}</h1>
@@ -22,7 +23,7 @@ const Contact = ({ data: { title, address, schoolName, contactInfo } }) => {
           ))}
         </InformationWrapper>
       </ContentWrapper>
-    </ContactWrapper>
+    </PageWrapper>
   );
 };
 

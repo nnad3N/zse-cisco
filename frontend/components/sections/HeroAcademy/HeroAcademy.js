@@ -1,5 +1,5 @@
 import React from 'react';
-import { dataShape } from 'types/componentTypes';
+import { dataShape } from 'propTypes/componentTypes';
 import Button from '@atoms/Button/Button';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import Image from '@atoms/Image/Image';

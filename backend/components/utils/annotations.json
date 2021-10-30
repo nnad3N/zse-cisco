@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_utils_annotations",
+  "info": {
+    "name": "Annotations",
+    "icon": "angle-up"
+  },
+  "options": {},
+  "attributes": {
+    "annotation": {
+      "type": "text"
+    }
+  }
+}

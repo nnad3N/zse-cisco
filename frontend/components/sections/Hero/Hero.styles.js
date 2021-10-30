@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroWrapper = styled.section`
-  padding: 5vh ${({ theme }) => theme.dimensions.padding};
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,24 +13,28 @@ export const HeroWrapper = styled.section`
     justify-content: center;
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 5vh ${({ theme }) => theme.dimensions.paddingMobile};
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
     min-height: unset;
+
+    h1 {
+      font-size: ${({ theme }) => theme.fontSize.header};
+      text-align: center;
+    }
   }
 `;
 
 export const ContentWrapper = styled.div`
-  margin-bottom: 5vh;
   width: 44rem;
   display: flex;
   flex-direction: column;
 
   h1 {
     max-width: 40rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     width: 100%;
   }
 
@@ -41,10 +45,11 @@ export const ContentWrapper = styled.div`
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  margin-top: 4rem;
+  margin-top: 5rem;
 
   ${({ theme }) => theme.mq.laptop} {
     justify-content: center;
+    margin-bottom: 5rem;
   }
 `;
 
@@ -58,7 +63,7 @@ export const ImageWrapper = styled.div`
     width: 44rem;
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     width: 100%;
   }
 `;

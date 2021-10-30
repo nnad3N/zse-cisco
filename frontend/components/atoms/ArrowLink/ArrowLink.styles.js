@@ -5,16 +5,15 @@ export const ArrowLinkWrapper = styled.a`
   align-items: center;
   justify-content: center;
   align-self: flex-end;
-  margin-top: 2rem;
 
   &:visited {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.mainColor};
-    color: ${({ theme }) => theme.colors.mainColor};
+    border-bottom: 2px solid ${({ theme, accented }) => (accented ? theme.colors.accentColor : theme.colors.mainColor)};
+    color: ${({ theme, accented }) => (accented ? theme.colors.accentColor : theme.colors.mainColor)};
   }
 
   h5 {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.mainColor};
-    color: ${({ theme }) => theme.colors.mainColor};
+    border-bottom: 2px solid ${({ theme, accented }) => (accented ? theme.colors.accentColor : theme.colors.mainColor)};
+    color: ${({ theme, accented }) => (accented ? theme.colors.accentColor : theme.colors.mainColor)};
     margin-right: 2rem;
     font-size: ${({ theme }) => theme.fontSize.body};
   }

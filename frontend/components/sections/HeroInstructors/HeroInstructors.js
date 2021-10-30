@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import HeroInstructorComponent from '@molecules/HeroInstructorComponent/HeroInstructorComponent';
 import { HeroInstructorsWrapper } from './HeroInstructors.styles';
 
-const HeroInstructors = ({ data: { instructorComponent } }) => {
+const HeroInstructors = ({ data: { instructorComponents } }) => {
   return (
     <HeroInstructorsWrapper>
-      {instructorComponent.map((instructorData) => (
+      {instructorComponents.map((instructorData) => (
         <HeroInstructorComponent key={instructorData.id} data={instructorData} />
       ))}
     </HeroInstructorsWrapper>

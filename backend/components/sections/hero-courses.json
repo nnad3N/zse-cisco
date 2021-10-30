@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "courses": {
+    "heroCourses": {
       "type": "component",
       "repeatable": true,
       "component": "section-components.course-component"

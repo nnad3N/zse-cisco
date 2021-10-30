@@ -51,6 +51,11 @@ a {
 h1 {
     font-size: ${({ theme }) => theme.fontSize.header};
     font-weight: 700;
+
+    ${({ theme }) => theme.mq.tablet} {
+    font-size: ${({ theme }) => theme.fontSize.headerMobile};
+
+    }
 }
 
 h2 {
@@ -100,6 +105,10 @@ li {
             color: white;
         }
     }
+}
+
+span{
+    font-size: ${({ theme }) => theme.fontSize.body}
 }
 
 `;

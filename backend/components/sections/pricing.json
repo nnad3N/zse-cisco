@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_pricings",
+  "info": {
+    "name": "Pricing",
+    "icon": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "pricingComponents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section-components.pricing-component"
+    }
+  }
+}

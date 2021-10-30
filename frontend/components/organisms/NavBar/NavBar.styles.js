@@ -5,7 +5,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   min-height: 10vh;
-  padding: 1rem ${({ theme }) => theme.dimensions.padding};
+  padding: 1rem ${({ theme }) => theme.padding.m};
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
   z-index: 30;
@@ -16,12 +16,12 @@ export const Header = styled.header`
     border-radius: 0;
   }
 
-  ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 2rem ${({ theme }) => theme.dimensions.paddingMobile};
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: 2rem ${({ theme }) => theme.padding.s};
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   width: 22rem;
 `;
 

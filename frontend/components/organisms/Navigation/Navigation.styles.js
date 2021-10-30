@@ -6,21 +6,17 @@ export const StyledNavigation = styled.nav`
   width: 100%;
   z-index: 20;
   background-color: ${({ theme }) => theme.colors.mainColor};
-  padding: ${({ theme }) => theme.dimensions.navigationPadding} ${({ theme }) => theme.dimensions.padding};
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   display: grid;
-  grid-template-columns: 40rem 40rem;
-  row-gap: ${({ theme }) => theme.dimensions.navigationRowGap};
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, auto));
+  row-gap: ${({ theme }) => theme.padding.xV};
+  column-gap: ${({ theme }) => theme.padding.x};
+  justify-content: center;
   align-content: start;
 
-  ${({ theme }) => theme.mq.laptop} {
-    grid-template-columns: 40rem;
-    justify-content: center;
-  }
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    grid-template-columns: 1fr;
-    padding: 6rem ${({ theme }) => theme.dimensions.paddingMobile};
+  ${({ theme }) => theme.mq.mobileLarge} {
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+    grid-template-columns: 100%;
   }
 
   img {

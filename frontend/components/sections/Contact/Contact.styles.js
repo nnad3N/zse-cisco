@@ -1,24 +1,13 @@
 import styled from 'styled-components';
 
-export const ContactWrapper = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10vh ${({ theme }) => theme.dimensions.padding};
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    padding: 8vh ${({ theme }) => theme.dimensions.paddingMobile};
-  }
-`;
-
 export const ContentWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
   padding: ${({ theme }) => theme.dimensions.tilePadding};
-  width: clamp(65rem, 100%, 38vw);
+  width: clamp(${({ theme }) => theme.dimensions.tileWidth}, 100%, 80rem);
 
-  ${({ theme }) => theme.mq.mobileMedium} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
   }
 `;

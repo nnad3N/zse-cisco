@@ -4,10 +4,10 @@ import Link from 'next/link';
 import Image from '@atoms/Image/Image';
 import { ArrowLinkWrapper, ImageWrapper } from './ArrowLink.styles';
 
-const ArrowLink = ({ slug, title, image }) => {
+const ArrowLink = ({ slug, title, image, accented }) => {
   return (
     <Link href={`/${slug}`} passHref>
-      <ArrowLinkWrapper>
+      <ArrowLinkWrapper accented={accented}>
         <h5>{title}</h5>
         <ImageWrapper>
           <Image image={image} />

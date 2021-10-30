@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { childrenShape } from 'types/componentTypes';
+import { childrenShape } from 'propTypes/componentTypes';
 import { LineVerticalWrapper, Line } from './LineVertical.styles';
 
 const LineVertical = ({ children, large }) => {

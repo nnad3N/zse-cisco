@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "instructorComponent": {
+    "instructorComponents": {
       "type": "component",
       "repeatable": true,
       "component": "section-components.instructor-component"

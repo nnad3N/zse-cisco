@@ -4,14 +4,14 @@ import HeroCourseComponent from '@molecules/HeroCourseComponent/HeroCourseCompon
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import { HeroCourseWrapper, ContentWrapper } from './HeroCourses.styles';
 
-const HeroCourses = ({ data: { title, courses, arrowImage } }) => {
+const HeroCourses = ({ data: { title, heroCourses, arrowImage } }) => {
   return (
     <HeroCourseWrapper>
       <LineHorizontal large>
         <h1>{title}</h1>
       </LineHorizontal>
       <ContentWrapper>
-        {courses.map((courseData) => (
+        {heroCourses.map((courseData) => (
           <HeroCourseComponent key={courseData.id} data={courseData} image={arrowImage} />
         ))}
       </ContentWrapper>
@@ -22,7 +22,7 @@ const HeroCourses = ({ data: { title, courses, arrowImage } }) => {
 HeroCourses.propTypes = {
   data: PropTypes.shape({
     arrowImage: PropTypes.object,
-    courses: PropTypes.arrayOf(PropTypes.object).isRequired,
+    heroCourses: PropTypes.arrayOf(PropTypes.object).isRequired,
     id: PropTypes.number,
     title: PropTypes.string,
   }),
@@ -30,7 +30,7 @@ HeroCourses.propTypes = {
 
 HeroCourses.defaultProps = {
   data: {
-    courses: [],
+    heroCourses: [],
   },
 };
 

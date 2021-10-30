@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_regulations",
+  "info": {
+    "name": "Regulations",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

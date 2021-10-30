@@ -29,7 +29,7 @@ export const HeroCourseComponentWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: ${({ theme }) => theme.dimensions.cardPaddingMobile};
+    padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
   }
 `;
 

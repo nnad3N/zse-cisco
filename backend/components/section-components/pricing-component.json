@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_section_components_pricing_components",
+  "info": {
+    "name": "PricingComponent",
+    "icon": "th-large",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tableHead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utils.table-row"
+    },
+    "tableRows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.table-row"
+    },
+    "annotations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.annotations"
+    },
+    "semester": {
+      "type": "string"
+    }
+  }
+}

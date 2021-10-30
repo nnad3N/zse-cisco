@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { pagePropsShape } from 'types/appTypes';
+import { pagePropsShape } from 'propTypes/appTypes';
 import AppProvider from 'providers/AppProvider';
 import { useRouter } from 'next/router';
 import 'public/nprogress.css';
