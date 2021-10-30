@@ -21,7 +21,7 @@ export const Header = styled.header`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.a`
   width: 22rem;
 `;
 

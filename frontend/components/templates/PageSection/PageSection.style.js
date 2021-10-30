@@ -6,7 +6,7 @@ export const PageSectionWrapper = styled.section`
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
   padding: ${({ theme }) => theme.dimensions.pageSectionPadding};
-  width: ${({ theme }) => theme.dimensions.pageSectionWidth};
+  max-width: ${({ theme }) => theme.dimensions.pageSectionWidth};
 
   &:last-child {
     margin-bottom: 0;

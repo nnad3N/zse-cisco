@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_section_components_offert_components",
+  "info": {
+    "name": "OffertComponent",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "offertCourses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section-components.course-component"
+    }
+  }
+}

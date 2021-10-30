@@ -7,7 +7,7 @@ const PageSection = ({ children }) => {
 };
 
 PageSection.propTypes = {
-  children: childrenShape,
+  // children: childrenShape,
 };
 
 export default PageSection;

@@ -30,7 +30,8 @@
         "sections.hero-academy",
         "sections.contact",
         "sections.regulations",
-        "sections.pricing"
+        "sections.pricing",
+        "sections.offert"
       ]
     }
   }

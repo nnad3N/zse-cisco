@@ -12,6 +12,7 @@ export const StyledMarkdown = styled(Markdown)`
   h6 {
     color: ${({ theme }) => theme.colors.black};
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   h1,

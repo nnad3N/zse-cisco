@@ -107,4 +107,8 @@ li {
     }
 }
 
+span{
+    font-size: ${({ theme }) => theme.fontSize.body}
+}
+
 `;

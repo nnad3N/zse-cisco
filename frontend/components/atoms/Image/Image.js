@@ -3,28 +3,33 @@ import { getStrapiMedia } from 'utils/media';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
 const Image = ({ image, priority }) => {
-  const { alternativeText, width, height } = image;
+  if (image) {
+    const { alternativeText, width, height } = image;
 
-  const loader = () => {
-    return getStrapiMedia(image);
-  };
+    const loader = () => {
+      return getStrapiMedia(image);
+    };
 
-  const imageUrl = getStrapiMedia(image);
+    const imageUrl = getStrapiMedia(image);
 
-  return (
-    <NextImageWrapper>
-      <StyledNextImage
-        loader={loader}
-        unoptimized
-        layout="responsive"
-        width={width}
-        height={height}
-        src={imageUrl}
-        alt={alternativeText || 'image'}
-        priority={priority}
-      />
-    </NextImageWrapper>
-  );
+    return (
+      <NextImageWrapper>
+        <StyledNextImage
+          loader={loader}
+          unoptimized
+          layout="responsive"
+          width={width}
+          height={height}
+          src={imageUrl}
+          alt={alternativeText || 'image'}
+          priority={priority}
+        />
+      </NextImageWrapper>
+    );
+  } else {
+    console.error('Image was required but not provided');
+    return <h5>Image was required but not provided</h5>;
+  }
 };
 
 Image.propTypes = {

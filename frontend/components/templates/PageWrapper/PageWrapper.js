@@ -1,8 +1,12 @@
 import React from 'react';
 import { StyledPageWrapper } from './PageWrapper.styles';
 
-const PageWrapper = ({ children }) => {
-  return <StyledPageWrapper>{children}</StyledPageWrapper>;
+const PageWrapper = ({ children, short, column }) => {
+  return (
+    <StyledPageWrapper short={short} column={column}>
+      {children}
+    </StyledPageWrapper>
+  );
 };
 
 PageWrapper.propTypes = {};
