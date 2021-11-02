@@ -22,7 +22,7 @@ const Image = ({ image, priority }) => {
           height={height}
           src={imageUrl}
           alt={alternativeText || 'image'}
-          priority={priority}
+          priority
         />
       </NextImageWrapper>
     );

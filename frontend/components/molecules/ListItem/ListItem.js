@@ -5,11 +5,11 @@ import Image from '@atoms/Image/Image';
 import { ListItemWrapper, Bullet } from './ListItem.styles';
 
 // If needed you can make this component accept children like LineVertical in order to make list with custom bullets
-const ListItem = ({ link, setIsNavOpen }) => {
+const ListItem = ({ link, setIsNavOpen, linked, wrap, children }) => {
   return (
-    <ListItemWrapper>
+    <ListItemWrapper wrap={wrap}>
       <Bullet />
-      <FunctionalLink link={link} setIsNavOpen={setIsNavOpen} />
+      {linked ? <FunctionalLink link={link} setIsNavOpen={setIsNavOpen} /> : children}
     </ListItemWrapper>
   );
 };

@@ -17,7 +17,7 @@ const Navigation = ({ navLinks }) => {
           </LineHorizontal>
           <ul>
             {links.map((link) => (
-              <ListItem key={link.id} link={link} setIsNavOpen={setIsNavOpen} />
+              <ListItem linked key={link.id} link={link} setIsNavOpen={setIsNavOpen} />
             ))}
           </ul>
         </ContentWrapper>

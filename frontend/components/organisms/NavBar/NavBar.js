@@ -12,7 +12,7 @@ const NavBar = ({ logo }) => {
     <Header isLoading={isLoading}>
       <Loader id="loader" isLoading={isLoading} />
       <Link href="/" passHref>
-        <Logo>
+        <Logo onClick={() => setIsNavOpen(false)}>
           <Image image={logo} priority />
         </Logo>
       </Link>

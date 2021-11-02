@@ -71,7 +71,7 @@ export const StyledMarkdown = styled(Markdown)`
     margin-left: 3rem;
 
     &:first-child {
-      margin-top: 0.5rem;
+      margin-top: 0.8rem;
     }
 
     a {

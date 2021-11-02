@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import { StyledButton } from './Button.styles';
 
 const Button = ({ data, hasMargin, accent }) => {
@@ -9,9 +10,11 @@ const Button = ({ data, hasMargin, accent }) => {
     link: { slug },
   } = data;
   return (
-    <StyledButton hasMargin={hasMargin} href={`/${slug}`} isFilled={isFilled} accent={accent}>
-      {caption}
-    </StyledButton>
+    <Link href={`/${slug}`} passHref>
+      <StyledButton hasMargin={hasMargin} isFilled={isFilled} accent={accent}>
+        {caption}
+      </StyledButton>
+    </Link>
   );
 };
 
