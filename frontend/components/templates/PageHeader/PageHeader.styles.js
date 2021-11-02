@@ -10,7 +10,7 @@ export const PageHeaderWrapper = styled.header`
   justify-content: center;
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 `;
 
@@ -27,6 +27,7 @@ export const ContentWrapper = styled.div`
   ${({ theme }) => theme.mq.desktop} {
     width: max-content;
     flex-direction: column;
+    align-items: flex-start;
 
     h1 {
       max-width: max-content;
@@ -59,6 +60,6 @@ export const ImageWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.tablet} {
-    padding-top: ${({ theme }) => theme.padding.xV};
+    padding-top: ${({ theme }) => theme.padding.mV};
   }
 `;

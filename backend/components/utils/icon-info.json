@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_utils_icon_infos",
+  "info": {
+    "name": "IconInfo",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "caption": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

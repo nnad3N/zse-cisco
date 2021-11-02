@@ -8,7 +8,7 @@ import RichText from '@molecules/RichText/RichText';
 import PageTileWrapper from '@templates/PageTileWrapper/PageTileWrapper';
 import PageTile from '@templates/PageTile/PageTile';
 import ArrowLink from '@atoms/ArrowLink/ArrowLink';
-import { StyledSpan } from './Offert.styles';
+import { StyledTitle, StyledSpan } from './Offert.styles';
 
 const Offert = ({
   data: {
@@ -28,7 +28,7 @@ const Offert = ({
         {offertComponents.map(({ title, content, offertCourses, id }) => (
           <PageSection key={id}>
             <LineVertical large>
-              <h1>{title}</h1>
+              <StyledTitle>{title}</StyledTitle>
             </LineVertical>
             <RichText>{content}</RichText>
             <PageTileWrapper>

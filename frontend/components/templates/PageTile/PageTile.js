@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PageTileWrapper } from './PageTile.styles';
 
-const PageTile = ({ children }) => {
-  return <PageTileWrapper>{children}</PageTileWrapper>;
+const PageTile = ({ children, wide }) => {
+  return <PageTileWrapper wide={wide}>{children}</PageTileWrapper>;
 };
 
 PageTile.propTypes = {};

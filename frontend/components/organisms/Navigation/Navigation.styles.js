@@ -15,7 +15,7 @@ export const StyledNavigation = styled.nav`
   align-content: start;
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+    padding: ${({ theme }) => theme.padding.sV} ${({ theme }) => theme.padding.s};
     grid-template-columns: 100%;
   }
 
