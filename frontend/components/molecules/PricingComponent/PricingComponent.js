@@ -30,6 +30,27 @@ const PricingComponent = ({ data: { title, semester, tableHead, tableRows, annot
   );
 };
 
-PricingComponent.propTypes = {};
+PricingComponent.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    semester: PropTypes.string,
+    tableHead: PropTypes.object,
+    tableRows: PropTypes.arrayOf(PropTypes.object),
+    annotations: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
+};
+
+PricingComponent.defaultProps = {
+  data: {
+    title: '',
+    semester: '',
+    tableHead: {
+      rowName: '',
+      rowContent: '',
+    },
+    tableRows: [],
+    annotations: [],
+  },
+};
 
 export default PricingComponent;

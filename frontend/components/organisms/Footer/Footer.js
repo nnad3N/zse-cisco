@@ -46,11 +46,13 @@ Footer.propTypes = {
     schoolName: PropTypes.string,
     footerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
     footerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
-  }),
+  }).isRequired,
 };
 
 Footer.defaultProps = {
   footer: {
+    header: '',
+    schoolName: '',
     footerInfo: [],
     footerImages: [],
   },

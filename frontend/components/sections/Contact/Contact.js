@@ -28,14 +28,21 @@ const Contact = ({ data: { title, address, schoolName, contactInfo } }) => {
 };
 
 Contact.propTypes = {
-  title: PropTypes.string,
-  address: PropTypes.string,
-  schoolName: PropTypes.string,
-  contactInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    address: PropTypes.string,
+    schoolName: PropTypes.string,
+    contactInfo: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
 };
 
 Contact.defaultProps = {
-  contactInfo: [],
+  data: {
+    title: '',
+    address: '',
+    schoolName: '',
+    contactInfo: [],
+  },
 };
 
 export default Contact;

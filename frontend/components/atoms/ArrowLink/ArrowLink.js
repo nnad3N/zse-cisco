@@ -21,11 +21,12 @@ ArrowLink.propTypes = {
   slug: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.object,
+  accented: PropTypes.bool,
 };
 
 ArrowLink.defaultProps = {
   slug: '',
-  title: 'Link',
+  title: '',
 };
 
 export default ArrowLink;

@@ -26,7 +26,14 @@ HeroPricing.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     button: PropTypes.object,
-  }),
+  }).isRequired,
+};
+
+HeroPricing.defaultProps = {
+  data: {
+    title: '',
+    description: '',
+  },
 };
 
 export default HeroPricing;

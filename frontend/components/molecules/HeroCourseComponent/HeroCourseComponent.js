@@ -34,19 +34,21 @@ HeroCourseComponent.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     link: PropTypes.shape({
-      slug: PropTypes.string.isRequired,
+      slug: PropTypes.string,
     }),
     linkName: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
   image: PropTypes.object,
 };
 
 HeroCourseComponent.defaultProps = {
   data: {
+    title: '',
+    description: '',
+    linkName: '',
     link: {
       slug: '',
     },
-    linkName: 'Link',
   },
 };
 

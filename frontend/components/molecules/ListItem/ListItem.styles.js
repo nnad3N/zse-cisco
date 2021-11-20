@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ListItemWrapper = styled.li`
   display: flex;
-  align-items: ${({ wrap }) => (wrap ? 'flex-start' : 'center')};
+  align-items: ${({ long }) => (long ? 'flex-start' : 'center')};
 
   &:not(:last-child) {
     margin-bottom: 1.5rem;

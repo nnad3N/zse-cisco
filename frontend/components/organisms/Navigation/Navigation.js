@@ -17,7 +17,7 @@ const Navigation = ({ navLinks }) => {
           </LineHorizontal>
           <ul>
             {links.map((link) => (
-              <ListItem linked key={link.id} link={link} setIsNavOpen={setIsNavOpen} />
+              <ListItem hasLinks key={link.id} link={link} setIsNavOpen={setIsNavOpen} />
             ))}
           </ul>
         </ContentWrapper>
@@ -39,7 +39,8 @@ Navigation.propTypes = {
 Navigation.defaultProps = {
   navLinks: [
     {
-      groupName: 'Group Name',
+      groupName: '',
+      id: 0,
       links: [],
     },
   ],

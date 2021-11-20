@@ -23,7 +23,16 @@ HeroInstructorComponent.propTypes = {
     header: PropTypes.string,
     instructor: PropTypes.string,
     description: PropTypes.string,
-  }),
+    image: PropTypes.object,
+  }).isRequired,
+};
+
+HeroInstructorComponent.defaultProps = {
+  data: {
+    header: '',
+    instructor: '',
+    description: '',
+  },
 };
 
 export default HeroInstructorComponent;

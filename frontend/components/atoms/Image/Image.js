@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import NextImage from 'next/image';
 import { getStrapiMedia } from 'utils/media';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
-const Image = ({ image, priority }) => {
+const Image = ({ image }) => {
   if (image) {
     const { alternativeText, width, height } = image;
 
@@ -20,7 +21,7 @@ const Image = ({ image, priority }) => {
           layout="responsive"
           width={width}
           height={height}
-          src={imageUrl}
+          src={imageUrl ? imageUrl : '/imgError.svg'}
           alt={alternativeText || 'image'}
           priority
         />
@@ -28,26 +29,27 @@ const Image = ({ image, priority }) => {
     );
   } else {
     console.error('Image was required but not provided');
-    return <h5>Image was required but not provided</h5>;
+    // throw new Error('Image was required but not provided');
+    return <NextImage src="/imgError.svg" height={300} width={300} />;
   }
 };
 
 Image.propTypes = {
   image: PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    alternativeText: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
+    url: PropTypes.string,
+    alternativeText: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
   }),
   priority: PropTypes.bool,
 };
 
 Image.defaultProps = {
   image: {
-    url: 'https://images.pexels.com/photos/897817/pexels-photo-897817.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-    alternativeText: 'image failed to load properly',
-    width: 1260,
-    height: 750,
+    url: '',
+    alternativeText: 'Image failed to load properly',
+    width: 0,
+    height: 0,
   },
 };
 

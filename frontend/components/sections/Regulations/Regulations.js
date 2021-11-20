@@ -19,8 +19,17 @@ const Regulations = ({ data: { title, content } }) => {
 };
 
 Regulations.propTypes = {
-  title: PropTypes.string,
-  content: PropTypes.string,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    content: PropTypes.string,
+  }).isRequired,
+};
+
+Regulations.defaultProps = {
+  data: {
+    title: '',
+    content: '',
+  },
 };
 
 export default Regulations;

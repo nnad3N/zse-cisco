@@ -20,16 +20,16 @@ const FunctionalLink = ({ link: { name, slug, newTab }, setIsNavOpen }) => {
 
 FunctionalLink.propTypes = {
   link: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    slug: PropTypes.string,
     newTab: PropTypes.bool,
-  }),
+  }).isRequired,
   setIsNavOpen: PropTypes.func,
 };
 
 FunctionalLink.defaultProps = {
   link: {
-    name: 'Link',
+    name: '',
     slug: '',
   },
 };

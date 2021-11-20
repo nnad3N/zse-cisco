@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledMarkdown } from './RichText.styles';
+import { childrenShape } from 'propTypes/componentTypes';
 
 const RichText = ({ children }) => {
   return <StyledMarkdown>{children}</StyledMarkdown>;
 };
 
 RichText.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.elementType), PropTypes.elementType]),
+  children: childrenShape,
 };
 
 export default RichText;
