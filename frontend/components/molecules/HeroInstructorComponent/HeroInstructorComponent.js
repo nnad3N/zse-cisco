@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import Image from '@atoms/Image/Image';
 import { HeroInstructorWrapper, ImageWrapper, InstructorWrapper } from './HeroInstructorComponent.styles';
 
-const HeroInstructorComponent = ({ data: { header, instructor, description, image } }) => {
+const HeroInstructorComponent = ({ data: { header, instructor, description } }) => {
   return (
     <HeroInstructorWrapper>
-      <ImageWrapper>
-        <Image image={image} />
-      </ImageWrapper>
-      <InstructorWrapper>
-        <h5>{header}</h5>
-        <h4>{instructor}</h4>
-        <p>{description}</p>
-      </InstructorWrapper>
+      <h5>{header}</h5>
+      <h4>{instructor}</h4>
+      <p>{description}</p>
     </HeroInstructorWrapper>
   );
 };

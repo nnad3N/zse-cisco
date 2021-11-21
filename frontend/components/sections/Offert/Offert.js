@@ -19,7 +19,7 @@ const Offert = ({
 }) => {
   return (
     <>
-      <PageHeader image={image}>
+      <PageHeader image={image} longText>
         <LineVertical large>
           <h1>{title}</h1>
         </LineVertical>

@@ -9,7 +9,7 @@ const NavBar = ({ logo }) => {
   const { isLoading, isNavOpen, setIsNavOpen } = useContext(AppContext);
 
   return (
-    <Header isLoading={isLoading}>
+    <Header isLoading={isLoading} isNavOpen={isNavOpen}>
       <Loader id="loader" isLoading={isLoading} />
       <Link href="/" passHref>
         <Logo onClick={() => setIsNavOpen(false)}>

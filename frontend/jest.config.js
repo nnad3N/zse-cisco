@@ -7,6 +7,7 @@ module.exports = {
     '^types/(.*)$': '<rootDir>/types/$1',
     '^assets/(.*)$': '<rootDir>/assets/$1',
     '^providers/(.*)$': '<rootDir>/providers/$1',
+    '^propTypes/(.*)$': '<rootDir>/propTypes/$1',
     '^components/(.*)$': '<rootDir>/components/$1',
     '^@atoms/(.*)$': '<rootDir>/components/atoms/$1',
     '^@molecules/(.*)$': '<rootDir>/components/molecules/$1',

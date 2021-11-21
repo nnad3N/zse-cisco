@@ -9,7 +9,7 @@ export const InfoSection = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.mainColor};
 
-  ${({ theme }) => theme.mq.mobileLarge} {
+  ${({ theme }) => theme.mq.laptop} {
     padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 `;
@@ -18,8 +18,9 @@ export const InfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  max-width: ${({ theme }) => theme.dimensions.pageSectionWidth};
 
-  ${({ theme }) => theme.mq.laptopLarge} {
+  ${({ theme }) => theme.mq.tablet} {
     width: max-content;
     flex-direction: column;
     align-items: flex-start;
@@ -28,21 +29,27 @@ export const InfoWrapper = styled.div`
 
 export const InfoComponent = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: ${({ theme }) => theme.colors.white};
 
   &:not(:last-child) {
-    margin-right: 8rem;
+    margin-right: 6rem;
   }
 
   span {
     font-size: ${({ theme }) => theme.fontSize.captionLargeMedium};
   }
 
-  ${({ theme }) => theme.mq.laptopLarge} {
+  ${({ theme }) => theme.mq.laptop} {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
     &:not(:last-child) {
       margin-right: 0;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
   }
 `;
@@ -51,11 +58,6 @@ export const StyledSpan = styled.span`
   color: ${({ theme }) => theme.colors.accentColor};
   font-weight: 600;
   margin-right: 0.6rem;
-`;
-
-export const ImageWrapper = styled.div`
-  width: 7rem;
-  margin-right: 3rem;
 `;
 
 export const StyledList = styled.ul`
@@ -77,9 +79,19 @@ export const PageTileWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 
-  ${({ theme }) => theme.mq.laptopLarge} {
+  ${({ theme }) => theme.mq.laptop} {
     flex-direction: column;
     align-items: center;
+
+    div {
+      width: ${({ theme }) => theme.dimensions.tileWidth};
+    }
+  }
+
+  ${({ theme }) => theme.mq.tablet} {
+    div {
+      width: 100%;
+    }
   }
 `;
 

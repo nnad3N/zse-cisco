@@ -4,20 +4,11 @@ export const HeroCourseComponentWrapper = styled.div`
   align-self: flex-start;
   display: flex;
   flex-direction: column;
-  padding: ${({ theme }) => theme.dimensions.heroCoursePadding};
+  padding: ${({ theme }) => theme.dimensions.tilePadding};
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
-  position: relative;
   max-width: 50rem;
-
-  &:nth-child(odd) {
-    justify-self: end;
-  }
-
-  &:nth-child(even) {
-    justify-self: start;
-  }
 
   h4 {
     text-align: center;
@@ -30,17 +21,5 @@ export const HeroCourseComponentWrapper = styled.div`
 
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-90%, -65%);
-
-  ${({ theme }) => theme.mq.mobileLarge} {
-    display: none;
   }
 `;

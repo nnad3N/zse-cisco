@@ -11,11 +11,6 @@ export const StyledFooter = styled.footer`
     padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 
-  h3 {
-    grid-area: header;
-    color: ${({ theme }) => theme.colors.accentColor};
-  }
-
   p {
     text-align: left;
     font-size: ${({ theme }) => theme.fontSize.subText};
@@ -24,17 +19,17 @@ export const StyledFooter = styled.footer`
 
 export const FooterWrapper = styled.div`
   display: grid;
-  column-gap: ${({ theme }) => theme.padding.s};
+  column-gap: ${({ theme }) => theme.padding.xs};
   row-gap: ${({ theme }) => theme.padding.xsV};
   width: 100%;
-  grid-template:
-    'header line images'
-    'content line images';
+  grid-template: 'content line images';
+  justify-content: space-between;
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.laptop} {
+    row-gap: ${({ theme }) => theme.padding.xsV};
     max-width: ${({ theme }) => theme.dimensions.tileWidth};
+    justify-content: stretch;
     grid-template:
-      'header '
       'content'
       'line'
       'images';
@@ -64,16 +59,25 @@ export const StyledSchoolInfo = styled.p`
 
 export const ContentWrapper = styled.div`
   grid-area: content;
-  display: flex;
+  display: grid;
   align-items: center;
 
-  ${({ theme }) => theme.mq.desktop} {
+  h3 {
+    color: ${({ theme }) => theme.colors.accentColor};
+    text-align: start;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    margin-bottom: 1rem;
+  }
+
+  ${({ theme }) => theme.mq.laptop} {
     justify-content: space-between;
   }
 `;
 
 export const InformationWrapper = styled.div`
   margin-left: 8rem;
+  width: max-content;
 
   span {
     color: ${({ theme }) => theme.colors.accentColor};
@@ -81,7 +85,7 @@ export const InformationWrapper = styled.div`
     font-weight: 600;
   }
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.laptop} {
     margin-left: 0;
   }
 `;
@@ -93,7 +97,7 @@ export const Line = styled.span`
   height: 100%;
   background-color: ${({ theme }) => theme.colors.accentColor};
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.laptop} {
     width: 100%;
     height: 0.5rem;
   }
@@ -118,7 +122,7 @@ export const ImageWrapper = styled.div`
     margin-right: 5rem;
   }
 
-  ${({ theme }) => theme.mq.desktop} {
+  ${({ theme }) => theme.mq.laptop} {
     width: 25rem;
   }
 
@@ -126,7 +130,7 @@ export const ImageWrapper = styled.div`
     min-width: 30rem;
 
     &:first-child {
-      margin: 5rem 0;
+      margin: 0 0 3rem 0;
     }
   }
 `;

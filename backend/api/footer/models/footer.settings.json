@@ -18,11 +18,6 @@
     "schoolName": {
       "type": "string"
     },
-    "footerInfo": {
-      "type": "component",
-      "repeatable": true,
-      "component": "utils.footer-info"
-    },
     "footerImages": {
       "collection": "file",
       "via": "related",
@@ -34,6 +29,11 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "footerInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.info"
     }
   }
 }

@@ -47,11 +47,17 @@ const Sections = ({ sections }) => {
 };
 
 Section.propTypes = {
-  sectionData: PropTypes.object,
+  sectionData: PropTypes.object.isRequired,
 };
 
 Sections.propTypes = {
   sections: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+Section.defaultProps = {
+  sectionData: {
+    __component: '',
+  },
 };
 
 Sections.defaultProps = {

@@ -16,6 +16,10 @@ export const Header = styled.header`
     border-radius: 0;
   }
 
+  ${({ theme }) => theme.mq.laptop} {
+    padding: ${({ theme, isNavOpen }) => (isNavOpen ? `1rem ${theme.padding.s}` : `1rem ${theme.padding.m}`)};
+  }
+
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: 2rem ${({ theme }) => theme.padding.s};
   }

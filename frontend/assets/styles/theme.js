@@ -25,7 +25,9 @@ export const theme = {
     xl: '18vw',
     x: '15vw',
     m: '10vw',
+    xs: '8vw',
     s: '5vw',
+
     xxlV: '10rem',
     xlV: '8rem',
     xV: '7rem',
@@ -37,7 +39,6 @@ export const theme = {
   dimensions: {
     tilePadding: '4rem 3.5rem',
     tilePaddingMobile: '3rem 5vw',
-    heroCoursePadding: '3rem 5rem',
     tileWidth: '65rem',
     pageSectionPadding: '4rem 5rem',
     pageSectionWidth: '100rem',

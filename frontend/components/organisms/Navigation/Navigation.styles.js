@@ -8,11 +8,15 @@ export const StyledNavigation = styled.nav`
   background-color: ${({ theme }) => theme.colors.mainColor};
   padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, auto));
   row-gap: ${({ theme }) => theme.padding.xV};
   column-gap: ${({ theme }) => theme.padding.x};
-  justify-content: center;
-  align-content: start;
+  align-content: flex-start;
+
+  ${({ theme }) => theme.mq.laptop} {
+    column-gap: ${({ theme }) => theme.padding.s};
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+  }
 
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.padding.sV} ${({ theme }) => theme.padding.s};
@@ -36,10 +40,11 @@ export const ExitButton = styled.button`
 `;
 
 export const ContentWrapper = styled.div`
+  justify-self: center;
+  min-width: 40rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-self: center;
 
   & > div {
     margin-bottom: 2rem;

@@ -17,10 +17,10 @@
       "repeatable": true,
       "component": "section-components.rich-text"
     },
-    "iconInfo": {
+    "courseInfo": {
       "type": "component",
       "repeatable": true,
-      "component": "utils.icon-info"
+      "component": "utils.info"
     },
     "listTitle": {
       "type": "string"

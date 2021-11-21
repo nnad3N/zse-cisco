@@ -8,8 +8,12 @@ export const StyledPageWrapper = styled.div`
   justify-content: center;
   flex-direction: ${({ column }) => (column ? 'column' : 'row')};
 
-  ${({ theme }) => theme.mq.mobileLarge} {
-    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
+  ${({ theme }) => theme.mq.desktop} {
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme, wide }) => (wide ? theme.padding.xs : theme.padding.m)};
+  }
+
+  ${({ theme, wide }) => (wide ? theme.mq.laptopLarge : theme.mq.tablet)} {
+    padding: 0;
     min-height: unset;
   }
 `;

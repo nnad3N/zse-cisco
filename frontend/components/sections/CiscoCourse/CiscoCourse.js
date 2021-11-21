@@ -5,7 +5,6 @@ import LineVertical from '@atoms/LineVertical/LineVertical';
 import PageWrapper from '@templates/PageWrapper/PageWrapper';
 import PageSection from '@templates/PageSection/PageSection';
 import RichText from '@molecules/RichText/RichText';
-import Image from '@atoms/Image/Image';
 import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import PageTile from '@templates/PageTile/PageTile';
 import ListItem from '@molecules/ListItem/ListItem';
@@ -15,7 +14,6 @@ import {
   InfoWrapper,
   InfoComponent,
   StyledSpan,
-  ImageWrapper,
   StyledList,
   StyledItem,
   PageTileWrapper,
@@ -26,13 +24,13 @@ const CiscoCourse = ({
   data: {
     header: { title, image },
     richText,
-    iconInfo,
+    courseInfo,
     listTitle,
     listComponent,
   },
 }) => {
   return (
-    <div>
+    <>
       <PageHeader image={image}>
         <LineVertical large>
           <h1>{title}</h1>
@@ -50,18 +48,15 @@ const CiscoCourse = ({
       </PageWrapper>
       <InfoSection>
         <InfoWrapper>
-          {iconInfo.map(({ caption, value, icon, id }) => (
+          {courseInfo.map(({ caption, info, id }) => (
             <InfoComponent key={id}>
-              <ImageWrapper>
-                <Image image={icon} />
-              </ImageWrapper>
               <StyledSpan>{caption}</StyledSpan>
-              <span>{value}</span>
+              <span>{info}</span>
             </InfoComponent>
           ))}
         </InfoWrapper>
       </InfoSection>
-      <PageWrapper short>
+      <PageWrapper short wide>
         <PageSection wide>
           <LineHorizontal large>
             <h1>{listTitle}</h1>
@@ -74,7 +69,7 @@ const CiscoCourse = ({
                 </LineVertical>
                 <StyledList>
                   {listItems.map(({ item, id }) => (
-                    <ListItem long key={id}>
+                    <ListItem key={id}>
                       <StyledItem>{item}</StyledItem>
                     </ListItem>
                   ))}
@@ -84,7 +79,7 @@ const CiscoCourse = ({
           </PageTileWrapper>
         </PageSection>
       </PageWrapper>
-    </div>
+    </>
   );
 };
 
@@ -95,7 +90,7 @@ CiscoCourse.propTypes = {
       image: PropTypes.object,
     }),
     richText: PropTypes.arrayOf(PropTypes.object),
-    iconInfo: PropTypes.arrayOf(PropTypes.object),
+    courseInfo: PropTypes.arrayOf(PropTypes.object),
     listTitle: PropTypes.string,
     listComponent: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
@@ -107,7 +102,7 @@ CiscoCourse.defaultProps = {
       title: '',
     },
     richText: [],
-    iconInfo: [],
+    courseInfo: [],
     listTitle: '',
     listComponent: [],
   },

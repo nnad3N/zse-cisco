@@ -16,9 +16,9 @@ export const ContentWrapper = styled.div`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(40rem, auto));
-  column-gap: ${({ theme }) => theme.padding.x};
-  row-gap: ${({ theme }) => `calc(${theme.padding.xV} + 2rem)`};
-  margin-top: ${({ theme }) => `calc(${theme.padding.xV} + 2rem)`};
+  column-gap: ${({ theme }) => theme.padding.m};
+  row-gap: ${({ theme }) => theme.padding.xV};
+  margin-top: ${({ theme }) => theme.padding.xV};
 
   ${({ theme }) => theme.mq.mobileLarge} {
     margin-top: ${({ theme }) => theme.padding.mV};

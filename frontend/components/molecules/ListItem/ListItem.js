@@ -4,9 +4,9 @@ import FunctionalLink from '@atoms/FunctionalLink/FunctionalLink';
 import { ListItemWrapper, Bullet } from './ListItem.styles';
 import { childrenShape } from 'propTypes/componentTypes';
 
-const ListItem = ({ link, setIsNavOpen, hasLinks, children, ...props }) => {
+const ListItem = ({ link, setIsNavOpen, hasLinks, children }) => {
   return (
-    <ListItemWrapper {...props}>
+    <ListItemWrapper>
       <Bullet />
       {hasLinks ? <FunctionalLink link={link} setIsNavOpen={setIsNavOpen} /> : children}
     </ListItemWrapper>
@@ -18,7 +18,6 @@ ListItem.propTypes = {
   setIsNavOpen: PropTypes.func,
   hasLinks: PropTypes.bool,
   children: childrenShape,
-  props: PropTypes.bool,
 };
 
 export default ListItem;

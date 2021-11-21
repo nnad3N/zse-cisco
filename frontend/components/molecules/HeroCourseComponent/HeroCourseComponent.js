@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from '@atoms/Image/Image';
 import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import LineVertical from '@atoms/LineVertical/LineVertical';
-import { HeroCourseComponentWrapper, ImageWrapper } from './HeroCourseComponent.styles';
+import { HeroCourseComponentWrapper } from './HeroCourseComponent.styles';
 
 const HeroCourseComponent = ({
   data: {
@@ -11,15 +10,11 @@ const HeroCourseComponent = ({
     description,
     link: { slug },
     linkName,
-    icon,
   },
   image,
 }) => {
   return (
     <HeroCourseComponentWrapper>
-      <ImageWrapper>
-        <Image image={icon} />
-      </ImageWrapper>
       <h4>{title}</h4>
       <LineVertical>
         <p>{description}</p>
