@@ -19,7 +19,7 @@ const Offert = ({
 }) => {
   return (
     <>
-      <PageHeader image={image}>
+      <PageHeader image={image} longText>
         <LineVertical large>
           <h1>{title}</h1>
         </LineVertical>
@@ -49,6 +49,24 @@ const Offert = ({
   );
 };
 
-Offert.propTypes = {};
+Offert.propTypes = {
+  data: PropTypes.shape({
+    sectionHeader: PropTypes.shape({
+      title: PropTypes.string,
+      image: PropTypes.object,
+    }),
+    offertComponents: PropTypes.arrayOf(PropTypes.object),
+    arrowImage: PropTypes.object,
+  }).isRequired,
+};
+
+Offert.defaultProps = {
+  data: {
+    sectionHeader: {
+      title: '',
+    },
+    offertComponents: [],
+  },
+};
 
 export default Offert;

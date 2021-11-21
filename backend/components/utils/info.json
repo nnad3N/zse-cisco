@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_utils_infos",
+  "info": {
+    "name": "info",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    }
+  }
+}

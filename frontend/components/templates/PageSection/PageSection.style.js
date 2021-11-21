@@ -17,8 +17,14 @@ export const PageSectionWrapper = styled.section`
     min-width: ${({ wide }) => (wide ? '100%' : 0)};
   }
 
+  ${({ theme }) => theme.mq.tablet} {
+    border-radius: 0;
+    margin-bottom: ${({ theme }) => theme.padding.sV};
+  }
+
   ${({ theme }) => theme.mq.mobileLarge} {
-    margin-bottom: ${({ theme }) => theme.padding.mV};
+    border-radius: 0;
+    margin-bottom: ${({ theme }) => theme.padding.ssV};
     padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
   }
 `;

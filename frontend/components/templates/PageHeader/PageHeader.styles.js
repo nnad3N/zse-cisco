@@ -21,7 +21,8 @@ export const ContentWrapper = styled.div`
   justify-content: space-between;
 
   h1 {
-    max-width: 40rem;
+    max-width: ${({ longText }) => (longText ? `max-content` : `40rem`)};
+    margin-right: 2rem;
   }
 
   ${({ theme }) => theme.mq.desktop} {
@@ -35,10 +36,10 @@ export const ContentWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.tablet} {
-    width: 50rem;
+    width: ${({ longText }) => (longText ? `100%` : `50rem`)};
 
     h1 {
-      max-width: 30rem;
+      max-width: ${({ longText }) => (longText ? `max-content` : `40rem`)};
     }
   }
 
@@ -48,8 +49,8 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 80rem;
-  max-width: 80rem;
+  width: ${({ longText }) => (longText ? `40rem` : `80rem`)};
+  max-width: ${({ longText }) => (longText ? `40rem` : `80rem`)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +58,7 @@ export const ImageWrapper = styled.div`
   ${({ theme }) => theme.mq.desktop} {
     width: 100%;
     padding-top: ${({ theme }) => theme.padding.xV};
+    margin: ${({ longText }) => (longText ? '0 auto' : 0)};
   }
 
   ${({ theme }) => theme.mq.tablet} {

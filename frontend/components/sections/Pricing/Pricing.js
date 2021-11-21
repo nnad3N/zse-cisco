@@ -25,6 +25,20 @@ const Pricing = ({ data: { title, content, pricingComponents } }) => {
   );
 };
 
-Pricing.propTypes = {};
+Pricing.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    content: PropTypes.string,
+    pricingComponents: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
+};
+
+Pricing.defaultProps = {
+  data: {
+    title: '',
+    content: '',
+    pricingComponents: [],
+  },
+};
 
 export default Pricing;

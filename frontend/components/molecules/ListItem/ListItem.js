@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FunctionalLink from '@atoms/FunctionalLink/FunctionalLink';
-import Image from '@atoms/Image/Image';
 import { ListItemWrapper, Bullet } from './ListItem.styles';
+import { childrenShape } from 'propTypes/componentTypes';
 
-// If needed you can make this component accept children like LineVertical in order to make list with custom bullets
-const ListItem = ({ link, setIsNavOpen, linked, wrap, children }) => {
+const ListItem = ({ link, setIsNavOpen, hasLinks, children }) => {
   return (
-    <ListItemWrapper wrap={wrap}>
+    <ListItemWrapper>
       <Bullet />
-      {linked ? <FunctionalLink link={link} setIsNavOpen={setIsNavOpen} /> : children}
+      {hasLinks ? <FunctionalLink link={link} setIsNavOpen={setIsNavOpen} /> : children}
     </ListItemWrapper>
   );
 };
@@ -17,6 +16,8 @@ const ListItem = ({ link, setIsNavOpen, linked, wrap, children }) => {
 ListItem.propTypes = {
   link: PropTypes.object,
   setIsNavOpen: PropTypes.func,
+  hasLinks: PropTypes.bool,
+  children: childrenShape,
 };
 
 export default ListItem;

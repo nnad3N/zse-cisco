@@ -14,11 +14,15 @@ const HeroInstructors = ({ data: { instructorComponents } }) => {
 };
 
 HeroInstructors.propTypes = {
-  instructorComponent: PropTypes.arrayOf(PropTypes.object).isRequired,
+  data: PropTypes.shape({
+    instructorComponents: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
 };
 
 HeroInstructors.defaultProps = {
-  instructorComponent: [],
+  data: {
+    instructorComponents: [],
+  },
 };
 
 export default HeroInstructors;

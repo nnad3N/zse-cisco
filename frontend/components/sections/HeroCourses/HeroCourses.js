@@ -22,15 +22,16 @@ const HeroCourses = ({ data: { title, heroCourses, arrowImage } }) => {
 HeroCourses.propTypes = {
   data: PropTypes.shape({
     arrowImage: PropTypes.object,
-    heroCourses: PropTypes.arrayOf(PropTypes.object).isRequired,
+    heroCourses: PropTypes.arrayOf(PropTypes.object),
     id: PropTypes.number,
     title: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 HeroCourses.defaultProps = {
   data: {
     heroCourses: [],
+    title: '',
   },
 };
 

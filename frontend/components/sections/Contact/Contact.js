@@ -4,7 +4,7 @@ import PageWrapper from '@templates/PageWrapper/PageWrapper';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { ContentWrapper, AddressWrapper, InformationWrapper } from './Contact.styles';
 
-const Contact = ({ data: { title, address, schoolName, contactInfo } }) => {
+const Contact = ({ data: { title, schoolName, contactInfo } }) => {
   return (
     <PageWrapper>
       <ContentWrapper>
@@ -13,7 +13,6 @@ const Contact = ({ data: { title, address, schoolName, contactInfo } }) => {
         </LineVertical>
         <AddressWrapper>
           <h4>{schoolName}</h4>
-          <h5>{address}</h5>
         </AddressWrapper>
         <InformationWrapper>
           {contactInfo.map(({ id, caption, info }) => (
@@ -28,14 +27,21 @@ const Contact = ({ data: { title, address, schoolName, contactInfo } }) => {
 };
 
 Contact.propTypes = {
-  title: PropTypes.string,
-  address: PropTypes.string,
-  schoolName: PropTypes.string,
-  contactInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    address: PropTypes.string,
+    schoolName: PropTypes.string,
+    contactInfo: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
 };
 
 Contact.defaultProps = {
-  contactInfo: [],
+  data: {
+    title: '',
+    address: '',
+    schoolName: '',
+    contactInfo: [],
+  },
 };
 
 export default Contact;

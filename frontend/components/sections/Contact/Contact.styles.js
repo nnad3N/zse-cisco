@@ -7,13 +7,17 @@ export const ContentWrapper = styled.div`
   padding: ${({ theme }) => theme.dimensions.tilePadding};
   width: clamp(${({ theme }) => theme.dimensions.tileWidth}, 100%, 80rem);
 
+  h1 {
+    font-size: ${({ theme }) => theme.fontSize.header};
+  }
+
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.dimensions.tilePaddingMobile};
   }
 `;
 
 export const AddressWrapper = styled.div`
-  margin-top: 6rem;
+  margin-top: 5rem;
 
   h4,
   h5 {
@@ -27,10 +31,11 @@ export const AddressWrapper = styled.div`
 `;
 
 export const InformationWrapper = styled.div`
-  margin: 4rem 0 6rem 0;
+  margin: 2rem 0 6rem 0;
 
   p,
   span {
+    text-align: start;
     font-size: ${({ theme }) => theme.fontSize.captionLarge};
   }
 
@@ -40,6 +45,6 @@ export const InformationWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.tablet} {
-    margin: 4rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
 `;

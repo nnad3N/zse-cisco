@@ -28,4 +28,11 @@ HeroAcademy.propTypes = {
   data: dataShape,
 };
 
+HeroAcademy.defaultProps = {
+  data: {
+    title: '',
+    description: '',
+  },
+};
+
 export default HeroAcademy;

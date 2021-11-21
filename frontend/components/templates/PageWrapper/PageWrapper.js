@@ -1,14 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { childrenShape } from 'propTypes/componentTypes';
 import { StyledPageWrapper } from './PageWrapper.styles';
 
-const PageWrapper = ({ children, short, column }) => {
-  return (
-    <StyledPageWrapper short={short} column={column}>
-      {children}
-    </StyledPageWrapper>
-  );
+const PageWrapper = ({ children, ...props }) => {
+  return <StyledPageWrapper {...props}>{children}</StyledPageWrapper>;
 };
 
-PageWrapper.propTypes = {};
+PageWrapper.propTypes = {
+  children: childrenShape,
+  props: PropTypes.bool,
+};
 
 export default PageWrapper;

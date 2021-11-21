@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 
 export const HeroInstructorsWrapper = styled.section`
-  padding: 0 ${({ theme }) => theme.padding.m};
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
-  column-gap: ${({ theme }) => theme.padding.s};
-  justify-content: center;
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.x};
   background-color: ${({ theme }) => theme.colors.mainColor};
+  display: flex;
+  justify-content: space-between;
+
+  ${({ theme }) => theme.mq.laptopLarge} {
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+  }
 
   ${({ theme }) => theme.mq.laptop} {
-    column-gap: ${({ theme }) => theme.padding.m};
+    flex-direction: column;
+    align-items: center;
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    padding: 0;
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 `;

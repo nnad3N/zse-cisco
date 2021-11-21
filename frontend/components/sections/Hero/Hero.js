@@ -4,6 +4,7 @@ import Button from '@atoms/Button/Button';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import Image from '@atoms/Image/Image';
 import { HeroWrapper, ContentWrapper, ButtonWrapper, ImageWrapper } from './Hero.styles';
+import { dataShape } from 'propTypes/componentTypes';
 
 const Hero = ({ data: { title, description, buttons, image } }) => {
   return (
@@ -27,10 +28,15 @@ const Hero = ({ data: { title, description, buttons, image } }) => {
 };
 
 Hero.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  button: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.object), PropTypes.object]),
-  image: PropTypes.object,
+  data: dataShape,
+};
+
+Hero.defaultProps = {
+  data: {
+    title: '',
+    description: '',
+    buttons: [],
+  },
 };
 
 export default Hero;

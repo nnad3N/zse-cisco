@@ -20,19 +20,19 @@ const Button = ({ data, hasMargin, accent }) => {
 
 Button.propTypes = {
   data: PropTypes.shape({
-    caption: PropTypes.string.isRequired,
+    caption: PropTypes.string,
     isFilled: PropTypes.bool,
     link: PropTypes.shape({
-      slug: PropTypes.string.isRequired,
+      slug: PropTypes.string,
     }),
-  }),
+  }).isRequired,
   hasMargin: PropTypes.bool,
   accept: PropTypes.bool,
 };
 
 Button.defaultProps = {
   data: {
-    caption: 'Click',
+    caption: '',
     link: {
       slug: '',
     },

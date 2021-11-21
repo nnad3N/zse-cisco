@@ -13,13 +13,10 @@
     "schoolName": {
       "type": "string"
     },
-    "address": {
-      "type": "string"
-    },
     "contactInfo": {
       "type": "component",
       "repeatable": true,
-      "component": "utils.footer-info"
+      "component": "utils.info"
     }
   }
 }

@@ -16,8 +16,8 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
   return (
     <StyledFooter>
       <FooterWrapper>
-        <h3>{header}</h3>
         <ContentWrapper>
+          <h3>{header}</h3>
           <StyledSchoolInfo>{schoolName}</StyledSchoolInfo>
           <InformationWrapper>
             {footerInfo.map(({ id, caption, info }) => (
@@ -46,11 +46,13 @@ Footer.propTypes = {
     schoolName: PropTypes.string,
     footerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
     footerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
-  }),
+  }).isRequired,
 };
 
 Footer.defaultProps = {
   footer: {
+    header: '',
+    schoolName: '',
     footerInfo: [],
     footerImages: [],
   },
