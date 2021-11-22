@@ -97,6 +97,10 @@ export const PageTileWrapper = styled.div`
 
 export const StyledTileHeader = styled.h4`
   ${({ theme }) => theme.mobileLarge} {
-    max-width: 75%;
+    max-width: 67%;
+  }
+
+  ${({ theme }) => theme.mq.mobileSmall} {
+    max-width: 60%;
   }
 `;

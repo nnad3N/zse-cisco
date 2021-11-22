@@ -21,8 +21,8 @@ const Image = ({ image }) => {
           layout="responsive"
           width={width}
           height={height}
-          src={imageUrl ? imageUrl : '/imgError.svg'}
-          alt={alternativeText || 'image'}
+          src={imageUrl}
+          alt={alternativeText}
           priority
         />
       </NextImageWrapper>
@@ -45,12 +45,7 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  image: {
-    url: '',
-    alternativeText: 'Image failed to load properly',
-    width: 0,
-    height: 0,
-  },
+  image: null,
 };
 
 export default Image;
