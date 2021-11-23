@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div`
   max-width: ${({ theme }) => theme.dimensions.pageSectionWidth};
 
   ${({ theme }) => theme.mq.tablet} {
-    width: max-content;
+    width: fit-content;
     flex-direction: column;
     align-items: flex-start;
   }

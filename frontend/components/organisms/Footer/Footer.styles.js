@@ -14,6 +14,7 @@ export const StyledFooter = styled.footer`
   p {
     text-align: left;
     font-size: ${({ theme }) => theme.fontSize.subText};
+    word-wrap: break-word;
   }
 `;
 
@@ -23,12 +24,13 @@ export const FooterWrapper = styled.div`
   row-gap: ${({ theme }) => theme.padding.xsV};
   width: 100%;
   grid-template: 'content line images';
-  justify-content: space-between;
+
+  ${({ theme }) => theme.mq.laptopLarge} {
+    column-gap: ${({ theme }) => theme.padding.s};
+  }
 
   ${({ theme }) => theme.mq.laptop} {
-    row-gap: ${({ theme }) => theme.padding.xsV};
     max-width: ${({ theme }) => theme.dimensions.tileWidth};
-    justify-content: stretch;
     grid-template:
       'content'
       'line'
@@ -55,6 +57,10 @@ export const FooterWrapper = styled.div`
 export const StyledSchoolInfo = styled.p`
   max-width: 14rem;
   margin-right: 3rem;
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    margin-right: 2rem;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -87,6 +93,12 @@ export const InformationWrapper = styled.div`
 
   ${({ theme }) => theme.mq.laptop} {
     margin-left: 0;
+  }
+
+  ${({ theme }) => theme.mq.mobileMedium} {
+    p {
+      width: 50vw;
+    }
   }
 `;
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Button from '@atoms/Button/Button';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import Image from '@atoms/Image/Image';

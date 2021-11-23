@@ -25,13 +25,17 @@ export const HeroWrapper = styled.section`
 `;
 
 export const ContentWrapper = styled.div`
-  width: 44rem;
+  width: 50rem;
   display: flex;
   flex-direction: column;
 
   h1 {
     max-width: 40rem;
     margin-bottom: 5rem;
+
+    ${({ theme }) => theme.mq.laptop} {
+      margin-bottom: 3rem;
+    }
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
@@ -60,7 +64,7 @@ export const ImageWrapper = styled.div`
   justify-content: center;
 
   ${({ theme }) => theme.mq.laptop} {
-    width: 44rem;
+    width: 50rem;
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {

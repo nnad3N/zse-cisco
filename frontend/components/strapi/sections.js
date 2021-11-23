@@ -9,6 +9,7 @@ import Regulations from '@sections/Regulations/Regulations';
 import Pricing from '@sections/Pricing/Pricing';
 import Offert from '@sections/Offert/Offert';
 import CiscoCourse from '@sections/CiscoCourse/CiscoCourse';
+import About from '@sections/About/About';
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -22,6 +23,7 @@ const sectionComponents = {
   'sections.pricing': Pricing,
   'sections.offert': Offert,
   'sections.cisco-course': CiscoCourse,
+  'sections.about': About,
 };
 
 // Display a section individually

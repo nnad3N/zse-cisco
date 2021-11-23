@@ -32,7 +32,8 @@
         "sections.regulations",
         "sections.pricing",
         "sections.offert",
-        "sections.cisco-course"
+        "sections.cisco-course",
+        "sections.about"
       ]
     }
   }
