@@ -7,24 +7,11 @@ const Image = ({ image }) => {
   if (image) {
     const { alternativeText, width, height } = image;
 
-    const loader = () => {
-      return getStrapiMedia(image);
-    };
-
     const imageUrl = getStrapiMedia(image);
 
     return (
       <NextImageWrapper>
-        <StyledNextImage
-          loader={loader}
-          unoptimized
-          layout="responsive"
-          width={width}
-          height={height}
-          src={imageUrl}
-          alt={alternativeText}
-          priority
-        />
+        <StyledNextImage layout="responsive" width={width} height={height} objectFit="contain" src={imageUrl} alt={alternativeText} />
       </NextImageWrapper>
     );
   } else {
