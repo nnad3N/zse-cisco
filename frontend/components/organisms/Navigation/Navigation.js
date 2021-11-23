@@ -29,11 +29,11 @@ const Navigation = ({ navLinks }) => {
 Navigation.propTypes = {
   navLinks: PropTypes.arrayOf(
     PropTypes.shape({
-      groupName: PropTypes.string.isRequired,
+      groupName: PropTypes.string,
       id: PropTypes.number,
-      links: PropTypes.arrayOf(PropTypes.object).isRequired,
+      links: PropTypes.arrayOf(PropTypes.object),
     })
-  ),
+  ).isRequired,
 };
 
 Navigation.defaultProps = {

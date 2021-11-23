@@ -22,7 +22,12 @@ const Layout = ({ children, navigation: { logo, navLinks }, footer }) => {
 
 Layout.propTypes = {
   children: childrenShape,
-  navigation: PropTypes.object,
+  navigation: PropTypes.object.isRequired,
+  footer: PropTypes.object.isRequired,
+};
+
+Layout.defaultProps = {
+  navigation: {},
 };
 
 export default Layout;

@@ -10,19 +10,15 @@ export const HeroInstructorWrapper = styled.div`
     margin-bottom: 1rem;
   }
 
+  ${({ theme }) => theme.mq.desktop} {
+    max-width: 40rem;
+  }
+
   ${({ theme }) => theme.mq.laptop} {
+    max-width: 50rem;
+
     &:not(:last-child) {
       padding: 0 0 ${({ theme }) => theme.padding.mV} 0;
     }
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  width: 20rem;
-  border-radius: 50%;
-  margin: 2rem 3rem;
-
-  ${({ theme }) => theme.mq.heroInstructors} {
-    margin: 0 6rem 0 0;
   }
 `;

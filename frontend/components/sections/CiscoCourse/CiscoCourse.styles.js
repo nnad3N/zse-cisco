@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div`
   max-width: ${({ theme }) => theme.dimensions.pageSectionWidth};
 
   ${({ theme }) => theme.mq.tablet} {
-    width: max-content;
+    width: fit-content;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -97,6 +97,10 @@ export const PageTileWrapper = styled.div`
 
 export const StyledTileHeader = styled.h4`
   ${({ theme }) => theme.mobileLarge} {
-    max-width: 75%;
+    max-width: 67%;
+  }
+
+  ${({ theme }) => theme.mq.mobileSmall} {
+    max-width: 60%;
   }
 `;

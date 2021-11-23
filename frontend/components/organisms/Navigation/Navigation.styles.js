@@ -18,9 +18,13 @@ export const StyledNavigation = styled.nav`
     padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
   }
 
+  ${({ theme }) => theme.mq.tabletLarge} {
+    grid-template-columns: 100%;
+    padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.m};
+  }
+
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: ${({ theme }) => theme.padding.sV} ${({ theme }) => theme.padding.s};
-    grid-template-columns: 100%;
   }
 
   img {

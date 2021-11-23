@@ -55,6 +55,7 @@ export const theme = {
     desktopWide: `@media (min-width: 1400px)`,
     laptopLarge: `@media (max-width: 1450px)`,
     laptop: `@media (max-width: 1224px)`,
+    tabletLarge: `@media (max-width: 1050px)`,
     tablet: `@media (max-width: 850px)`,
     mobileLarge: `@media (max-width: 568px)`,
     mobileMedium: `@media (max-width: 450px)`,

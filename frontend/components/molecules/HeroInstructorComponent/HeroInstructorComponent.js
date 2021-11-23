@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from '@atoms/Image/Image';
-import { HeroInstructorWrapper, ImageWrapper, InstructorWrapper } from './HeroInstructorComponent.styles';
+import { HeroInstructorWrapper } from './HeroInstructorComponent.styles';
 
 const HeroInstructorComponent = ({ data: { header, instructor, description } }) => {
   return (
@@ -18,7 +17,6 @@ HeroInstructorComponent.propTypes = {
     header: PropTypes.string,
     instructor: PropTypes.string,
     description: PropTypes.string,
-    image: PropTypes.object,
   }).isRequired,
 };
 

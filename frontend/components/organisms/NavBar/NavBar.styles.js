@@ -20,6 +20,10 @@ export const Header = styled.header`
     padding: ${({ theme, isNavOpen }) => (isNavOpen ? `1rem ${theme.padding.s}` : `1rem ${theme.padding.m}`)};
   }
 
+  ${({ theme }) => theme.mq.tabletLarge} {
+    padding: 1rem ${({ theme }) => theme.padding.m};
+  }
+
   ${({ theme }) => theme.mq.mobileLarge} {
     padding: 2rem ${({ theme }) => theme.padding.s};
   }

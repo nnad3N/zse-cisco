@@ -7,24 +7,11 @@ const Image = ({ image }) => {
   if (image) {
     const { alternativeText, width, height } = image;
 
-    const loader = () => {
-      return getStrapiMedia(image);
-    };
-
     const imageUrl = getStrapiMedia(image);
 
     return (
       <NextImageWrapper>
-        <StyledNextImage
-          loader={loader}
-          unoptimized
-          layout="responsive"
-          width={width}
-          height={height}
-          src={imageUrl ? imageUrl : '/imgError.svg'}
-          alt={alternativeText || 'image'}
-          priority
-        />
+        <StyledNextImage layout="responsive" width={width} height={height} objectFit="contain" src={imageUrl} alt={alternativeText} />
       </NextImageWrapper>
     );
   } else {
@@ -45,12 +32,7 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  image: {
-    url: '',
-    alternativeText: 'Image failed to load properly',
-    width: 0,
-    height: 0,
-  },
+  image: null,
 };
 
 export default Image;

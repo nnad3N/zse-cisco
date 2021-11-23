@@ -7,7 +7,7 @@ export const HeroInstructorsWrapper = styled.section`
   justify-content: space-between;
 
   ${({ theme }) => theme.mq.laptopLarge} {
-    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.s};
+    padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
   }
 
   ${({ theme }) => theme.mq.laptop} {

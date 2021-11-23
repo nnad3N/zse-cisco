@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['zse-cisco-experimental.herokuapp.com', 'localhost'],
+    domains: [process.env.NEXT_PUBLIC_STRAPI_API_URL, 'localhost'],
   },
 };

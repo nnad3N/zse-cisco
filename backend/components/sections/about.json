@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_sections_abouts",
+  "info": {
+    "name": "About",
+    "icon": "book-open",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "secOneTitle": {
+      "type": "string"
+    },
+    "secOneDescription": {
+      "type": "text"
+    },
+    "secOneImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "secTwoTitle": {
+      "type": "string"
+    },
+    "secTwoDescription": {
+      "type": "text"
+    },
+    "secThreeTitle": {
+      "type": "string"
+    },
+    "secThreeDescription": {
+      "type": "text"
+    },
+    "secThreeImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
