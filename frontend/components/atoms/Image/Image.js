@@ -1,17 +1,30 @@
 import PropTypes from 'prop-types';
 import NextImage from 'next/image';
-import { getStrapiMedia } from 'utils/media';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
 const Image = ({ image }) => {
   if (image) {
-    const { alternativeText, width, height } = image;
+    const { alternativeText, url, width, height } = image;
 
-    const imageUrl = getStrapiMedia(image);
+    const loader = ({ src, width }) => {
+      if (src == null) {
+        return null;
+      }
+      return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'}${src}?w=${width}`;
+    };
 
     return (
       <NextImageWrapper>
-        <StyledNextImage layout="responsive" width={width} height={height} objectFit="contain" src={imageUrl} alt={alternativeText} priority />
+        <StyledNextImage
+          loader={loader}
+          layout="responsive"
+          width={width}
+          height={height}
+          objectFit="contain"
+          src={url}
+          alt={alternativeText}
+          priority
+        />
       </NextImageWrapper>
     );
   } else {
@@ -28,7 +41,6 @@ Image.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
   }),
-  priority: PropTypes.bool,
 };
 
 Image.defaultProps = {
