@@ -11,7 +11,7 @@ const Image = ({ image }) => {
 
     return (
       <NextImageWrapper>
-        <StyledNextImage layout="responsive" width={width} height={height} objectFit="contain" src={imageUrl} alt={alternativeText} />
+        <StyledNextImage layout="responsive" width={width} height={height} objectFit="contain" src={imageUrl} alt={alternativeText} priority />
       </NextImageWrapper>
     );
   } else {
