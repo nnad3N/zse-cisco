@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import NextImage from 'next/image';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
-const Image = ({ image, priority }) => {
+const Image = ({ image }) => {
   if (image) {
     const { alternativeText, url, width, height } = image;
 
@@ -23,7 +23,7 @@ const Image = ({ image, priority }) => {
           objectFit="contain"
           src={url}
           alt={alternativeText}
-          priority={priority}
+          priority
         />
       </NextImageWrapper>
     );
@@ -41,12 +41,10 @@ Image.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
   }),
-  priority: PropTypes.bool,
 };
 
 Image.defaultProps = {
   image: null,
-  priority: false,
 };
 
 export default Image;

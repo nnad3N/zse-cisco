@@ -17,7 +17,7 @@ const About = ({
           <p>{secOneDescription}</p>
         </ContentWrapper>
         <ImageWrapper>
-          <Image image={secOneImage} priority />
+          <Image image={secOneImage} />
         </ImageWrapper>
       </SectionWrapper>
       <SectionDarkWrapper>

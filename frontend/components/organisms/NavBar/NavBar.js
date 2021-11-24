@@ -13,7 +13,7 @@ const NavBar = ({ logo }) => {
       <Loader id="loader" isLoading={isLoading} />
       <Link href="/" passHref>
         <Logo onClick={() => setIsNavOpen(false)}>
-          <Image image={logo} priority />
+          <Image image={logo} />
         </Logo>
       </Link>
       <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen} data-testid="menu-button">
