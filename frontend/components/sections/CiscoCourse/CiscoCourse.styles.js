@@ -60,20 +60,6 @@ export const StyledSpan = styled.span`
   margin-right: 0.6rem;
 `;
 
-export const StyledList = styled.ul`
-  margin-top: 4rem;
-  font-size: ${({ theme }) => theme.fontSize.body};
-`;
-
-export const StyledItem = styled.span`
-  inline-size: 40rem;
-  overflow-wrap: break-word;
-
-  ${({ theme }) => theme.mq.mobileLarge} {
-    inline-size: 100%;
-  }
-`;
-
 export const PageTileWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -102,5 +88,23 @@ export const StyledTileHeader = styled.h4`
 
   ${({ theme }) => theme.mq.mobileSmall} {
     max-width: 60%;
+  }
+`;
+
+export const StyledList = styled.ul`
+  margin-top: 4rem;
+  font-size: ${({ theme }) => theme.fontSize.body};
+
+  li {
+    align-items: flex-start;
+  }
+`;
+
+export const StyledItem = styled.span`
+  inline-size: 40rem;
+  overflow-wrap: break-word;
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    inline-size: 100%;
   }
 `;
