@@ -30,17 +30,14 @@ export const StyledNavigation = styled.nav`
   img {
     border-radius: 0;
   }
-`;
 
-export const ExitButton = styled.button`
-  border: none;
-  background-color: transparent;
-  height: 5rem;
-  width: 5rem;
-  position: absolute;
-  top: 5vh;
-  right: 5vw;
-  cursor: pointer;
+  li {
+    transition: transform 0.1s ease-out;
+
+    &:hover {
+      transform: translate(1%, -7%);
+    }
+  }
 `;
 
 export const ContentWrapper = styled.div`

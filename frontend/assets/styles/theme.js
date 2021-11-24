@@ -4,8 +4,9 @@ export const theme = {
     black: '#000000',
     backgroundColor: '#E8EBF1',
     mainColor: '#0E274D',
+    lighterMainColor: '#103369',
     accentColor: '#00BCEA',
-    darkBlue: '#173C74',
+    lighterAccentColor: '#00cdff',
   },
   fontSize: {
     header: '4.8rem',

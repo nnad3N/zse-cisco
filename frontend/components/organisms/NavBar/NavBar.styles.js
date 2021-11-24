@@ -44,9 +44,19 @@ export const MenuButton = styled.button`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  transition: transform 0.1s ease-out;
+
+  &:hover {
+    transform: ${({ isNavOpen }) => (isNavOpen ? `translate(2%, -6%)` : `translate(2%, -10%)`)};
+
+    span {
+      background-color: ${({ theme }) => theme.colors.lighterAccentColor};
+    }
+  }
 `;
 
 export const StyledSpan = styled.span`
+  transition: background-color 0.3s ease-out;
   width: 100%;
   height: 1rem;
   background-color: ${({ theme }) => theme.colors.accentColor};
