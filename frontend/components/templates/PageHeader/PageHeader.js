@@ -10,7 +10,7 @@ const PageHeader = ({ children, image, longText }) => {
       <ContentWrapper longText={longText}>
         {children}
         <ImageWrapper longText={longText}>
-          <Image image={image} />
+          <Image image={image} priority />
         </ImageWrapper>
       </ContentWrapper>
     </PageHeaderWrapper>

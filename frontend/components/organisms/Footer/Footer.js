@@ -31,7 +31,7 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
         <ImagesWrapper>
           {footerImages.map((footerImage) => (
             <ImageWrapper key={footerImage.id}>
-              <Image image={footerImage} />
+              <Image image={footerImage} priority />
             </ImageWrapper>
           ))}
         </ImagesWrapper>

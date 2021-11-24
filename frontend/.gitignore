@@ -4,10 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
 
 # testing
 /coverage
 /__mocks__
+*.test.js
 
 # production
 /build

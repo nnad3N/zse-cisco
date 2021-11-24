@@ -20,7 +20,7 @@ const Hero = ({ data: { title, description, buttons, image } }) => {
         </ButtonWrapper>
       </ContentWrapper>
       <ImageWrapper>
-        <Image image={image} />
+        <Image image={image} priority />
       </ImageWrapper>
     </HeroWrapper>
   );
