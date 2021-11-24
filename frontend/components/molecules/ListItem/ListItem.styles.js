@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ListItemWrapper = styled.li`
   display: flex;
   align-items: center;
+  width: fit-content;
 
   &:not(:last-child) {
     margin-bottom: 1.5rem;

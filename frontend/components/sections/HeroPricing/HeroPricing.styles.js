@@ -41,16 +41,6 @@ export const DescriptionWrapper = styled.div`
     margin-top: 4rem;
   }
 
-  a {
-    color: ${({ theme }) => theme.colors.accentColor};
-    border-color: ${({ theme }) => theme.colors.accentColor};
-
-    &:visited {
-      color: ${({ theme }) => theme.colors.accentColor};
-      border-color: ${({ theme }) => theme.colors.accentColor};
-    }
-  }
-
   & > div {
     font-size: ${({ theme }) => theme.fontSize.subText};
     margin: 0 5rem 0 0;
