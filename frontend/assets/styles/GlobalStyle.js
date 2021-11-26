@@ -90,6 +90,7 @@ p {
     font-size: ${({ theme }) => theme.fontSize.body};
     font-weight: 400;
     text-align: justify;
+    line-height: 1.6;
 }
 
 ul {
