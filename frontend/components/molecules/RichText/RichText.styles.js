@@ -16,6 +16,13 @@ export const StyledMarkdown = styled(Markdown)`
   }
 
   h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 0.7rem;
+  }
+
+  h1,
   h2 {
     font-weight: 300;
     margin-top: 2rem;
@@ -38,21 +45,21 @@ export const StyledMarkdown = styled(Markdown)`
   }
 
   h3 {
-    font-size: 4.8rem;
+    font-size: 2.5rem;
+    font-weight: 400;
   }
 
   h4 {
-    font-size: 3.4rem;
-    letter-spacing: 0.025rem;
+    font-size: 2.5rem;
+    font-weight: 600;
   }
 
   h5 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   h6 {
     font-size: 2rem;
-    letter-spacing: 0.015rem;
     font-weight: 600;
   }
 
@@ -69,6 +76,7 @@ export const StyledMarkdown = styled(Markdown)`
   li {
     font-size: ${({ theme }) => theme.fontSize.body};
     margin-left: 3rem;
+    line-height: 1.6;
 
     &:first-child {
       margin-top: 0.8rem;
