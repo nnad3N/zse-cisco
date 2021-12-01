@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { pagePropsShape } from 'propTypes/appTypes';
 import AppProvider from 'providers/AppProvider';
@@ -12,9 +13,15 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from 'assets/styles/theme';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import ErrorPage from 'next/error';
-import useDarkMode from 'use-dark-mode';
+import useDarkMode from 'hooks/useDarkMode';
 
 const MyApp = ({ Component, pageProps }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const router = useRouter();
   const { global } = pageProps;
 
@@ -27,8 +34,9 @@ const MyApp = ({ Component, pageProps }) => {
     defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
   } = global;
 
-  const { value } = useDarkMode();
-  const theme = value ? darkTheme : lightTheme;
+  const { currentDarkMode, handleDarkModeChange } = useDarkMode(false);
+
+  const theme = currentDarkMode ? darkTheme : lightTheme;
 
   return (
     <>
@@ -52,8 +60,8 @@ const MyApp = ({ Component, pageProps }) => {
       />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <AppProvider router={router}>
-          <Component {...pageProps} />
+        <AppProvider router={router} handleDarkModeChange={handleDarkModeChange} currentDarkMode={currentDarkMode}>
+          {isMounted && <Component {...pageProps} />}
         </AppProvider>
       </ThemeProvider>
     </>

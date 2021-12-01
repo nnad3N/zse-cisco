@@ -7,7 +7,7 @@ export const AppContext = createContext({
   setIsNavOpen: () => {},
 });
 
-const AppProvider = ({ children, router }) => {
+const AppProvider = ({ children, router, handleDarkModeChange, currentDarkMode }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -41,6 +41,8 @@ const AppProvider = ({ children, router }) => {
         isLoading,
         isNavOpen,
         setIsNavOpen,
+        handleDarkModeChange,
+        currentDarkMode,
       }}
     >
       {children}
