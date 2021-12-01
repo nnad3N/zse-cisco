@@ -100,11 +100,11 @@ ul {
 
 li {
     a {
-        color: white;
+        color: ${({ theme }) => theme.colors.white};
         font-size: ${({ theme }) => theme.fontSize.body};
 
         &:visited {
-            color: white;
+            color: ${({ theme }) => theme.colors.white};
         }
     }
 }
