@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { AppContext } from 'providers/AppProvider';
 import Image from '@atoms/Image/Image';
-import { Header, Logo, MenuButton, StyledSpan, Loader } from './NavBar.styles';
+import useDarkMode from 'use-dark-mode';
+import { Header, Logo, MenuButton, StyledSpan, Loader, ButtonsWrapper, DarkModeButton } from './NavBar.styles';
 
 const NavBar = ({ logo }) => {
   const { isLoading, isNavOpen, setIsNavOpen } = useContext(AppContext);
+  const { value, toggle } = useDarkMode(false);
 
   return (
     <Header isLoading={isLoading} isNavOpen={isNavOpen}>
@@ -16,10 +18,13 @@ const NavBar = ({ logo }) => {
           <Image image={logo} />
         </Logo>
       </Link>
-      <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen} data-testid="menu-button">
-        <StyledSpan short isNavOpen={isNavOpen} />
-        <StyledSpan isNavOpen={isNavOpen} />
-      </MenuButton>
+      <ButtonsWrapper>
+        <DarkModeButton onClick={toggle} dark={value} />
+        <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen} data-testid="menu-button">
+          <StyledSpan short isNavOpen={isNavOpen} />
+          <StyledSpan isNavOpen={isNavOpen} />
+        </MenuButton>
+      </ButtonsWrapper>
     </Header>
   );
 };

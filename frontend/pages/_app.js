@@ -9,9 +9,10 @@ import { fetchAPI } from 'utils/api';
 import { getStrapiMedia } from 'utils/media';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'assets/styles/theme';
+import { lightTheme, darkTheme } from 'assets/styles/theme';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import ErrorPage from 'next/error';
+import useDarkMode from 'use-dark-mode';
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -25,6 +26,9 @@ const MyApp = ({ Component, pageProps }) => {
     favicon,
     defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
   } = global;
+
+  const { value } = useDarkMode();
+  const theme = value ? darkTheme : lightTheme;
 
   return (
     <>

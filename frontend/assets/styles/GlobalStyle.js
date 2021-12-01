@@ -32,6 +32,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: ${({ theme }) => theme.colors.backgroundColor};
+    color: ${({ theme }) => theme.colors.black};
    
 }
 

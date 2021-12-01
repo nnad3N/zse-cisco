@@ -19,7 +19,7 @@ const HeroCourseComponent = ({
       <LineVertical>
         <p>{description}</p>
       </LineVertical>
-      <ArrowLink slug={slug} title={linkName} image={image} />
+      <ArrowLink slug={slug} title={linkName} />
     </HeroCourseComponentWrapper>
   );
 };

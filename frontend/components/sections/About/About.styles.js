@@ -5,7 +5,7 @@ export const SectionWrapper = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.backgroundWhite};
 
   ${({ theme }) => theme.mq.laptop} {
     flex-direction: column;

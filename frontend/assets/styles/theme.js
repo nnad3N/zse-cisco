@@ -1,13 +1,36 @@
-export const theme = {
+const light = {
   colors: {
     white: '#FFFFFF',
     black: '#000000',
+    backgroundLight: '#FFFFFF',
+    backgroundWhite: '#FFFFFF',
     backgroundColor: '#E8EBF1',
     mainColor: '#0E274D',
-    lighterMainColor: '#103369',
     accentColor: '#00BCEA',
     lighterAccentColor: '#00cdff',
+    buttonColor: '#0E274D',
+    buttonTextColor: '#FFFFFF',
+    lighterButtonColor: '#103369',
   },
+};
+
+const dark = {
+  colors: {
+    white: '#e6e6e6',
+    black: '#e6e6e6',
+    backgroundLight: '#1c1d1f',
+    backgroundWhite: '#131314',
+    backgroundColor: '#131314',
+    mainColor: '#0E274D',
+    accentColor: '#00BCEA',
+    lighterAccentColor: '#00cdff',
+    buttonColor: '#00BCEA',
+    buttonTextColor: '#0E274D',
+    lighterButtonColor: '#00cdff',
+  },
+};
+
+const defaultTheme = {
   fontSize: {
     header: '4.8rem',
     headerMobile: '4rem',
@@ -63,3 +86,6 @@ export const theme = {
     mobileSmall: `@media (max-width: 350px)`,
   },
 };
+
+export const lightTheme = { ...defaultTheme, ...light };
+export const darkTheme = { ...defaultTheme, ...dark };

@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const StyledButton = styled.a`
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   padding: 1rem 2rem;
-  border: ${({ theme, isFilled }) => (isFilled ? '0' : `3px solid ${theme.colors.mainColor}`)};
-  border-color: ${({ theme, accent }) => (accent ? theme.colors.accentColor : theme.colors.mainColor)};
-  background-color: ${({ theme, isFilled, accent }) => (isFilled ? (accent ? theme.colors.accentColor : theme.colors.mainColor) : 'transparent')};
-  color: ${({ theme, isFilled, accent }) => (isFilled ? theme.colors.white : accent ? theme.colors.accentColor : theme.colors.mainColor)};
+  border: ${({ theme, isFilled }) => (isFilled ? '0' : `3px solid ${theme.colors.buttonColor}`)};
+  border-color: ${({ theme, accent }) => (accent ? theme.colors.accentColor : theme.colors.buttonColor)};
+  background-color: ${({ theme, isFilled, accent }) => (isFilled ? (accent ? theme.colors.accentColor : theme.colors.buttonColor) : 'transparent')};
+  color: ${({ theme, isFilled, accent }) => (isFilled ? theme.colors.buttonTextColor : accent ? theme.colors.accentColor : theme.colors.buttonColor)};
   display: flex;
   align-items: center;
   transition: all 0.1s ease-out;
@@ -17,10 +17,10 @@ export const StyledButton = styled.a`
 
   &:hover {
     transform: translate(1%, -10%);
-    border-color: ${({ theme, accent }) => (accent ? theme.colors.lighterAccentColor : theme.colors.lighterMainColor)};
+    border-color: ${({ theme, accent }) => (accent ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
     background-color: ${({ theme, isFilled, accent }) =>
-      isFilled ? (accent ? theme.colors.lighterAccentColor : theme.colors.lighterMainColor) : 'transparent'};
+      isFilled ? (accent ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor) : 'transparent'};
     color: ${({ theme, isFilled, accent }) =>
-      isFilled ? theme.colors.white : accent ? theme.colors.lighterAccentColor : theme.colors.lighterMainColor};
+      isFilled ? theme.colors.buttonTextColor : accent ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor};
   }
 `;

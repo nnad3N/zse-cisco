@@ -12,7 +12,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript />
+          <NextScript src="noflash.js" />
         </body>
       </Html>
     );
