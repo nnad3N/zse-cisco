@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import NextImage from 'next/image';
+import { AppContext } from 'providers/AppProvider';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
 
 const Image = ({ image }) => {
+  const { currentDarkMode } = useContext(AppContext);
+
   if (image) {
     const { alternativeText, url, width, height } = image;
 
@@ -14,7 +18,7 @@ const Image = ({ image }) => {
     };
 
     return (
-      <NextImageWrapper>
+      <NextImageWrapper dark={currentDarkMode}>
         <StyledNextImage
           loader={loader}
           layout="responsive"
