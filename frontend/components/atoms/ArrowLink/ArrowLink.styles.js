@@ -46,7 +46,7 @@ export const Arrow = styled.span`
   ${ArrowLinkWrapper}:hover &,
   ${ArrowLinkWrapper}:hover &::before,
   ${ArrowLinkWrapper}:hover &::after {
-    background-color: ${({ theme, accented }) => (accented ? theme.colors.accentColor : theme.colors.lighterButtonColor)};
+    background-color: ${({ theme, accented }) => (accented ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
   }
 
   &::before,
