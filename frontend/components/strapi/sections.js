@@ -10,6 +10,7 @@ import Pricing from '@sections/Pricing/Pricing';
 import Offert from '@sections/Offert/Offert';
 import CiscoCourse from '@sections/CiscoCourse/CiscoCourse';
 import About from '@sections/About/About';
+import Rodo from '@sections/Rodo/Rodo';
 
 // Map Strapi sections to section components
 const sectionComponents = {
@@ -24,6 +25,7 @@ const sectionComponents = {
   'sections.offert': Offert,
   'sections.cisco-course': CiscoCourse,
   'sections.about': About,
+  'sections.rodo': Rodo,
 };
 
 // Display a section individually

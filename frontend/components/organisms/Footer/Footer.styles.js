@@ -7,12 +7,11 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
 
-  ${({ theme }) => theme.mq.mobileLarge} {
+  ${({ theme }) => theme.mq.laptopLarge} {
     padding: ${({ theme }) => theme.padding.mV} ${({ theme }) => theme.padding.s};
   }
 
   p {
-    text-align: left;
     font-size: ${({ theme }) => theme.fontSize.subText};
     word-wrap: break-word;
   }
@@ -20,21 +19,19 @@ export const StyledFooter = styled.footer`
 
 export const FooterWrapper = styled.div`
   display: grid;
-  column-gap: ${({ theme }) => theme.padding.xs};
   row-gap: ${({ theme }) => theme.padding.xsV};
   width: 100%;
   grid-template: 'content line images';
+  justify-content: space-between;
 
-  ${({ theme }) => theme.mq.laptopLarge} {
-    column-gap: ${({ theme }) => theme.padding.s};
+  ${({ theme }) => theme.mq.desktop} {
+    column-gap: 5rem;
   }
 
   ${({ theme }) => theme.mq.laptop} {
     max-width: ${({ theme }) => theme.dimensions.tileWidth};
-    grid-template:
-      'content'
-      'line'
-      'images';
+    display: flex;
+    flex-direction: column;
   }
 
   ${({ theme }) => theme.mq.laptop} {
@@ -44,7 +41,8 @@ export const FooterWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.mobileLarge} {
-    max-width: 100%;
+    justify-content: space-between;
+    width: 100%;
     text-align: center;
   }
 
@@ -54,35 +52,48 @@ export const FooterWrapper = styled.div`
   }
 `;
 
-export const StyledSchoolInfo = styled.p`
-  max-width: 14rem;
-  margin-right: 3rem;
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    margin-right: 2rem;
-  }
-`;
-
 export const ContentWrapper = styled.div`
   grid-area: content;
   display: grid;
-  align-items: center;
+  justify-content: space-between;
+  min-width: 30vw;
 
   h3 {
     color: ${({ theme }) => theme.colors.accentColor};
     text-align: start;
     grid-row: 1/2;
     grid-column: 1/3;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   ${({ theme }) => theme.mq.laptop} {
-    justify-content: space-between;
+    width: unset;
+  }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h3 {
+      text-align: center;
+    }
+  }
+`;
+
+export const StyledSchoolInfo = styled.p`
+  width: 24rem;
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    text-align: center;
+    width: 32rem;
+    margin-bottom: 1rem;
   }
 `;
 
 export const InformationWrapper = styled.div`
-  margin-left: 8rem;
+  margin-left: 6rem;
   width: max-content;
 
   span {
@@ -93,12 +104,6 @@ export const InformationWrapper = styled.div`
 
   ${({ theme }) => theme.mq.laptop} {
     margin-left: 0;
-  }
-
-  ${({ theme }) => theme.mq.mobileMedium} {
-    p {
-      width: 50vw;
-    }
   }
 `;
 
@@ -117,31 +122,39 @@ export const Line = styled.span`
 
 export const ImagesWrapper = styled.div`
   grid-area: images;
+  min-width: 30vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-height: fit-content;
 
-  ${({ theme }) => theme.mq.tablet} {
+  ${({ theme }) => theme.mq.mobileLarge} {
     flex-direction: column;
   }
 `;
 
 export const ImageWrapper = styled.div`
-  width: 12vw;
+  width: clamp(9vw, 100%, 12rem);
   max-width: 30rem;
 
   &:first-child {
     margin-right: 5rem;
+    width: clamp(14vw, 100%, 24rem);
   }
 
   ${({ theme }) => theme.mq.laptop} {
-    width: 25rem;
-  }
-
-  ${({ theme }) => theme.mq.tablet} {
-    min-width: 30rem;
+    width: 20rem;
 
     &:first-child {
+      width: 25rem;
+    }
+  }
+
+  ${({ theme }) => theme.mq.mobileLarge} {
+    min-width: 20rem;
+
+    &:first-child {
+      min-width: 30rem;
       margin: 0 0 3rem 0;
     }
   }

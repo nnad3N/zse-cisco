@@ -33,7 +33,8 @@
         "sections.pricing",
         "sections.offert",
         "sections.cisco-course",
-        "sections.about"
+        "sections.about",
+        "sections.rodo"
       ]
     }
   }
