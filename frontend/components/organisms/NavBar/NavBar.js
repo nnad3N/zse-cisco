@@ -17,8 +17,8 @@ const NavBar = ({ logo }) => {
         </Logo>
       </Link>
       <ButtonsWrapper>
-        <DarkModeButton onClick={handleDarkModeChange} dark={currentDarkMode} />
-        <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen} data-testid="menu-button">
+        <DarkModeButton onClick={handleDarkModeChange} dark={currentDarkMode} aria-label="Dark Mode Toggle Button" />
+        <MenuButton onClick={() => setIsNavOpen((state) => !state)} isNavOpen={isNavOpen} data-testid="menu-button" aria-label="Menu Toggle Button">
           <StyledSpan short isNavOpen={isNavOpen} />
           <StyledSpan isNavOpen={isNavOpen} />
         </MenuButton>

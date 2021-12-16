@@ -29,6 +29,11 @@ export const ArrowLinkWrapper = styled.a`
       color: ${({ theme, accented }) => (accented ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
     }
   }
+
+  &:focus-visible {
+    outline: 3px solid;
+    outline-offset: 0.75rem;
+  }
 `;
 
 export const ImageWrapper = styled.div`

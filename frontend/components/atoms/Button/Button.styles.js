@@ -23,4 +23,9 @@ export const StyledButton = styled.a`
     color: ${({ theme, isFilled, accent }) =>
       isFilled ? theme.colors.buttonTextColor : accent ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor};
   }
+
+  &:focus-visible {
+    outline: 3px solid ${({ theme }) => theme.colors.accentColor};
+    outline-offset: -1px;
+  }
 `;

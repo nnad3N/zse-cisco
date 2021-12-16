@@ -41,8 +41,6 @@ a, button {
     font-size: ${({ theme }) => theme.fontSize.body};
     font-weight: 600;
     cursor: pointer;
-
-   
 }
 
 a {

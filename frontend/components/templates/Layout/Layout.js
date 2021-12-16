@@ -13,9 +13,14 @@ const Layout = ({ children, navigation: { logo, navLinks }, footer }) => {
   return (
     <StyledLayout isNavOpen={isNavOpen}>
       <NavBar logo={logo} />
-      {isNavOpen && <Navigation navLinks={navLinks} />}
-      {children}
-      <Footer footer={footer} />
+      {isNavOpen ? (
+        <Navigation navLinks={navLinks} />
+      ) : (
+        <>
+          {children}
+          <Footer footer={footer} />
+        </>
+      )}
     </StyledLayout>
   );
 };
