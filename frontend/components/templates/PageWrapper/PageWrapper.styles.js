@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 
 export const StyledPageWrapper = styled.div`
-  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
+  padding: ${({ theme, modular }) => (modular ? 0 : theme.padding.xV)} ${({ theme }) => theme.padding.m} ${({ theme }) => theme.padding.xV}
+    ${({ theme }) => theme.padding.m};
   min-height: ${({ short }) => (short ? 'unset' : '90vh')};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: ${({ column }) => (column ? 'column' : 'row')};
+  background-color: ${({ theme, white }) => (white ? theme.colors.backgroundWhite : 'transparent')};
 
   ${({ theme }) => theme.mq.desktop} {
-    padding: ${({ theme }) => theme.padding.xV} ${({ theme, wide }) => (wide ? theme.padding.xs : theme.padding.m)};
+    padding: ${({ theme, modular }) => (modular ? 0 : theme.padding.xV)} ${({ theme }) => theme.padding.m} ${({ theme }) => theme.padding.xV}
+      ${({ theme }) => theme.padding.m};
   }
 
-  ${({ theme, wide }) => (wide ? theme.mq.laptopLarge : theme.mq.tablet)} {
+  ${({ theme }) => theme.mq.tablet} {
     padding: 0;
     min-height: unset;
   }

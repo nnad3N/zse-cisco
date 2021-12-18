@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_courses",
+  "info": {
+    "displayName": "Course",
+    "icon": "allergies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { pagePropsShape } from 'propTypes/appTypes';
 import AppProvider from 'providers/AppProvider';
@@ -9,12 +10,22 @@ import { fetchAPI } from 'utils/api';
 import { getStrapiMedia } from 'utils/media';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'assets/styles/theme';
+import { lightTheme, darkTheme } from 'assets/styles/theme';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import ErrorPage from 'next/error';
+import useDarkMode from 'hooks/useDarkMode';
 
 const MyApp = ({ Component, pageProps }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const router = useRouter();
+  const { currentDarkMode, handleDarkModeChange } = useDarkMode(false);
+  const theme = currentDarkMode ? darkTheme : lightTheme;
+
   const { global } = pageProps;
 
   if (global == null) {
@@ -28,7 +39,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon)} />}</Head>
+      <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon.data.attributes)} />}</Head>
       <DefaultSeo
         titleTemplate={`%s | ${metaTitleSuffix}`}
         title={metaTitle}
@@ -48,8 +59,8 @@ const MyApp = ({ Component, pageProps }) => {
       />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <AppProvider router={router}>
-          <Component {...pageProps} />
+        <AppProvider router={router} handleDarkModeChange={handleDarkModeChange} currentDarkMode={currentDarkMode}>
+          {isMounted && <Component {...pageProps} />}
         </AppProvider>
       </ThemeProvider>
     </>
@@ -79,9 +90,9 @@ MyApp.defaultProps = {
 // https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
   const appProps = await App.getInitialProps(ctx);
-  const global = await fetchAPI('/global');
+  const global = await fetchAPI('/api/global?populate=defaultSeo,favicon');
 
-  return { ...appProps, pageProps: { global } };
+  return { ...appProps, pageProps: { global: global.data.attributes } };
 };
 
 export default MyApp;

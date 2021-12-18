@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "navLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.nav-link"
+    }
+  }
+}

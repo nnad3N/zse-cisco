@@ -4,47 +4,34 @@ import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { HeroCourseComponentWrapper } from './HeroCourseComponent.styles';
 
-const HeroCourseComponent = ({
-  data: {
-    title,
-    description,
-    link: { slug },
-    linkName,
-  },
-  image,
-}) => {
+const HeroCourseComponent = ({ data: { header, description, url }, linkCaption }) => {
   return (
     <HeroCourseComponentWrapper>
-      <h4>{title}</h4>
+      <h4>{header}</h4>
       <LineVertical>
         <p>{description}</p>
       </LineVertical>
-      <ArrowLink slug={slug} title={linkName} image={image} />
+      <ArrowLink url={url} text={linkCaption} />
     </HeroCourseComponentWrapper>
   );
 };
 
 HeroCourseComponent.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string,
+    header: PropTypes.string,
     description: PropTypes.string,
-    link: PropTypes.shape({
-      slug: PropTypes.string,
-    }),
-    linkName: PropTypes.string.isRequired,
-  }).isRequired,
-  image: PropTypes.object,
+    url: PropTypes.string,
+  }),
+  linkCaption: PropTypes.string,
 };
 
 HeroCourseComponent.defaultProps = {
   data: {
-    title: '',
+    header: '',
     description: '',
-    linkName: '',
-    link: {
-      slug: '',
-    },
+    url: '',
   },
+  linkCaption: '',
 };
 
 export default HeroCourseComponent;

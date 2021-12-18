@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_section_text_headers",
+  "info": {
+    "displayName": "SectionTextHeader",
+    "icon": "arrow-alt-circle-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

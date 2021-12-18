@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.button"
+    }
+  }
+}

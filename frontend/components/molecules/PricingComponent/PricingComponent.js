@@ -4,51 +4,64 @@ import LineVertical from '@atoms/LineVertical/LineVertical';
 import PageTile from '@templates/PageTile/PageTile';
 import { Semester, Head, Row, Annotation } from './PricingComponent.styles';
 
-const PricingComponent = ({ data: { title, semester, tableHead, tableRows, annotations } }) => {
+const PricingComponent = ({ data }) => {
+  const { header, semester, group, price, student, studentPrice, graduate, graduatePrice, others, othersPrice, annotation } = data;
+
   return (
     <PageTile>
       <LineVertical>
-        <h4>{title}</h4>
+        <h4>{header}</h4>
       </LineVertical>
       {semester && <Semester>{semester}</Semester>}
       <Head>
-        <span>{tableHead.rowName}</span>
-        <span>{tableHead.rowContent}</span>
+        <span>{group}</span>
+        <span>{price}</span>
       </Head>
-      {tableRows.map(({ rowName, rowContent, id }) => (
-        <Row key={id}>
-          <span>{rowName}</span>
-          <span>{rowContent}</span>
-        </Row>
-      ))}
-      <div>
-        {annotations.map(({ annotation, id }) => (
-          <Annotation key={id}>{annotation}</Annotation>
-        ))}
-      </div>
+      <Row>
+        <span>{student}</span>
+        <span>{studentPrice}</span>
+      </Row>
+      <Row>
+        <span>{graduate}</span>
+        <span>{graduatePrice}</span>
+      </Row>
+      <Row>
+        <span>{others}</span>
+        <span>{othersPrice}</span>
+      </Row>
+      {annotation && <Annotation>{annotation}</Annotation>}
     </PageTile>
   );
 };
 
 PricingComponent.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string,
+    header: PropTypes.string,
     semester: PropTypes.string,
-    tableHead: PropTypes.object,
-    tableRows: PropTypes.arrayOf(PropTypes.object),
-    annotations: PropTypes.arrayOf(PropTypes.object),
+    group: PropTypes.string,
+    price: PropTypes.string,
+    student: PropTypes.string,
+    studentPrice: PropTypes.string,
+    graduate: PropTypes.string,
+    graduatePrice: PropTypes.string,
+    others: PropTypes.string,
+    othersPrice: PropTypes.string,
+    annotation: PropTypes.string,
   }).isRequired,
 };
 
 PricingComponent.defaultProps = {
   data: {
-    title: '',
+    header: '',
     semester: '',
-    tableHead: {
-      rowName: '',
-      rowContent: '',
-    },
-    tableRows: [],
+    group: '',
+    price: '',
+    student: '',
+    studentPrice: '',
+    graduate: '',
+    graduatePrice: '',
+    others: '',
+    othersPrice: '',
     annotations: [],
   },
 };

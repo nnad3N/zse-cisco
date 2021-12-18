@@ -5,11 +5,11 @@ import LineHorizontal from '@atoms/LineHorizontal/LineHorizontal';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { HeroPricingWrapper, DescriptionWrapper } from './HeroPricing.styles';
 
-const HeroPricing = ({ data: { title, description, button } }) => {
+const HeroPricing = ({ data: { header, description, button } }) => {
   return (
     <HeroPricingWrapper>
       <LineHorizontal>
-        <h1>{title}</h1>
+        <h1>{header}</h1>
       </LineHorizontal>
       <DescriptionWrapper>
         <LineVertical>
@@ -23,7 +23,7 @@ const HeroPricing = ({ data: { title, description, button } }) => {
 
 HeroPricing.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string,
+    header: PropTypes.string,
     description: PropTypes.string,
     button: PropTypes.object,
   }).isRequired,
@@ -31,7 +31,7 @@ HeroPricing.propTypes = {
 
 HeroPricing.defaultProps = {
   data: {
-    title: '',
+    header: '',
     description: '',
   },
 };

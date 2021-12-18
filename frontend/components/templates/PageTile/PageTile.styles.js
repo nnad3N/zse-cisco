@@ -7,7 +7,7 @@ export const PageTileWrapper = styled.div`
   padding: ${({ theme }) => theme.dimensions.tilePadding};
   background-color: ${({ theme }) => theme.colors.mainColor};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
-  width: ${({ wide }) => (wide ? 'max-content' : '40rem')};
+  width: 40rem;
   color: ${({ theme }) => theme.colors.white};
   align-items: flex-start;
 

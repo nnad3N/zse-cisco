@@ -32,6 +32,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: ${({ theme }) => theme.colors.backgroundColor};
+    color: ${({ theme }) => theme.colors.black};
    
 }
 
@@ -40,8 +41,6 @@ a, button {
     font-size: ${({ theme }) => theme.fontSize.body};
     font-weight: 600;
     cursor: pointer;
-
-   
 }
 
 a {
@@ -99,11 +98,11 @@ ul {
 
 li {
     a {
-        color: white;
+        color: ${({ theme }) => theme.colors.white};
         font-size: ${({ theme }) => theme.fontSize.body};
 
         &:visited {
-            color: white;
+            color: ${({ theme }) => theme.colors.white};
         }
     }
 }

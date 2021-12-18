@@ -4,20 +4,20 @@ import PageWrapper from '@templates/PageWrapper/PageWrapper';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { ContentWrapper, AddressWrapper, InformationWrapper } from './Contact.styles';
 
-const Contact = ({ data: { title, schoolName, contactInfo } }) => {
+const Contact = ({ data: { header, schoolName, contactInfos } }) => {
   return (
     <PageWrapper>
       <ContentWrapper>
         <LineVertical large>
-          <h1>{title}</h1>
+          <h1>{header}</h1>
         </LineVertical>
         <AddressWrapper>
           <h4>{schoolName}</h4>
         </AddressWrapper>
         <InformationWrapper>
-          {contactInfo.map(({ id, caption, info }) => (
+          {contactInfos.map(({ id, caption, content }) => (
             <p key={id}>
-              <span>{caption}</span> {info}
+              <span>{caption}</span> {content}
             </p>
           ))}
         </InformationWrapper>

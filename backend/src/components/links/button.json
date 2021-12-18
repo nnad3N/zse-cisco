@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_links_buttons",
+  "info": {
+    "displayName": "Button",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string"
+    },
+    "newTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "isFilled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

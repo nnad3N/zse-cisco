@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_seo_default_seos",
+  "info": {
+    "displayName": "DefaultSeo",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "string",
+      "required": true
+    },
+    "metaTitleSuffix": {
+      "type": "string",
+      "required": true
+    },
+    "sharedImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

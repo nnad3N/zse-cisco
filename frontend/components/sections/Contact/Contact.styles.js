@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContentWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.backgroundLight};
   border-radius: ${({ theme }) => theme.utils.borderRadius};
   box-shadow: ${({ theme }) => theme.utils.boxShadow};
   padding: ${({ theme }) => theme.dimensions.tilePadding};
@@ -19,24 +19,23 @@ export const ContentWrapper = styled.div`
 export const AddressWrapper = styled.div`
   margin-top: 5rem;
 
-  h4,
-  h5 {
+  h4 {
+    font-size: ${({ theme }) => theme.fontSize.captionLargeMedium};
     font-weight: 400;
   }
 
-  h5 {
-    font-size: ${({ theme }) => theme.fontSize.subText};
-    margin-top: 0.5rem;
+  ${({ theme }) => theme.mq.mobileLarge} {
+    margin-top: 4rem;
   }
 `;
 
 export const InformationWrapper = styled.div`
-  margin: 2rem 0 6rem 0;
+  margin: 2.5rem 0 5rem 0;
 
   p,
   span {
     text-align: start;
-    font-size: ${({ theme }) => theme.fontSize.captionLarge};
+    font-size: ${({ theme }) => theme.fontSize.captionLargeMedium};
   }
 
   span {

@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroAcademy from '@sections/HeroAcademy/HeroAcademy';
+import HeroAcademy from '@sections/HeroAcademy/HeroAbout';
 import { renderWithProviders } from 'utils/renderWithProviders';
 import { screen } from '@testing-library/react';
 import button from '__mocks__/button';

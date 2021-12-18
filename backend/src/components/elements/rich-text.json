@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_rich_texts",
+  "info": {
+    "displayName": "RichText",
+    "icon": "arrow-alt-circle-down"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

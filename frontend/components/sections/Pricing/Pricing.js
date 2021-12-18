@@ -7,12 +7,12 @@ import RichText from '@molecules/RichText/RichText';
 import PageTileWrapper from '@templates/PageTileWrapper/PageTileWrapper';
 import PricingComponent from '@molecules/PricingComponent/PricingComponent';
 
-const Pricing = ({ data: { title, content, pricingComponents } }) => {
+const Pricing = ({ data: { header, content, pricingComponents } }) => {
   return (
     <PageWrapper>
       <PageSection>
         <LineVertical large>
-          <h1>{title}</h1>
+          <h1>{header}</h1>
         </LineVertical>
         <RichText>{content}</RichText>
         <PageTileWrapper>
@@ -27,7 +27,7 @@ const Pricing = ({ data: { title, content, pricingComponents } }) => {
 
 Pricing.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string,
+    header: PropTypes.string,
     content: PropTypes.string,
     pricingComponents: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
@@ -35,7 +35,7 @@ Pricing.propTypes = {
 
 Pricing.defaultProps = {
   data: {
-    title: '',
+    header: '',
     content: '',
     pricingComponents: [],
   },
