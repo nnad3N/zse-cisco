@@ -37,6 +37,8 @@ const MyApp = ({ Component, pageProps }) => {
     defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
   } = global;
 
+  console.log(global);
+
   return (
     <>
       <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon.data.attributes)} />}</Head>
@@ -90,7 +92,7 @@ MyApp.defaultProps = {
 // https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
   const appProps = await App.getInitialProps(ctx);
-  const global = await fetchAPI('/api/global?populate=defaultSeo,favicon');
+  const global = await fetchAPI('/api/global?populate=defaultSeo.sharedImage,favicon');
 
   return { ...appProps, pageProps: { global: global.data.attributes } };
 };
