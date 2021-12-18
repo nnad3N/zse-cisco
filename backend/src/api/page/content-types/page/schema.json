@@ -23,7 +23,13 @@
     "content": {
       "type": "dynamiczone",
       "components": [
+        "sections.section-header",
+        "sections.section-with-image",
+        "sections.section-with-desc",
+        "sections.section-with-list",
+        "sections.section-text-header",
         "sections.cisco-course",
+        "sections.pricing",
         "sections.contact",
         "sections.courses",
         "sections.hero-about",
@@ -31,14 +37,8 @@
         "sections.hero-instructors",
         "sections.hero-pricing",
         "sections.hero",
-        "sections.pricing",
         "sections.regulations",
-        "sections.rodo",
-        "sections.section-header",
-        "sections.section-with-image",
-        "sections.section-with-desc",
-        "sections.section-with-list",
-        "sections.section-text-header"
+        "sections.rodo"
       ]
     }
   }

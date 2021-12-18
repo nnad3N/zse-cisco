@@ -16,7 +16,7 @@
       "repeatable": true,
       "component": "elements.course"
     },
-    "LinkCaption": {
+    "linkCaption": {
       "type": "string",
       "required": true
     }
