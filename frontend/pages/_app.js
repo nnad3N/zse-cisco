@@ -37,8 +37,6 @@ const MyApp = ({ Component, pageProps }) => {
     defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
   } = global;
 
-  console.log(global);
-
   return (
     <>
       <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon.data.attributes)} />}</Head>
@@ -47,16 +45,15 @@ const MyApp = ({ Component, pageProps }) => {
         title={metaTitle}
         description={metaDescription}
         openGraph={{
-          ...(sharedImage &&
-            sharedImage.formats && {
-              images: Object.values(sharedImage.formats).map((image) => {
-                return {
-                  url: getStrapiMedia(image),
-                  width: image.width,
-                  height: image.height,
-                };
-              }),
+          ...(sharedImage && {
+            images: Object.values(sharedImage.data.attributes.formats).map((image) => {
+              return {
+                url: getStrapiMedia(image),
+                width: image.width,
+                height: image.height,
+              };
             }),
+          }),
         }}
       />
       <ThemeProvider theme={theme}>
