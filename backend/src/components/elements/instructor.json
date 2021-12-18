@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_instructors",
+  "info": {
+    "displayName": "Instructor",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

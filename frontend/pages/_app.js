@@ -23,6 +23,9 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   const router = useRouter();
+  const { currentDarkMode, handleDarkModeChange } = useDarkMode(false);
+  const theme = currentDarkMode ? darkTheme : lightTheme;
+
   const { global } = pageProps;
 
   if (global == null) {
@@ -34,13 +37,9 @@ const MyApp = ({ Component, pageProps }) => {
     defaultSeo: { metaTitleSuffix, metaTitle, metaDescription, sharedImage },
   } = global;
 
-  const { currentDarkMode, handleDarkModeChange } = useDarkMode(false);
-
-  const theme = currentDarkMode ? darkTheme : lightTheme;
-
   return (
     <>
-      <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon)} />}</Head>
+      <Head>{<link rel="shortcut icon" href={getStrapiMedia(favicon.data.attributes)} />}</Head>
       <DefaultSeo
         titleTemplate={`%s | ${metaTitleSuffix}`}
         title={metaTitle}
@@ -91,9 +90,9 @@ MyApp.defaultProps = {
 // https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
   const appProps = await App.getInitialProps(ctx);
-  const global = await fetchAPI('/global');
+  const global = await fetchAPI('/api/global?populate=defaultSeo,favicon');
 
-  return { ...appProps, pageProps: { global } };
+  return { ...appProps, pageProps: { global: global.data.attributes } };
 };
 
 export default MyApp;

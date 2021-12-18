@@ -5,12 +5,12 @@ import LineVertical from '@atoms/LineVertical/LineVertical';
 import RichText from '@molecules/RichText/RichText';
 import PageSection from 'components/templates/PageSection/PageSection';
 
-const Regulations = ({ data: { title, content } }) => {
+const Regulations = ({ data: { header, content } }) => {
   return (
     <PageWrapper>
       <PageSection>
         <LineVertical large>
-          <h1>{title}</h1>
+          <h1>{header}</h1>
         </LineVertical>
         <RichText>{content}</RichText>
       </PageSection>
@@ -20,14 +20,14 @@ const Regulations = ({ data: { title, content } }) => {
 
 Regulations.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string,
+    header: PropTypes.string,
     content: PropTypes.string,
   }).isRequired,
 };
 
 Regulations.defaultProps = {
   data: {
-    title: '',
+    header: '',
     content: '',
   },
 };

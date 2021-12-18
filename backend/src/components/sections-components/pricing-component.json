@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_sections_components_pricing_components",
+  "info": {
+    "displayName": "PricingComponent",
+    "icon": "angle-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "semester": {
+      "type": "string",
+      "required": false
+    },
+    "group": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "student": {
+      "type": "string",
+      "required": true
+    },
+    "studentPrice": {
+      "type": "string",
+      "required": true
+    },
+    "graduate": {
+      "type": "string"
+    },
+    "graduatePrice": {
+      "type": "string"
+    },
+    "others": {
+      "type": "string"
+    },
+    "othersPrice": {
+      "type": "string"
+    },
+    "annotation": {
+      "type": "text"
+    }
+  }
+}

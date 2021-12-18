@@ -8,12 +8,10 @@ package-lock.json
 
 # testing
 /coverage
-/__mocks__
-*.test.js
 
 # production
 /build
-/.next
+/.next/
 .next
 
 # misc

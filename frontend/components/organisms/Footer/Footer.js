@@ -12,7 +12,7 @@ import {
 } from './Footer.styles';
 import Image from '@atoms/Image/Image';
 
-const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) => {
+const Footer = ({ footer: { header, schoolName, footerInfos, footerImages } }) => {
   return (
     <StyledFooter>
       <FooterWrapper>
@@ -20,18 +20,18 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
           <h3>{header}</h3>
           <StyledSchoolInfo>{schoolName}</StyledSchoolInfo>
           <InformationWrapper>
-            {footerInfo.map(({ id, caption, info }) => (
+            {footerInfos.map(({ id, caption, content }) => (
               <p key={id}>
-                <span>{caption}</span> {info}
+                <span>{caption}</span> {content}
               </p>
             ))}
           </InformationWrapper>
         </ContentWrapper>
         <Line />
         <ImagesWrapper>
-          {footerImages.map((footerImage) => (
-            <ImageWrapper key={footerImage.id}>
-              <Image image={footerImage} />
+          {footerImages.data.map(({ attributes, id }) => (
+            <ImageWrapper key={id}>
+              <Image image={attributes} />
             </ImageWrapper>
           ))}
         </ImagesWrapper>
@@ -40,22 +40,22 @@ const Footer = ({ footer: { header, schoolName, footerInfo, footerImages } }) =>
   );
 };
 
-Footer.propTypes = {
-  footer: PropTypes.shape({
-    header: PropTypes.string,
-    schoolName: PropTypes.string,
-    footerInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
-    footerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
-  }).isRequired,
-};
+// Footer.propTypes = {
+//   footer: PropTypes.shape({
+//     header: PropTypes.string,
+//     schoolName: PropTypes.string,
+//     footerInfos: PropTypes.arrayOf(PropTypes.object).isRequired,
+//     footerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
+//   }).isRequired,
+// };
 
-Footer.defaultProps = {
-  footer: {
-    header: '',
-    schoolName: '',
-    footerInfo: [],
-    footerImages: [],
-  },
-};
+// Footer.defaultProps = {
+//   footer: {
+//     header: '',
+//     schoolName: '',
+//     footerInfos: [],
+//     footerImages: [],
+//   },
+// };
 
 export default Footer;

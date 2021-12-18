@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_section_headers",
+  "info": {
+    "displayName": "SectionHeader",
+    "icon": "angle-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isLong": {
+      "type": "boolean"
+    }
+  }
+}

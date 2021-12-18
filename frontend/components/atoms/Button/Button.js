@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { StyledButton } from './Button.styles';
 
-const Button = ({ data, hasMargin, accent }) => {
-  const {
-    caption,
-    isFilled,
-    link: { slug },
-  } = data;
+const Button = ({ data: { isFilled, text, url }, hasMargin, accent }) => {
   return (
-    <Link href={`/${slug}`} passHref>
+    <Link href={url || ''} passHref>
       <StyledButton hasMargin={hasMargin} isFilled={isFilled} accent={accent}>
-        {caption}
+        {text}
       </StyledButton>
     </Link>
   );

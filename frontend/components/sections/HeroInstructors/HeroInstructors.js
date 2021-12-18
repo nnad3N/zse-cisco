@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import HeroInstructorComponent from '@molecules/HeroInstructorComponent/HeroInstructorComponent';
 import { HeroInstructorsWrapper } from './HeroInstructors.styles';
 
-const HeroInstructors = ({ data: { instructorComponents } }) => {
+const HeroInstructors = ({ data: { instructors } }) => {
   return (
     <HeroInstructorsWrapper>
-      {instructorComponents.map((instructorData) => (
-        <HeroInstructorComponent key={instructorData.id} data={instructorData} />
+      {instructors.map((instructor) => (
+        <HeroInstructorComponent key={instructor.id} data={instructor} />
       ))}
     </HeroInstructorsWrapper>
   );
@@ -15,13 +15,13 @@ const HeroInstructors = ({ data: { instructorComponents } }) => {
 
 HeroInstructors.propTypes = {
   data: PropTypes.shape({
-    instructorComponents: PropTypes.arrayOf(PropTypes.object),
+    instructors: PropTypes.arrayOf(PropTypes.object),
   }).isRequired,
 };
 
 HeroInstructors.defaultProps = {
   data: {
-    instructorComponents: [],
+    instructors: [],
   },
 };
 

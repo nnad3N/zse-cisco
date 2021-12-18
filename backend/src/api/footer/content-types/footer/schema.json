@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "schoolName": {
+      "type": "string",
+      "required": true
+    },
+    "footerImages": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "footerInfos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pair-text"
+    }
+  }
+}

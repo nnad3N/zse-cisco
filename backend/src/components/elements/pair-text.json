@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_pair_texts",
+  "info": {
+    "displayName": "PairText",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  }
+}

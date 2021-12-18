@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_cisco_courses",
+  "info": {
+    "displayName": "CiscoCourse",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "richTextSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.rich-text"
+    },
+    "courseInfos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pair-text"
+    }
+  }
+}

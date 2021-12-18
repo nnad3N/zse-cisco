@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { AppContext } from 'providers/AppProvider';
@@ -13,7 +13,7 @@ const NavBar = ({ logo }) => {
       <Loader id="loader" isLoading={isLoading} />
       <Link href="/" passHref>
         <Logo onClick={() => setIsNavOpen(false)}>
-          <Image image={logo} />
+          <Image image={logo.data.attributes} />
         </Logo>
       </Link>
       <ButtonsWrapper>

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_section_with_images",
+  "info": {
+    "displayName": "SectionWithImage",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isReversed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_section_with_descs",
+  "info": {
+    "displayName": "SectionWithDesc",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

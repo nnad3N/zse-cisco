@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const FunctionalLink = ({ link: { name, slug, newTab }, setIsNavOpen }) => {
+const FunctionalLink = ({ link: { text, url, newTab }, setIsNavOpen }) => {
   if (newTab) {
     return (
-      <a href={slug} target="_blank" rel="noopener noreferrer" onClick={() => setIsNavOpen((state) => !state)}>
-        {name}
+      <a href={url} target="_blank" rel="noopener noreferrer" onClick={() => setIsNavOpen((state) => !state)}>
+        {text}
       </a>
     );
   }
 
   return (
-    <Link href={`/${slug}`} passHref>
-      <a onClick={() => setIsNavOpen((state) => !state)}>{name}</a>
+    <Link href={url || ''} passHref>
+      <a onClick={() => setIsNavOpen((state) => !state)}>{text}</a>
     </Link>
   );
 };

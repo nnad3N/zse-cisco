@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_annotations",
+  "info": {
+    "displayName": "Annotation",
+    "icon": "ankh"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

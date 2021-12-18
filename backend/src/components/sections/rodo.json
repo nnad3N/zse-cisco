@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_rodos",
+  "info": {
+    "displayName": "Rodo",
+    "icon": "anchor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

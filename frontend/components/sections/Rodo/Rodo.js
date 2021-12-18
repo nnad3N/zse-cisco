@@ -4,12 +4,12 @@ import PageWrapper from '@templates/PageWrapper/PageWrapper';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { ContentWrapper } from './Rodo.styles';
 
-const Rodo = ({ data: { title, description } }) => {
+const Rodo = ({ data: { header, description } }) => {
   return (
     <PageWrapper>
       <ContentWrapper>
         <LineVertical large>
-          <h1>{title}</h1>
+          <h1>{header}</h1>
         </LineVertical>
         <p>{description}</p>
       </ContentWrapper>
@@ -17,6 +17,14 @@ const Rodo = ({ data: { title, description } }) => {
   );
 };
 
-Rodo.propTypes = {};
+Rodo.propTypes = {
+  header: PropTypes.string,
+  description: PropTypes.string,
+};
+
+Rodo.defaultProps = {
+  header: '',
+  description: '',
+};
 
 export default Rodo;

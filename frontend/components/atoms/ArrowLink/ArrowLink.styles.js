@@ -36,10 +36,6 @@ export const ArrowLinkWrapper = styled.a`
   }
 `;
 
-export const ImageWrapper = styled.div`
-  width: 3.8rem;
-`;
-
 export const Arrow = styled.span`
   background-color: ${({ theme, accented }) => (accented ? theme.colors.accentColor : theme.colors.buttonColor)};
   min-width: 4.2rem;
