@@ -4,7 +4,7 @@ import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import LineVertical from '@atoms/LineVertical/LineVertical';
 import { HeroCourseComponentWrapper } from './HeroCourseComponent.styles';
 
-const HeroCourseComponent = ({ data: { header, description, url }, linkCaption }) => {
+const HeroCourseComponent = ({ data, data: { header, description, url }, linkCaption }) => {
   return (
     <HeroCourseComponentWrapper>
       <h4>{header}</h4>
