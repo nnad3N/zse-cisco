@@ -9,7 +9,7 @@ import { StyledTitle, InfoSection, InfoWrapper, InfoComponent, StyledSpan } from
 const CiscoCourse = ({ data: { richTextSections, courseInfos } }) => {
   return (
     <>
-      <PageWrapper column modular>
+      <PageWrapper column>
         {richTextSections.map(({ header, content, id }) => (
           <PageSection key={id}>
             <LineVertical large>

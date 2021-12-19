@@ -8,7 +8,7 @@ import { StyledList, StyledItem, Tile } from './SectionWithList.styles';
 
 const SectionWithList = ({ data: { header, listItems } }) => {
   return (
-    <PageWrapper short modular white>
+    <PageWrapper short white modular isLast>
       <Tile>
         <LineVertical>
           <h4>{header}</h4>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   width: 100%;
-  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m};
+  padding: ${({ theme }) => theme.padding.xV} ${({ theme }) => theme.padding.m} 0 ${({ theme }) => theme.padding.m};
   background-color: ${({ theme }) => theme.colors.backgroundWhite};
 
   ${({ theme }) => theme.mq.tablet} {

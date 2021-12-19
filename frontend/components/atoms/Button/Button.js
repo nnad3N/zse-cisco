@@ -1,12 +1,15 @@
-import React from 'react';
+import { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { AppContext } from 'providers/AppProvider';
 import { StyledButton } from './Button.styles';
 
 const Button = ({ data: { isFilled, text, url }, hasMargin, accent }) => {
+  const { currentDarkMode } = useContext(AppContext);
+
   return (
     <Link href={url || ''} passHref>
-      <StyledButton hasMargin={hasMargin} isFilled={isFilled} accent={accent}>
+      <StyledButton hasMargin={hasMargin} isFilled={isFilled} accent={accent} dark={currentDarkMode}>
         {text}
       </StyledButton>
     </Link>

@@ -9,9 +9,9 @@ import PageTile from '@templates/PageTile/PageTile';
 import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import { StyledTitle, StyledSpan } from './Courses.styles';
 
-const Courses = ({ data: { header, content, courses, linkCaption } }) => {
+const Courses = ({ data: { header, content, courses, linkCaption, sectionId } }) => {
   return (
-    <PageWrapper short column modular>
+    <PageWrapper id={sectionId} short column modular>
       <PageSection>
         <LineVertical large>
           <StyledTitle>{header}</StyledTitle>
@@ -39,6 +39,7 @@ Courses.propTypes = {
     content: PropTypes.string,
     linkCaption: PropTypes.string,
     courses: PropTypes.arrayOf(PropTypes.object),
+    sectionId: PropTypes.string,
   }).isRequired,
 };
 
@@ -48,6 +49,7 @@ Courses.defaultProps = {
     content: '',
     linkCaption: '',
     courses: [],
+    sectionId: '',
   },
 };
 
