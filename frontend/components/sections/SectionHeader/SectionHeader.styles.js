@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const SectionHeaderWrapper = styled.header`
   padding: ${({ theme }) => theme.padding.xlV} ${({ theme }) => theme.padding.m};
-  margin-bottom: ${({ theme }) => theme.padding.xV};
   width: 100%;
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.white};
@@ -44,7 +43,7 @@ export const ContentWrapper = styled.div`
     width: ${({ isLong }) => (isLong ? `100%` : `50rem`)};
 
     h1 {
-      max-width: ${({ isLong }) => (isLong ? `max-content` : `40rem`)};
+      max-width: max-content;
     }
   }
 

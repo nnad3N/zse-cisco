@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Tile = styled.div`
+export const Tile = styled.section`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => theme.dimensions.tilePadding};

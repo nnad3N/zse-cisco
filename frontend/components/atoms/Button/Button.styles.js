@@ -25,7 +25,7 @@ export const StyledButton = styled.a`
   }
 
   &:focus-visible {
-    outline: 3px solid ${({ theme }) => theme.colors.accentColor};
+    outline: 3px solid ${({ theme, dark }) => (dark ? theme.colors.white : theme.colors.accentColor)};
     outline-offset: -1px;
   }
 `;

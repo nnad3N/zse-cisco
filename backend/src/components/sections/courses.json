@@ -21,6 +21,11 @@
     },
     "linkCaption": {
       "type": "string"
+    },
+    "sectionId": {
+      "type": "string",
+      "required": false,
+      "unique": true
     }
   }
 }
