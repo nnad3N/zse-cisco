@@ -1,10 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'assets/styles/theme';
+import { lightTheme, darkTheme } from 'assets/styles/theme';
 import AppProvider from 'providers/AppProvider';
 
-export const renderWithProviders = (children) => {
+export const renderWithProviders = (isDark, children) => {
+  const theme = isDark ? darkTheme : lightTheme;
+
   return render(
     <AppProvider>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>

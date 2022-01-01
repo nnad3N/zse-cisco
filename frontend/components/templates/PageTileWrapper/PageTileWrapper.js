@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { childrenShape } from 'propTypes/componentTypes';
 import { StyledPageTileWrapper } from './PageTileWrapper.styles';
 

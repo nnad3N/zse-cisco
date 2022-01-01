@@ -1,7 +1,7 @@
 import React from 'react';
 import ArrowLink from '@atoms/ArrowLink/ArrowLink';
 import { renderWithProviders } from 'utils/renderWithProviders';
-import { screen } from '@testing-library/react';
+import { screen } from '@ing-library/react';
 import image from '__mocks__/image';
 
 describe('ArrowLink', () => {

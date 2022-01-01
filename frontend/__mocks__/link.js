@@ -1,6 +1,6 @@
 const link = {
-  name: 'test link',
-  slug: 'link',
+  text: 'link text',
+  url: 'link',
   newTab: false,
 };
 

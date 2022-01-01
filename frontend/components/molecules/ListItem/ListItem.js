@@ -16,8 +16,12 @@ const ListItem = ({ link, setIsNavOpen, hasLinks, children }) => {
 ListItem.propTypes = {
   link: PropTypes.object,
   setIsNavOpen: PropTypes.func,
-  hasLinks: PropTypes.bool,
+  hasLinks: PropTypes.bool.isRequired,
   children: childrenShape,
+};
+
+ListItem.defaultProps = {
+  hasLinks: false,
 };
 
 export default ListItem;

@@ -40,22 +40,26 @@ const Footer = ({ footer: { header, schoolName, footerInfos, footerImages } }) =
   );
 };
 
-// Footer.propTypes = {
-//   footer: PropTypes.shape({
-//     header: PropTypes.string,
-//     schoolName: PropTypes.string,
-//     footerInfos: PropTypes.arrayOf(PropTypes.object).isRequired,
-//     footerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   }).isRequired,
-// };
+Footer.propTypes = {
+  footer: PropTypes.shape({
+    header: PropTypes.string,
+    schoolName: PropTypes.string,
+    footerInfos: PropTypes.arrayOf(PropTypes.object).isRequired,
+    footerImages: PropTypes.shape({
+      data: PropTypes.arrayOf(PropTypes.object),
+    }),
+  }).isRequired,
+};
 
-// Footer.defaultProps = {
-//   footer: {
-//     header: '',
-//     schoolName: '',
-//     footerInfos: [],
-//     footerImages: [],
-//   },
-// };
+Footer.defaultProps = {
+  footer: {
+    header: '',
+    schoolName: '',
+    footerInfos: [],
+    footerImages: {
+      data: [],
+    },
+  },
+};
 
 export default Footer;
