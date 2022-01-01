@@ -7,17 +7,17 @@ import externalLink from '__mocks__/externalLink';
 
 describe('FunctionalLink', () => {
   it('Renders the name', () => {
-    renderWithProviders(<FunctionalLink link={link} />);
-    expect(screen.getByText('test link')).toBeInTheDocument();
+    renderWithProviders(false, <FunctionalLink link={link} />);
+    expect(screen.getByText('link text')).toBeInTheDocument();
   });
 
   it('Renders the link', () => {
-    renderWithProviders(<FunctionalLink link={link} />);
+    renderWithProviders(false, <FunctionalLink link={link} />);
     expect(screen.getByRole('link')).toHaveAttribute('href', '/link');
   });
 
   it('Renders the external link', () => {
-    renderWithProviders(<FunctionalLink link={externalLink} />);
-    expect(screen.getByRole('link')).toHaveAttribute('href', 'link');
+    renderWithProviders(false, <FunctionalLink link={externalLink} />);
+    expect(screen.getByRole('link')).toHaveAttribute('href', 'https://www.google.com');
   });
 });

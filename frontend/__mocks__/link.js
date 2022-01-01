@@ -1,6 +1,6 @@
 const link = {
   text: 'link text',
-  url: 'link',
+  url: '/link',
   newTab: false,
 };
 

@@ -5,7 +5,7 @@ import Link from 'next/link';
 const FunctionalLink = ({ link: { text, url, newTab }, setIsNavOpen }) => {
   if (newTab) {
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer" onClick={() => setIsNavOpen((state) => !state)}>
+      <a href={url || ''} target="_blank" rel="noopener noreferrer" onClick={() => setIsNavOpen((state) => !state)}>
         {text}
       </a>
     );

@@ -6,12 +6,12 @@ import image from '__mocks__/image';
 
 describe('Image', () => {
   it('Renders correctly with alternative text', () => {
-    renderWithProviders(<Image image={image} />);
+    renderWithProviders(false, <Image image={image.data.attributes} />);
     expect(screen.getByAltText('image alternative text')).toBeInTheDocument();
   });
 
   it('Has an src attribute', () => {
-    renderWithProviders(<Image image={image} />);
+    renderWithProviders(false, <Image image={image.data.attributes} />);
     expect(screen.getByAltText('image alternative text')).toHaveAttribute('src');
   });
 });

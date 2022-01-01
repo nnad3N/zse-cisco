@@ -1,6 +1,6 @@
 const externalLink = {
-  name: 'test link',
-  slug: 'link',
+  text: 'link text',
+  url: 'https://www.google.com',
   newTab: true,
 };
 
