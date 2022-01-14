@@ -33,7 +33,6 @@ const Image = ({ image }) => {
     );
   } else {
     console.error('Image was required but not provided');
-    // throw new Error('Image was required but not provided');
     return <NextImage src="/imgError.svg" height={300} width={300} />;
   }
 };

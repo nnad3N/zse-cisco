@@ -6,6 +6,7 @@ import { screen } from '@testing-library/react';
 describe('LineHorizontal', () => {
   it('Renders children', () => {
     renderWithProviders(
+      false,
       <LineHorizontal>
         <h1 data-testid="line-child">Test Title</h1>
       </LineHorizontal>
@@ -16,7 +17,7 @@ describe('LineHorizontal', () => {
   });
 
   it('Renders large variant', () => {
-    renderWithProviders(<LineHorizontal large={true} />);
+    renderWithProviders(false, <LineHorizontal large={true} />);
     const line = screen.getByTestId('line-horizontal');
     expect(line).toHaveStyle('min-height: 0.8rem');
     expect(line).toHaveStyle('margin-top: 2.2rem');

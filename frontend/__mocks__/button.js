@@ -1,8 +1,6 @@
 const button = {
-  caption: 'button',
-  link: {
-    slug: 'link',
-  },
+  text: 'button',
+  url: '/link',
   isFilled: true,
 };
 

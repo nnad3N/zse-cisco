@@ -54,7 +54,6 @@ export const ContentWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   width: ${({ isLong }) => (isLong ? `40rem` : `80rem`)};
-  max-width: ${({ isLong }) => (isLong ? `40rem` : `80rem`)};
   display: flex;
   align-items: center;
   justify-content: center;

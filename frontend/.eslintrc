@@ -1,5 +1,5 @@
 {
-  "extends": ["next", "babel", "prettier", "plugin:prettier/recommended"],
+  "extends": ["next", "@babel/eslint-parser", "prettier", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "import/no-unresolved": "error",

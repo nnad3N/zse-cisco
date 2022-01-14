@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { AppContext } from 'providers/AppProvider';
 import { StyledButton } from './Button.styles';
 
-const Button = ({ data: { isFilled, text, url }, hasMargin, accent }) => {
+const Button = ({ data: { isFilled, text, url }, hasMargin, accented }) => {
   const { currentDarkMode } = useContext(AppContext);
 
   return (
     <Link href={url || ''} passHref>
-      <StyledButton hasMargin={hasMargin} isFilled={isFilled} accent={accent} dark={currentDarkMode}>
+      <StyledButton hasMargin={hasMargin} isFilled={isFilled} accented={accented} dark={currentDarkMode}>
         {text}
       </StyledButton>
     </Link>

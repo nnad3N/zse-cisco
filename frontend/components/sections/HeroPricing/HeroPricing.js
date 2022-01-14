@@ -15,7 +15,7 @@ const HeroPricing = ({ data: { header, description, button } }) => {
         <LineVertical>
           <p>{description}</p>
         </LineVertical>
-        <Button data={button} accent />
+        <Button data={button} accented />
       </DescriptionWrapper>
     </HeroPricingWrapper>
   );

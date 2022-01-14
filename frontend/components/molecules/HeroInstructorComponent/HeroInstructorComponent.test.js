@@ -6,10 +6,9 @@ import data from '__mocks__/instructor';
 
 describe('HeroInstructorComponent', () => {
   it('Renders with provided data', () => {
-    renderWithProviders(<HeroInstructorComponent data={data} />);
-    expect(screen.getByText('test header')).toBeInTheDocument();
-    expect(screen.getByText('test instructor')).toBeInTheDocument();
-    expect(screen.getByText('test instructor description')).toBeInTheDocument();
-    expect(screen.getByAltText('image alternative text')).toBeInTheDocument();
+    renderWithProviders(false, <HeroInstructorComponent data={data} />);
+    expect(screen.getByText('header')).toBeInTheDocument();
+    expect(screen.getByText('name')).toBeInTheDocument();
+    expect(screen.getByText('description')).toBeInTheDocument();
   });
 });

@@ -6,12 +6,14 @@ import icon from '__mocks__/icon';
 
 describe('NavBar', () => {
   it('Renders with provided data', () => {
-    renderWithProviders(<NavBar logo={icon} />);
+    renderWithProviders(false, <NavBar logo={icon} />);
     expect(screen.getByAltText('icon alternative text')).toBeInTheDocument();
   });
-  it('Renders menu button', () => {
-    renderWithProviders(<NavBar />);
-    const menuButton = screen.getByRole('button');
+  it('Renders menu buttons', () => {
+    renderWithProviders(false, <NavBar logo={icon} />);
+    const menuButton = screen.getByLabelText('Menu Toggle Button');
+    const darkModeButton = screen.getByLabelText('Dark Mode Toggle Button');
     expect(menuButton).toBeInTheDocument();
+    expect(darkModeButton).toBeInTheDocument();
   });
 });

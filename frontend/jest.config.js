@@ -4,6 +4,7 @@ module.exports = {
   moduleNameMapper: {
     '^__mocks__/(.*)$': '<rootDir>/__mocks__/$1',
     '^utils/(.*)$': '<rootDir>/utils/$1',
+    '^hooks/(.*)$': '<rootDir>/hooks/$1',
     '^types/(.*)$': '<rootDir>/types/$1',
     '^assets/(.*)$': '<rootDir>/assets/$1',
     '^providers/(.*)$': '<rootDir>/providers/$1',

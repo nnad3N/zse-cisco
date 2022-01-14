@@ -1,14 +1,14 @@
 const links = [
   {
     id: 958257,
-    name: 'test link',
-    slug: 'link',
+    text: 'link',
+    url: '/link',
     newTab: false,
   },
   {
     id: 94852,
-    name: 'test link 2',
-    slug: 'link',
+    text: 'link 2',
+    url: '/link',
     newTab: false,
   },
 ];
