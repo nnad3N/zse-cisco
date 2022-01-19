@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: "strapi",
-      cwd: "/home/your-name/my-strapi-project/my-project",
+      name: "ciscocms",
+      cwd: "/var/www/ciscocms",
       script: "npm",
       args: "start",
       env: {
