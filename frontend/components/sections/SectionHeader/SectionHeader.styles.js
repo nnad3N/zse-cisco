@@ -62,6 +62,7 @@ export const ImageWrapper = styled.div`
     width: 100%;
     padding-top: ${({ theme }) => theme.padding.xV};
     margin: ${({ isLong }) => (isLong ? '0 auto' : 0)};
+    width: ${({ isLong }) => (isLong ? `40rem` : `50rem`)};
   }
 
   ${({ theme }) => theme.mq.tablet} {
