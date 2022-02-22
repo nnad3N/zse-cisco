@@ -28,6 +28,12 @@ export const ArrowLinkWrapper = styled.a`
       border-color: ${({ theme, accented }) => (accented ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
       color: ${({ theme, accented }) => (accented ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
     }
+
+    span,
+    span::after,
+    span::before {
+      background-color: ${({ theme, accented }) => (accented ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
+    }
   }
 
   &:focus-visible {
@@ -44,14 +50,9 @@ export const Arrow = styled.span`
   position: relative;
   transition: background-color 0.1s ease-out;
 
-  ${ArrowLinkWrapper}:hover &,
-  ${ArrowLinkWrapper}:hover &::before,
-  ${ArrowLinkWrapper}:hover &::after {
-    background-color: ${({ theme, accented }) => (accented ? theme.colors.lighterAccentColor : theme.colors.lighterButtonColor)};
-  }
-
   &::before,
   &::after {
+    transition: background-color 0.1s ease-out;
     content: '';
     position: absolute;
     transform-origin: right;
