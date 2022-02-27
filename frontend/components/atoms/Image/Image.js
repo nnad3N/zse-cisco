@@ -7,6 +7,8 @@ import { NextImageWrapper, StyledNextImage } from './Image.styles';
 const Image = ({ image }) => {
   const { currentDarkMode } = useContext(AppContext);
 
+  console.log(image);
+
   if (image) {
     const { alternativeText, url, width, height } = image;
 
@@ -22,8 +24,8 @@ const Image = ({ image }) => {
         <StyledNextImage
           loader={loader}
           layout="responsive"
-          width={width}
-          height={height}
+          width={width || 10}
+          height={height || 10}
           objectFit="contain"
           src={url}
           alt={alternativeText}
