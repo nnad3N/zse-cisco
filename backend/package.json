@@ -9,12 +9,14 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
-  "dependencies": {
-    "@strapi/strapi": "4.0.4",
-    "@strapi/plugin-users-permissions": "4.0.4",
-    "@strapi/plugin-i18n": "4.0.4",
+  "devDependencies": {
     "sqlite3": "5.0.2"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.1.1",
+    "@strapi/plugin-users-permissions": "4.1.1",
+    "@strapi/strapi": "4.1.1",
+    "mysql": "^2.18.1"
   },
   "author": {
     "name": "Damian Struk"
