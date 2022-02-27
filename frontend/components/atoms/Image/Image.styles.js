@@ -8,7 +8,7 @@ export const NextImageWrapper = styled.div`
 
   span {
     span {
-      display: unset;
+      display: unset !important;
       padding: 0 !important;
     }
   }
