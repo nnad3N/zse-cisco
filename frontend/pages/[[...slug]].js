@@ -56,8 +56,8 @@ export async function getStaticProps({ params }) {
     props: {
       sections: content,
       seo,
-      navigation: navigation.data.attributes,
-      footer: footer.data.attributes,
+      navigation: navigation?.data?.attributes,
+      footer: footer?.data?.attributes,
     },
   };
 }

@@ -25,7 +25,7 @@ describe('Button', () => {
   it('Renders with correct style', () => {
     renderWithProviders(false, <Button accented={true} />);
     const button = screen.getByRole('link');
-    expect(button).toHaveStyle(`border-color: ${lightTheme.colors.buttonColor}`);
+    expect(button).toHaveStyle(`border-color: ${lightTheme.colors.accentColor}`);
   });
 
   it('Has margin', () => {

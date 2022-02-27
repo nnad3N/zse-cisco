@@ -1,8 +1,9 @@
 {
-  "extends": ["next", "@babel/eslint-parser", "prettier", "plugin:prettier/recommended"],
+  "extends": ["next/core-web-vitals", "prettier", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
-    "import/no-unresolved": "error",
+    "jsx-a11y/alt-text": 0,
+    "@next/next/no-document-import-in-page": 0,
     "prettier/prettier": [
       "warn",
       {
