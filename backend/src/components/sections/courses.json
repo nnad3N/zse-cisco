@@ -24,8 +24,7 @@
     },
     "sectionId": {
       "type": "string",
-      "required": false,
-      "unique": true
+      "required": false
     }
   }
 }
