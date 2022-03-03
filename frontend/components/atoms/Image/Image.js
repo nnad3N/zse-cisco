@@ -3,36 +3,31 @@ import PropTypes from 'prop-types';
 import NextImage from 'next/image';
 import { AppContext } from 'providers/AppProvider';
 import { NextImageWrapper, StyledNextImage } from './Image.styles';
+import { getStrapiURL } from 'utils/api';
 
 const Image = ({ image }) => {
   const { currentDarkMode } = useContext(AppContext);
 
   if (image) {
     const { alternativeText, url, width, height } = image;
-
-    const loader = ({ src, width }) => {
-      if (src == null) {
-        return null;
-      }
-      return `${process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'}${src}?w=${width}`;
-    };
+    const src = getStrapiURL(url);
 
     return (
       <NextImageWrapper dark={currentDarkMode}>
         <StyledNextImage
-          loader={loader}
           layout="responsive"
-          width={width}
-          height={height}
+          width={width || 10}
+          height={height || 10}
           objectFit="contain"
-          src={url}
+          src={src}
           alt={alternativeText}
           priority
+          unoptimized
         />
       </NextImageWrapper>
     );
   } else {
-    console.error('Image was required but not provided');
+    console.error('Image was required but was not provided');
     return <NextImage src="/imgError.svg" height={300} width={300} />;
   }
 };

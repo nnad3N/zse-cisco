@@ -13,6 +13,7 @@ package-lock.json
 /build
 /.next/
 .next
+/out
 
 # misc
 .DS_Store
