@@ -2,7 +2,8 @@
   "collectionName": "components_seo_default_seos",
   "info": {
     "displayName": "DefaultSeo",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,7 +12,7 @@
       "required": true
     },
     "metaDescription": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "metaTitleSuffix": {
@@ -19,12 +20,12 @@
       "required": true
     },
     "sharedImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
